@@ -1,0 +1,39 @@
+{
+  "effect": {
+    "type": "String",
+    "metadata": {
+      "displayName": "Effect",
+      "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+      "DeployIfNotExists",
+      "AuditIfNotExists",
+      "Disabled"
+    ],
+    "defaultValue": "DeployIfNotExists"
+  },
+  "profileName": {
+    "type": "String",
+    "metadata": {
+      "displayName": "Profile name",
+      "description": "The diagnostic settings profile name"
+    },
+    "defaultValue": "setbypolicy_Diagnostics2Storage"
+  },
+  "LogsRetentionInDays": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Log Retention In Days",
+        "description": "Retention policy ranges from 1 to 365 days"
+      },
+      "defaultValue": "0"
+    },
+  "storageAccountId": {
+    "type": "String",
+    "metadata": {
+      "displayName": "Storage Account resource ID",
+      "description": "Select Storage account from dropdown list. If this account is outside of the scope of the assignment you must manually grant 'Contributor' permissions (or similar) to the policy assignment's principal ID.",
+      "strongType": "Microsoft.Storage/storageAccounts"
+    }
+  }
+}

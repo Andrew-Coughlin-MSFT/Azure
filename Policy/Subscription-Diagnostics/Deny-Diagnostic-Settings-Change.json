@@ -1,0 +1,103 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "AnyOf": [
+          {
+            "AllOf": [
+              {
+                "field": "type",
+                "equals": "Microsoft.Resources/subscriptions"
+              },
+              {
+                "field": "type",
+                "equals": "Microsoft.Insights/diagnosticSettings"
+              },
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/workspaceId",
+                "notEquals": "[parameters('logAnalytics')]"
+              },
+              {
+                "field": "name",
+                "in": "[parameters('LogAnalyticsDiagSetName')]"
+              },
+              {
+                "field":"Microsoft.Insights/diagnosticSettings/logs.enabled",
+                "notEquals":"true"
+              }
+            ]
+          },
+          {
+            "AllOf": [
+              {
+                "field": "type",
+                "equals": "Microsoft.Resources/subscriptions"
+              },
+              {
+                "field": "type",
+                "equals": "Microsoft.Insights/diagnosticSettings"
+              },
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/storageAccountId",
+                "notEquals": "[parameters('storageAccount')]"
+              },
+              {
+                "field": "name",
+                "in": "[parameters('storageAccountDiagSetName')]"
+              },
+              {
+                "field":"Microsoft.Insights/diagnosticSettings/logs.enabled",
+                "notEquals":"true"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effectType')]"
+      }
+    },
+    "parameters": {
+      "effectType": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      },
+      "logAnalytics": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Primary Log Analytics workspace",
+          "description": "Select Log Analytics workspace from dropdown list",
+          "strongType": "omsWorkspace"
+        }
+      },
+      "LogAnalyticsDiagSetName":{
+          "type":"String",
+          "metadata":{
+              "displayName": "Name of Log Analytics Diagnostic settings name",
+              "description":"Enter Log Analytics setting name"
+          }
+      },
+      "storageAccount": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Archive Storage Account",
+          "description": "Enter Storage Account ID"
+        }
+      },
+      "storageAccountDiagSetName":{
+          "type":"String",
+          "metadata":{
+              "displayName": "Name of Storage Diagnostic settings name",
+              "description":"Enter Diagnostic setting name"
+          }
+      }
+    }
+  }

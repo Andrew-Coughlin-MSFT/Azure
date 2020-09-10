@@ -1,1 +1,1 @@
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Policy/Subscription-Diagnostics/Deny-Modify-Diagnostic-Settings-DefaultName.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAndrew-Coughlin-MSFT%2FAzure%2Fmaster%2FPolicy%2FSubscription-Diagnostics%2FDeny-Modify-Diagnostic-Settings-DefaultName.json)

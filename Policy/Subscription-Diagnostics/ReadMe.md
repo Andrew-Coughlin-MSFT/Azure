@@ -1,0 +1,1 @@
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Policy/Subscription-Diagnostics/Deny-Modify-Diagnostic-Settings-DefaultName.json)

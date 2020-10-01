@@ -126,7 +126,7 @@
                                               },
                                               {
                                                 "field": "operationName",
-                                                "equals": "Microsoft.Capacity/reservationorders/write",
+                                                "equals": "Microsoft.Capacity/reservationorders/return/action",
                                                 "containsAny": null,
                                                 "odata.type": null
                                               }

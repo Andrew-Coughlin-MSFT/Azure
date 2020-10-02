@@ -1,6 +1,6 @@
 {
     "mode": "All",
-    "displayName": "Deploy Activity Log Alert to Detect Reservation Creation Alert",
+    "displayName": "Deploy Activity Log Alert to Detect Reservation Return Alert",
     "policyRule": {
         "if": {
             "allOf": [

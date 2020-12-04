@@ -1,0 +1,80 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "AnyOf": [
+          {
+            "AllOf": [
+              {
+                "field": "type",
+                "equals": "Microsoft.Insights/diagnosticSettings"
+              },
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/workspaceId",
+                "notEquals": "[parameters('logAnalytics')]"
+              },
+              {
+                "field": "name",
+                "equals": "[parameters('defaultDiagnosticName')]"
+              }
+            ]
+          },
+          {
+            "AllOf": [
+              {
+                "field": "type",
+                "equals": "Microsoft.Insights/diagnosticSettings"
+              },
+              {
+                "field": "Microsoft.Insights/diagnosticSettings/storageAccountId",
+                "notEquals": "[parameters('storageAccount')]"
+              },
+              {
+                "field": "name",
+                "equals": "[parameters('defaultDiagnosticName')]"
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effectType')]"
+      }
+    },
+    "parameters": {
+      "effectType": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Deny"
+      },
+      "logAnalytics": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Primary Log Analytics workspace",
+          "description": "Select Log Analytics workspace from dropdown list",
+          "strongType": "omsWorkspace"
+        }
+      },
+      "storageAccount": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Archive Storage Account",
+          "description": "Enter Storage Account ID"
+        }
+      },
+      "defaultDiagnosticName":{
+        "type": "String",
+        "metadata":{
+          "displayName":"Default Diagnostic Name",
+          "description":"Name of the Default Diagnostic Setting name that should not be changed"
+        }
+      }
+    }
+  }

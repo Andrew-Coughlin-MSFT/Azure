@@ -1,0 +1,31 @@
+{
+   "properties": {
+      "displayName": "Deny SQL Datawarehouse",
+      "description": "This policy denies the creation of SQL Datawarehouse instances.",
+      "policyRule": {
+         "if": {
+            "allOf": [
+               {
+                  "field": "type",
+                  "equals": "Microsoft.SQL/servers/databases"
+               },
+               {
+                     "anyOf": [
+                        {
+                           "field": "Microsoft.SQL/servers/databases/sku.name",
+                           "like": "DW*"
+                        },
+                        {
+                           "field": "Microsoft.SQL/servers/databases/sku.name",
+                           "equals": "DataWarehouse"
+                        }
+                     ]
+               }
+            ]
+         },
+         "then": {
+            "effect": "Deny"
+         }
+      }
+   }
+}

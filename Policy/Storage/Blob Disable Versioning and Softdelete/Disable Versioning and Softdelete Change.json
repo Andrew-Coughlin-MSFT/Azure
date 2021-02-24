@@ -2,8 +2,16 @@
     "mode": "All",
     "policyRule": {
       "if": {
-        "field": "Microsoft.Storage/storageAccounts/blobServices/default.isVersioningEnabled",
-        "equals": "true"
+          "anyOf": [
+              {
+                "field": "Microsoft.Storage/storageAccounts/blobServices/default.isVersioningEnabled",
+                "equals": "false"
+              },
+              {
+                "field": "Microsoft.Storage/storageAccounts/blobServices/deleteRetentionPolicy",
+                "equals": "false"
+              }
+          ]
       },
       "then": {
         "effect": "[parameters('effect')]"

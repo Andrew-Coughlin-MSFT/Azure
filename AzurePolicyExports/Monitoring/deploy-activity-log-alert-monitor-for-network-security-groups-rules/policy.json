@@ -3,12 +3,9 @@
   "displayName": "Activity Log Alert Monitor Network Security Groups Rules",
   "policyType": "Custom",
   "mode": "All",
+  "description":"This policy automatically deployes the Activity Log Alert Monitor for network security group rules.",
   "metadata": {
-   "category": "Custom Policies",
-   "createdBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "createdOn": "2021-02-28T20:33:15.484248Z",
-   "updatedBy": null,
-   "updatedOn": null
+   "category": "Custom Policies"
   },
   "parameters": {
    "actionGroupName": {

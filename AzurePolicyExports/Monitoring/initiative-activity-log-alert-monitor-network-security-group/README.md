@@ -11,9 +11,11 @@ This initiative sets up the azure policies to deploy Azure Monitor Alerts for th
 <h1>Try with Powershell</h1>
 
 ```Powershell
-    
     $Scope = (Get-AzContext).Subscription.Id
-
 ```
 
 <h1>Try with CLI</h1>
+
+```cli
+    az policy definition create --name
+```

@@ -23,7 +23,7 @@
     "type": "String",
     "metadata": {
      "displayName": "Resource Group Name",
-     "description": "Name of the Resource Group that will contain the rule.",
+     "description": "Name of the Resource Group that will contain the rule alert.",
      "strongType": "existingResourceGroups"
     }
    },

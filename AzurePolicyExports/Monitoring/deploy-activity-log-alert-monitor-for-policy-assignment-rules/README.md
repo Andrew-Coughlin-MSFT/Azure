@@ -1,0 +1,1 @@
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/CreatePolicyDefinitionBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAndrew-Coughlin-MSFT%2FAzure%2Fmaster%2FAzurePolicyExports%2FMonitoring%2Fdeploy-activity-log-alert-monitor-for-policy-assignment-rules%2Fpolicy.json)

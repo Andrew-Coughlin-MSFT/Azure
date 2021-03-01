@@ -6,7 +6,7 @@ This initiative sets up the azure policies to deploy Azure Monitor Alerts for th
 
 <h1>Try on Portal</h1>
 
-
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/getpolicy)
 
 <h1>Try with Powershell</h1>
 

@@ -1,0 +1,33 @@
+{
+    "ActionGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Action Group Name",
+      "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
+     }
+    },
+    "PolicyAssignmentCreateUpdateAlertName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Name Policy Assignment Create and Update",
+      "description": "Provide the name of the Alert Name for Policy Assignment Create and Update"
+     },
+     "defaultValue": "Alert Monitor Policy Assignment Create and Update"
+    },
+    "PolicyAssignmentDeleteAlertName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Name Policy Assignment Delete",
+      "description": "Provide the alert name for Policy Assignment Delete"
+     },
+     "defaultValue": "Alert Monitor Policy Assignment Delete"
+    },
+    "AlertResourceGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Resource Group Name",
+      "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert.",
+      "strongType": "existingResourceGroups"
+     }
+    }
+   }

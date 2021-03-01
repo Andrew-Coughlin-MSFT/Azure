@@ -16,32 +16,32 @@
     "type": "String",
     "metadata": {
      "displayName": "Action Group Name",
-     "description": "Name of the action group to use with this alert."
+     "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
     }
    },
    "RuleResourceGroupName": {
     "type": "String",
     "metadata": {
      "displayName": "Resource Group Name",
-     "description": "Name of the Resource Group that will contain the rule alert.",
+     "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert.",
      "strongType": "existingResourceGroups"
     }
    },
    "RuleNameNetworkSecurityGroup": {
     "type": "String",
     "metadata": {
-     "displayName": "Alert Network Security Group Name (Create and Modify)",
-     "description": "Name of the alert for Network Security Group Create and Modify"
+     "displayName": "Alert Network Security Group Name (Create and Update)",
+     "description": "Name of the alert for Network Security Group Create and Update"
     },
-    "defaultValue": "Alert Monitor Network Security Group Create and Modify"
+    "defaultValue": "Alert Monitor Network Security Group Create and Update"
    },
    "RuleNameClassicNetworkSecurityGroup": {
     "type": "String",
     "metadata": {
-     "displayName": "Alert Classic Network Security Group Name (Create and Modify)",
+     "displayName": "Alert Classic Network Security Group Name (Create and Update)",
      "description": "Name of the classic network security group alert."
     },
-    "defaultValue": "Alert Monitor Classic Network Security Group Create and Modify"
+    "defaultValue": "Alert Monitor Classic Network Security Group Create and Update"
    },
    "RuleNameNetworkSecurityGroupDelete": {
     "type": "String",
@@ -62,7 +62,7 @@
   },
   "policyDefinitions": [
    {
-    "policyDefinitionReferenceId": "Activity Log Alert Monitor Network Security Groups Create and Modify",
+    "policyDefinitionReferenceId": "Activity Log Alert Monitor Network Security Groups Create and Update",
     "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policyDefinitions/30b98f60-d810-48d4-9821-5fa77476fd12",
     "parameters": {
      "actionGroupName": {
@@ -81,7 +81,7 @@
     "groupNames": []
    },
    {
-    "policyDefinitionReferenceId": "Activity Log Alert Monitor Classic Network Security Groups Create and Modify",
+    "policyDefinitionReferenceId": "Activity Log Alert Monitor Classic Network Security Groups Create and Update",
     "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policyDefinitions/30b98f60-d810-48d4-9821-5fa77476fd12",
     "parameters": {
      "actionGroupName": {

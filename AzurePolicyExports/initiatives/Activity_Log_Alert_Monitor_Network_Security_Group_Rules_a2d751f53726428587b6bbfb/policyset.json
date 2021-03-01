@@ -16,14 +16,14 @@
     "type": "String",
     "metadata": {
      "displayName": "Action Group Name",
-     "description": "Name of the action group to use with this alert."
+     "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
     }
    },
    "RuleResourceGroupName": {
     "type": "String",
     "metadata": {
      "displayName": "Resource Group Name",
-     "description": "Name of the Resource Group that will contain the rule.",
+     "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert.",
      "strongType": "existingResourceGroups"
     }
    },
@@ -33,7 +33,7 @@
      "displayName": "Alert Network Security Group Name",
      "description": "Name of the alert for Network Security Group"
     },
-    "defaultValue": "Alert Monitor Network Security Group Rules Create or Modify"
+    "defaultValue": "Alert Monitor Network Security Group Rules Create or Update"
    },
    "RuleNameClassicNetworkSecurityGroup": {
     "type": "String",
@@ -41,7 +41,7 @@
      "displayName": "Alert Classic Network Security Group Name",
      "description": "Name of the classic network security group alert."
     },
-    "defaultValue": "Alert Monitor Classic Network Security Group Rules Create or Modify"
+    "defaultValue": "Alert Monitor Classic Network Security Group Rules Create or Update"
    },
    "RuleNameNetworkSecurityGroupDelete": {
     "type": "String",

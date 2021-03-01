@@ -15,7 +15,7 @@
     "type": "String",
     "metadata": {
      "displayName": "Action Group Name",
-     "description": "Name for the Action group."
+     "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
     }
    },
    "activityLogAlertName": {
@@ -29,7 +29,7 @@
     "type": "String",
     "metadata": {
      "displayName": "Alert Resource Group Name",
-     "description": "This is the name of the Resource Group that will contain the Activity log alert resource."
+     "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert."
     }
    },
    "effect": {

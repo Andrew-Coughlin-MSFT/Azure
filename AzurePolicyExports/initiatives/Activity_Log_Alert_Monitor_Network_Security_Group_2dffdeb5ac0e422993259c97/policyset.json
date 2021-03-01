@@ -30,18 +30,18 @@
    "RuleNameNetworkSecurityGroup": {
     "type": "String",
     "metadata": {
-     "displayName": "Alert Network Security Group Name",
-     "description": "Name of the alert for Network Security Group"
+     "displayName": "Alert Network Security Group Name (Create and Modify)",
+     "description": "Name of the alert for Network Security Group Create and Modify"
     },
-    "defaultValue": "Alert Monitor Network Security Group Create or Modify"
+    "defaultValue": "Alert Monitor Network Security Group Create and Modify"
    },
    "RuleNameClassicNetworkSecurityGroup": {
     "type": "String",
     "metadata": {
-     "displayName": "Alert Classic Network Security Group Name",
+     "displayName": "Alert Classic Network Security Group Name (Create and Modify)",
      "description": "Name of the classic network security group alert."
     },
-    "defaultValue": "Alert Monitor Classic Network Security Group Create or Modify"
+    "defaultValue": "Alert Monitor Classic Network Security Group Create and Modify"
    },
    "RuleNameNetworkSecurityGroupDelete": {
     "type": "String",
@@ -54,7 +54,7 @@
    "RuleNameClassicNetworkSecurityGroupDelete": {
     "type": "String",
     "metadata": {
-     "displayName": "Alert Classic Network Security Group Delete",
+     "displayName": "Alert Classic Network Security Group Name Delete",
      "description": "Name of the alert for Classic Network Security Group Delete"
     },
     "defaultValue": "Alert Monitor Classic Network Security Group Delete"

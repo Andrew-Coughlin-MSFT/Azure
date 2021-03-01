@@ -1,0 +1,33 @@
+{
+    "AlertRuleActionGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Action Group Name",
+      "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
+     }
+    },
+    "RuleResourceGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Resource Group Name",
+      "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert.",
+      "strongType": "existingResourceGroups"
+     }
+    },
+    "RuleNameFirewallRules": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Firewall SQL Server Rule Name for Create and Update",
+      "description": "Name of the Alert for Firewall rules"
+     },
+     "defaultValue": "Alert Monitor SQL Server Firewall Rule Create or Update"
+    },
+    "RuleNameFirewallRulesDelete": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert SQL Server Firewall Rule Name for Delete",
+      "description": "Alert Monitor name for Firewall Rule Name for delete"
+     },
+     "defaultValue": "Alert Monitor SQL Server Firewall Rule Delete"
+    }
+   }

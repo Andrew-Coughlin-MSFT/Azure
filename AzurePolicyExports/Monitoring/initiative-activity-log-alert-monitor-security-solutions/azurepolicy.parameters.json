@@ -1,0 +1,41 @@
+{
+    "AlertRuleActionGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Action Group Name",
+      "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
+     }
+    },
+    "RuleResourceGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Resource Group Name",
+      "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert.",
+      "strongType": "existingResourceGroups"
+     }
+    },
+    "RuleNameSecurityPolicyCreateModify": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Security Policy Create",
+      "description": "Alert Name for Security Policy Creations"
+     },
+     "defaultValue": "Alert Monitor Security Policy Create or Update"
+    },
+    "RuleNameSecuritySolutionCreateModify": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Security Solution Create or Update",
+      "description": "Alert name for Security Solution create or Update"
+     },
+     "defaultValue": "Alert Monitor Security Solution Create or Update"
+    },
+    "RuleNameSecuritySolutionDelete": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Security Solution Delete",
+      "description": "Alert Name for security solution delete"
+     },
+     "defaultValue": "Alert Monitor Security Solution Delete"
+    }
+   }

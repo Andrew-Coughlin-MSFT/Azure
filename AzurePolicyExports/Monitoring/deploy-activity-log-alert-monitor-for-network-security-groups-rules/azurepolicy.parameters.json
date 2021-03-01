@@ -1,0 +1,48 @@
+{
+    "actionGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Action Group Name",
+      "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
+     }
+    },
+    "activityLogAlertName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Name",
+      "description": "Name for the Activity log alert."
+     }
+    },
+    "ActivityLogAlertResourceGroupName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Alert Resource Group Name",
+      "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert."
+     }
+    },
+    "effect": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Effects",
+      "description": "Enable or disable the execution of the Policy."
+     },
+     "allowedValues": [
+      "DeployIfNotExists",
+      "Disabled"
+     ],
+     "defaultValue": "DeployIfNotExists"
+    },
+    "operationName": {
+     "type": "String",
+     "metadata": {
+      "displayName": "Operation Name",
+      "description": "Administrative Operation name for which activity log alert should be configured"
+     },
+     "allowedValues": [
+      "Microsoft.Network/networkSecurityGroups/securityRules/write",
+      "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+      "Microsoft.ClassicNetwork/networkSecurityGroups/securityRules/write",
+      "Microsoft.ClassicNetwork/networkSecurityGroups/securityRules/delete"
+     ]
+    }
+   }

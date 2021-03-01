@@ -4,12 +4,7 @@
   "policyType": "Custom",
   "description": "Initiative to define Network Security Group Alert rules for creation or updates.\n\n          \"Microsoft.Network/networkSecurityGroups/write\",\n          \"Microsoft.ClassicNetwork/networkSecurityGroups/write\",\n          \"Microsoft.Network/networkSecurityGroups/delete\",\n          \"Microsoft.ClassicNetwork/networkSecurityGroups/delete\"",
   "metadata": {
-   "category": "Custom Policies",
-   "version": "1.0",
-   "createdBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "createdOn": "2021-02-28T20:33:50.7244094Z",
-   "updatedBy": null,
-   "updatedOn": null
+   "category": "Custom Policies"
   },
   "parameters": {
    "AlertRuleActionGroupName": {

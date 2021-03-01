@@ -4,12 +4,7 @@
   "policyType": "Custom",
   "description": "Initiative to define Security Solution Alert rules for creation, updates or deletes\n\n          \"Microsoft.Security/policies/write\",\n          \"Microsoft.Security/securitySolutions/write\",\n          \"Microsoft.Security/securitySolutions/delete\"",
   "metadata": {
-   "category": "Custom Policies",
-   "version": "1.0",
-   "createdBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "createdOn": "2021-03-01T02:52:40.6362739Z",
-   "updatedBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "updatedOn": "2021-03-01T02:54:15.2820933Z"
+   "category": "Custom Policies"
   },
   "parameters": {
    "AlertRuleActionGroupName": {

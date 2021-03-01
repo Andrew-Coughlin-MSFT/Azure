@@ -4,12 +4,7 @@
   "policyType": "Custom",
   "description": "Initiative that ensure the following Alerts are setup for Policy Assignments:\n\"Microsoft.Authorization/policyAssignments/write\",\n\"Microsoft.Authorization/policyAssignments/delete\"",
   "metadata": {
-   "category": "Custom Policies",
-   "version": "1.0",
-   "createdBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "createdOn": "2021-02-28T14:33:56.9981559Z",
-   "updatedBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "updatedOn": "2021-03-01T01:17:20.778424Z"
+   "category": "Custom Policies"
   },
   "parameters": {
    "ActionGroupName": {

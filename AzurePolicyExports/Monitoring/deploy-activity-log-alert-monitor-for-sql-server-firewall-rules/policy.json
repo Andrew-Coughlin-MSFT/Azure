@@ -3,12 +3,9 @@
   "displayName": "Activity Log Alert Monitor SQL Server Firewall Rules",
   "policyType": "Custom",
   "mode": "All",
+  "description":"This policy automatically deployes the Activity Log Alert Monitor for sql server firewall rules.",
   "metadata": {
-   "category": "Custom Policies",
-   "createdBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "createdOn": "2021-02-28T20:42:09.3038573Z",
-   "updatedBy": null,
-   "updatedOn": null
+   "category": "Custom Policies"
   },
   "parameters": {
    "actionGroupName": {

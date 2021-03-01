@@ -3,12 +3,9 @@
   "displayName": "Activity Log Alert Monitor Security Solution",
   "policyType": "Custom",
   "mode": "All",
+  "description":"This policy automatically deployes the Activity Log Alert Monitor for security solution.",
   "metadata": {
-   "category": "Custom Policies",
-   "createdBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "createdOn": "2021-03-01T02:43:48.8710861Z",
-   "updatedBy": "20857a0c-5f1e-4ad9-b3d3-205ddb8b8799",
-   "updatedOn": "2021-03-01T02:53:10.8249269Z"
+   "category": "Custom Policies"
   },
   "parameters": {
    "actionGroupName": {

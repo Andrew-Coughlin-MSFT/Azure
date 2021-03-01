@@ -1,0 +1,139 @@
+{
+ "properties": {
+  "displayName": "Activity Log Alert Monitor Network Security Group",
+  "policyType": "Custom",
+  "description": "Initiative to define Network Security Group Alert rules for creation or updates.\n\n          \"Microsoft.Network/networkSecurityGroups/write\",\n          \"Microsoft.ClassicNetwork/networkSecurityGroups/write\",\n          \"Microsoft.Network/networkSecurityGroups/delete\",\n          \"Microsoft.ClassicNetwork/networkSecurityGroups/delete\"",
+  "metadata": {
+   "category": "Custom Policies"
+  },
+  "parameters": {
+   "AlertRuleActionGroupName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Action Group Name",
+     "description": "Name for the Action group to use with the alert. It must be in the same resource group where the alert will be created."
+    }
+   },
+   "RuleResourceGroupName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Resource Group Name",
+     "description": "This is the name of the Resource Group that will contain the Activity log alert resource and the action group for the alert.",
+     "strongType": "existingResourceGroups"
+    }
+   },
+   "RuleNameNetworkSecurityGroup": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Alert Network Security Group Name (Create and Update)",
+     "description": "Name of the alert for Network Security Group Create and Update"
+    },
+    "defaultValue": "Alert Monitor Network Security Group Create and Update"
+   },
+   "RuleNameClassicNetworkSecurityGroup": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Alert Classic Network Security Group Name (Create and Update)",
+     "description": "Name of the classic network security group alert."
+    },
+    "defaultValue": "Alert Monitor Classic Network Security Group Create and Update"
+   },
+   "RuleNameNetworkSecurityGroupDelete": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Alert Network Security Group Delete Name",
+     "description": "Alert name for Network Security Group Delete Name"
+    },
+    "defaultValue": "Alert Monitor Network Security Group Delete"
+   },
+   "RuleNameClassicNetworkSecurityGroupDelete": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Alert Classic Network Security Group Name Delete",
+     "description": "Name of the alert for Classic Network Security Group Delete"
+    },
+    "defaultValue": "Alert Monitor Classic Network Security Group Delete"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Activity Log Alert Monitor Network Security Groups Create and Update",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policyDefinitions/30b98f60-d810-48d4-9821-5fa77476fd12",
+    "parameters": {
+     "actionGroupName": {
+      "value": "[parameters('AlertRuleActionGroupName')]"
+     },
+     "activityLogAlertName": {
+      "value": "[parameters('RuleNameNetworkSecurityGroup')]"
+     },
+     "ActivityLogAlertResourceGroupName": {
+      "value": "[parameters('RuleResourceGroupName')]"
+     },
+     "operationName": {
+      "value": "Microsoft.Network/networkSecurityGroups/write"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Activity Log Alert Monitor Classic Network Security Groups Create and Update",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policyDefinitions/30b98f60-d810-48d4-9821-5fa77476fd12",
+    "parameters": {
+     "actionGroupName": {
+      "value": "[parameters('AlertRuleActionGroupName')]"
+     },
+     "activityLogAlertName": {
+      "value": "[parameters('RuleNameClassicNetworkSecurityGroup')]"
+     },
+     "ActivityLogAlertResourceGroupName": {
+      "value": "[parameters('RuleResourceGroupName')]"
+     },
+     "operationName": {
+      "value": "Microsoft.ClassicNetwork/networkSecurityGroups/write"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Activity Log Alert Monitor Network Security Groups Delete",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policyDefinitions/30b98f60-d810-48d4-9821-5fa77476fd12",
+    "parameters": {
+     "actionGroupName": {
+      "value": "[parameters('AlertRuleActionGroupName')]"
+     },
+     "activityLogAlertName": {
+      "value": "[parameters('RuleNameNetworkSecurityGroupDelete')]"
+     },
+     "ActivityLogAlertResourceGroupName": {
+      "value": "[parameters('RuleResourceGroupName')]"
+     },
+     "operationName": {
+      "value": "Microsoft.Network/networkSecurityGroups/delete"
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Activity Log Alert Monitor Classic Network Security Groups Delete",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policyDefinitions/30b98f60-d810-48d4-9821-5fa77476fd12",
+    "parameters": {
+     "actionGroupName": {
+      "value": "[parameters('AlertRuleActionGroupName')]"
+     },
+     "activityLogAlertName": {
+      "value": "[parameters('RuleNameClassicNetworkSecurityGroupDelete')]"
+     },
+     "ActivityLogAlertResourceGroupName": {
+      "value": "[parameters('RuleResourceGroupName')]"
+     },
+     "operationName": {
+      "value": "Microsoft.ClassicNetwork/networkSecurityGroups/delete"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+ "id": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policySetDefinitions/2dffdeb5ac0e422993259c97",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "2dffdeb5ac0e422993259c97"
+}

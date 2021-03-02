@@ -58,7 +58,7 @@
   "policyDefinitions": [
    {
     "policyDefinitionReferenceId": "Activity Log Alert Monitor Network Security Groups Create and Update",
-    "policyDefinitionId": "/subscriptions/bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
     "parameters": {
      "actionGroupName": {
       "value": "[parameters('AlertRuleActionGroupName')]"
@@ -77,7 +77,7 @@
    },
    {
     "policyDefinitionReferenceId": "Activity Log Alert Monitor Classic Network Security Groups Create and Update",
-    "policyDefinitionId": "/subscriptions/bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
     "parameters": {
      "actionGroupName": {
       "value": "[parameters('AlertRuleActionGroupName')]"
@@ -96,7 +96,7 @@
    },
    {
     "policyDefinitionReferenceId": "Activity Log Alert Monitor Network Security Groups Delete",
-    "policyDefinitionId": "/subscriptions/bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
     "parameters": {
      "actionGroupName": {
       "value": "[parameters('AlertRuleActionGroupName')]"
@@ -115,7 +115,7 @@
    },
    {
     "policyDefinitionReferenceId": "Activity Log Alert Monitor Classic Network Security Groups Delete",
-    "policyDefinitionId": "/subscriptions/bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e49bd23-973a-4a0c-8bf6-05f44237b5ea",
     "parameters": {
      "actionGroupName": {
       "value": "[parameters('AlertRuleActionGroupName')]"

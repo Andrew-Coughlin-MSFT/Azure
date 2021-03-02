@@ -6,12 +6,15 @@ This initiative sets up the azure policies to deploy Azure Monitor Alerts for th
 
 <h1>Try on Portal</h1>
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/getpolicy)
+Not supported At this time
 
 <h1>Try with Powershell</h1>
 
 ```Powershell
-    $Scope = (Get-AzContext).Subscription.Id
+    $policydefinitions = "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/AzurePolicyExports/Monitoring/initiative-activity-log-alert-monitor-network-security-group/azurepolicyset.definitions.json"
+    $policysetparameters = "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/AzurePolicyExports/Monitoring/initiative-activity-log-alert-monitor-network-security-group/azurepolicyset.parameters.json"
+
+    $policyset= New-AzPolicySetDefinition -Name "Activity-log-alert-nsg" -DisplayName "Activity Log Alert Monitor Network Security Group Policy Initiative" -Description "Initiative to define Network Security Group Alert rules for creation or updates" -PolicyDefinition $policydefinitions -Parameter $policysetparameters 
 ```
 
 <h1>Try with CLI</h1>

@@ -133,7 +133,7 @@
     "groupNames": []
    }
   ],
- "id": "/providers/Microsoft.Authorization/policyDefinitions/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policySetDefinitions/2dffdeb5ac0e422993259c97",
+ "id": "/providers/Microsoft.Management/managementGroups/78dd488d-892f-4724-9861-9486288f62b8/providers/Microsoft.Authorization/policySetDefinitions/2dffdeb5ac0e422993259c97",
  "type": "Microsoft.Authorization/policySetDefinitions",
  "name": "2dffdeb5ac0e422993259c97"
 }

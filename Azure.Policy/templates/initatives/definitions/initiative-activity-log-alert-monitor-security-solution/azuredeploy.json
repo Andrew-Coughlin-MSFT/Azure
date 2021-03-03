@@ -3,8 +3,8 @@
     "contentVersion": "1.0.0.0",
     "variables": {
         "policySetName": "azure-monitor-alerts-security-solution",
-        "policySetDisplayName": "Activity Log Alert Monitor Seceurity Solution Alerts",
-        "policySetDescription": "Initiative to define Seceurity Solution Alerts",
+        "policySetDisplayName": "Activity Log Alert Monitor Security Solution Alerts",
+        "policySetDescription": "Initiative to define Security Solution Alerts",
         "policyDefinition": "azure-activity-log-alert-monitor-for-security-solution"
 
     },

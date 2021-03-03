@@ -1,0 +1,99 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "variables": {
+        "policySetName": "azure-monitor-alerts-policy-assignment",
+        "policySetDisplayName": "Activity Log Alert Monitor Policy Assignment Alerts",
+        "policySetDescription": "Initiative to define Policy Assignment Alerts",
+        "policyDefinition": "azure-activity-log-alert-monitor-for-pol-assign-rules"
+
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Authorization/policySetDefinitions",
+            "apiVersion": "2019-09-01",
+            "name": "[variables('policySetName')]",
+            "properties": {
+                "displayName": "[variables('policySetDisplayName')]",
+                "description": "[variables('policySetDescription')]",
+                "policyType": "Custom",
+                "metadata": {
+                    "category": "Tags"
+                },
+                "parameters": {
+                    "ActionGroupName": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "Action Group Name",
+                        "description": "Type the action group name to use with these alerts"
+                    }
+                    },
+                    "PolicyAssignmentCreateUpdateAlertName": {
+                    "type": "String",
+                    "defaultValue": "Alert Monitor Policy Assignment Create and Update",
+                    "metadata": {
+                        "displayName": "Alert Name Policy Assignment Create and Update",
+                        "description": "Provide the name of the Alert Name for Policy Assignment Create and Update"
+                    }
+                    },
+                    "PolicyAssignmentDeleteAlertName": {
+                    "type": "String",
+                    "defaultValue": "Alert Monitor Policy Assignment Delete",
+                    "metadata": {
+                        "displayName": "Alert Name Policy Assignment Delete",
+                        "description": "Provide the alert name for Policy Assignment Delete"
+                    }
+                    },
+                    "AlertResourceGroupName": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "Alert Resource Group Name",
+                        "description": "Provide the resource group name that the alert should be stored at",
+                        "strongType": "existingResourceGroups"
+                    }
+                    }
+                },
+                "policyDefinitions": [
+                    {
+                    "policyDefinitionId": "[concat(subscription().id, '/providers/Microsoft.Authorization/policyDefinitions/', variables('policyDefinition'))]",
+                    "parameters": {
+                        "actionGroupName": {
+                        "value": "[[parameters('ActionGroupName')]"
+                        },
+                        "activityLogAlertName": {
+                        "value": "[[parameters('PolicyAssignmentCreateUpdateAlertName')]"
+                        },
+                        "ActivityLogAlertResourceGroupName": {
+                        "value": "[[parameters('AlertResourceGroupName')]"
+                        },
+                        "operationName": {
+                        "value": "Microsoft.Authorization/policyAssignments/write"
+                        }
+                    },
+                    "policyDefinitionReferenceId": "Activity Log Alert Monitor Policy Assignment Rules Create and Update",
+                    "groupNames": []
+                    },
+                    {
+                    "policyDefinitionId": "[concat(subscription().id, '/providers/Microsoft.Authorization/policyDefinitions/', variables('policyDefinition'))]",
+                    "parameters": {
+                        "actionGroupName": {
+                        "value": "[[parameters('ActionGroupName')]"
+                        },
+                        "activityLogAlertName": {
+                        "value": "[[parameters('PolicyAssignmentDeleteAlertName')]"
+                        },
+                        "ActivityLogAlertResourceGroupName": {
+                        "value": "[[parameters('AlertResourceGroupName')]"
+                        },
+                        "operationName": {
+                        "value": "Microsoft.Authorization/policyAssignments/delete"
+                        }
+                    },
+                    "policyDefinitionReferenceId": "Activity Log Alert Monitor Policy Assignment Rules Delete",
+                    "groupNames": []
+                    }
+                ]
+            }
+        }
+    ]
+}

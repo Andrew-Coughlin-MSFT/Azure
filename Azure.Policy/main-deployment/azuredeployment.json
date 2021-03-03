@@ -12,32 +12,23 @@
 
     },
     "variables": {
-        "templateBaseUrl": "https://raw.githubusercontent.com/andrewmatveychuk/azure.policy/master/linked-templates/",
+        "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/",
 
         "linkedTemplates": {
             // Policy definitions
 
-            // General
-            "restrictAllowedLocationsPolicy": "[concat(variables('templateBaseUrl'), 'policies/definitions/general/restrict-allowed-locations/azuredeploy.json')]",
-            // Naming Convention
-            "enforceNamingForResourcePolicy": "[concat(variables('templateBaseUrl'), 'policies/definitions/naming-convention/enforce-naming-for-resource/azuredeploy.json')]",
-            "enforceNamingForResourceGroupsPolicy": "[concat(variables('templateBaseUrl'), 'policies/definitions/naming-convention/enforce-naming-for-resourcegroups/azuredeploy.json')]",
-            // Audit Azure SQL database retention policy settings
-            "longTermRetentionPolicy": "[concat(variables('templateBaseUrl'), 'policies/sql-databases/audit-sqldatabase-longTermRetentionPolicy/azuredeploy.json')]",
-            "shortTermRetentionPolicy": "[concat(variables('templateBaseUrl'), 'policies/sql-databases/audit-sqldatabase-shortTermRetentionPolicy/azuredeploy.json')]",
-            // Tags
-            "enforceResourceGroupTagsPolicy": "[concat(variables('templateBaseUrl'), 'policies/definitions/tagging/enforce-resourcegroup-tags/azuredeploy.json')]",
-            "auditSqlDatabaseCriticalityTagPolicy": "[concat(variables('templateBaseUrl'), 'policies/definitions/tagging/audit-sqldatabase-criticality-tag/azuredeploy.json')]",
+            "networksecuritygrouprules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-network-security-group-rules/azuredeploy.json')]",
+            "networksecuritygroup": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-network-security-group/azuredeploy.json')]",
+            "policyassignmentrules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-policy-assignment-rules/azuredeploy.json')]",
+            "securitysolution": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-security-solution/azuredpeloy.json')]",
+            "sqlsrvfirewallrules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-sql-server-firewall-rules/azuredeploy.json')]",
 
-            // Initiative definitions
-
-            // Naming Convention
-            "namingConventionInitiative": "[concat(variables('templateBaseUrl'), 'initiatives/definitions/naming-convention/azuredeploy.json')]",
-            // Audit Azure SQL database retention policy settings
-            "longTermRetentionInitiative": "[concat(variables('templateBaseUrl'), 'initiatives/definitions/sql-databases/longTerm-retention-policy/azuredeploy.json')]",
-            "shortTermRetentionInitiative": "[concat(variables('templateBaseUrl'), 'initiatives/definitions/sql-databases/shortTerm-retention-policy/azuredeploy.json')]",
-            // Tags
-            "taggingInitiative": "[concat(variables('templateBaseUrl'), 'initiatives/definitions/tagging/azuredeploy.json')]"
+            // Initiatives
+            "initnsgrules": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-network-security-group-rules/azuredeploy.json')]",
+            "initnsg": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-network-security-group/azuredeploy.json')]",
+            "initpolicyassignment": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-policy-assignment/azuredeploy.json')]",
+            "initsecuritysolution": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-security-solution/azuredeploy.json')]",
+            "initsqlserverfirewallrules": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-sql-server-firewall-rules/azuredeploy.json')]"
         }
     },
     "resources": [
@@ -46,12 +37,12 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "restrictAllowedLocationsPolicyDeployment",
+            "name": "networkSecurityGroupRulesPolicyDeployment",
             "location": "[parameters('location')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').restrictAllowedLocationsPolicy]",
+                    "uri": "[variables('linkedTemplates').networksecuritygrouprules]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -59,12 +50,12 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "enforceNamingForResourcePolicyDeployment",
+            "name": "networkSecurityGroupPolicyDeployment",
             "location": "[parameters('location')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').enforceNamingForResourcePolicy]",
+                    "uri": "[variables('linkedTemplates').networksecuritygroup]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -72,12 +63,12 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "enforceNamingForResourceGroupsPolicyDeployment",
+            "name": "policyAssignmentRulesPolicyDeployment",
             "location": "[parameters('location')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').enforceNamingForResourceGroupsPolicy]",
+                    "uri": "[variables('linkedTemplates').policyassignmentrules]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -85,12 +76,12 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "longTermRetentionPolicyDeployment",
+            "name": "securitySolutionPolicyDeployment",
             "location": "[parameters('location')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').longTermRetentionPolicy]",
+                    "uri": "[variables('linkedTemplates').securitysolution]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -98,38 +89,12 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "shortTermRetentionPolicyDeployment",
+            "name": "sqlSrvFirewallRulesPolicyDeployment",
             "location": "[parameters('location')]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').shortTermRetentionPolicy]",
-                    "contentVersion": "1.0.0.0"
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2018-05-01",
-            "name": "enforceResourceGroupTagsPolicyDeployment",
-            "location": "[parameters('location')]",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[variables('linkedTemplates').enforceResourceGroupTagsPolicy]",
-                    "contentVersion": "1.0.0.0"
-                }
-            }
-        },
-        {
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2018-05-01",
-            "name": "auditSqlDatabaseCriticalityTagPolicyDeployment",
-            "location": "[parameters('location')]",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[variables('linkedTemplates').auditSqlDatabaseCriticalityTagPolicy]",
+                    "uri": "[variables('linkedTemplates').sqlsrvfirewallrules]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -139,16 +104,15 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "namingConventionInitiativeDeployment",
+            "name": "nsgRulesInitiativeDeployment",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/enforceNamingForResourcePolicyDeployment",
-                "Microsoft.Resources/deployments/enforceNamingForResourceGroupsPolicyDeployment"
+                "Microsoft.Resources/deployments/networkSecurityGroupRulesPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').namingConventionInitiative]",
+                    "uri": "[variables('linkedTemplates').initnsgrules]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -156,15 +120,15 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "longTermRetentionInitiativeDeployment",
+            "name": "securityGroupInitiativeDeployment",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/longTermRetentionPolicyDeployment"
+                "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').longTermRetentionInitiative]",
+                    "uri": "[variables('linkedTemplates').initnsg]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -172,15 +136,15 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "shortTermRetentionInitiativeDeployment",
+            "name": "policyAssignmentInitiativeDeployment",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/shortTermRetentionPolicyDeployment"
+                "Microsoft.Resources/deployments/policyAssignmentRulesPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').shortTermRetentionInitiative]",
+                    "uri": "[variables('linkedTemplates').initpolicyassignment]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -188,15 +152,31 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2018-05-01",
-            "name": "taggingInitiativeDeployment",
+            "name": "securitysolutionInitiativeDeployment",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/enforceResourceGroupTagsPolicyDeployment"
+                "Microsoft.Resources/deployments/securitySolutionPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').taggingInitiative]",
+                    "uri": "[variables('linkedTemplates').initsecuritysolution]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2018-05-01",
+            "name": "initsqlserverfirewallrules",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "Microsoft.Resources/deployments/sqlSrvFirewallRulesPolicyDeployment"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[variables('linkedTemplates').initsqlserverfirewallrules]",
                     "contentVersion": "1.0.0.0"
                 }
             }

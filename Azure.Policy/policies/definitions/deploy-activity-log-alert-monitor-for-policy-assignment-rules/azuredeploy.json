@@ -3,9 +3,9 @@
     "contentVersion": "1.0.0.0",
 
     "variables": {
-        "policyName": "azure-activity-log-alert-monitor-for-network-security-group",
-        "policyDisplayName": "Activity Log Alert Monitor Network Security Groups",
-        "policyDescription": "This policy created Azure Monitor Alerts for Network Security Groups"
+        "policyName": "azure-activity-log-alert-monitor-for-pol-assign-rules",
+        "policyDisplayName": "Activity Log Alert Monitor Policy Assignment Rules",
+        "policyDescription": "This policy created Azure Monitor Alerts for Policy Assignment Rules"
     },
     "resources": [
         {
@@ -56,10 +56,8 @@
                     "operationName": {
                     "type": "String",
                     "allowedValues": [
-                        "Microsoft.Network/networkSecurityGroups/write",
-                        "Microsoft.ClassicNetwork/networkSecurityGroups/write",
-                        "Microsoft.Network/networkSecurityGroups/delete",
-                        "Microsoft.ClassicNetwork/networkSecurityGroups/delete"
+                        "Microsoft.Authorization/policyAssignments/write",
+                        "Microsoft.Authorization/policyAssignments/delete"
                     ],
                     "metadata": {
                         "displayName": "Operation Name",

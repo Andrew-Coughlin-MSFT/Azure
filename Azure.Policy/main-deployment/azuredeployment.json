@@ -12,14 +12,16 @@
         },
         "targetMG": {
             "type": "string",
+            "defaultValue":"",
             "metadata": {
-            "description": "Provide the Target Management Group id, which is in guid format."
+                "description": "Provide the Target Management Group id, which is in guid format."
             }
         }
 
     },
     "variables": {
         "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/",
+        "mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]",
 
         "linkedTemplates": {
             // Policy definitions
@@ -51,6 +53,11 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').networksecuritygrouprules]",
                     "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                "targetMG": {
+                    "value": "[variables('mgScope')]"
+                }
                 }
             }
         },

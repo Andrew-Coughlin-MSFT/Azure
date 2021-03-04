@@ -4,6 +4,10 @@
     "parameters": {
         "location": {
             "value": "Central US"
+        },
+        "targetMG": {
+            "value": ""
         }
+        
     }
 }

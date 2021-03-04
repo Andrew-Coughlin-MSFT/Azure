@@ -1,11 +1,20 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
+    "parameters": {
+        "targetMG": {
+        "type": "string",
+        "metadata": {
+            "description": "Provide the Target Management Group id, which is in guid format."
+        }
+        }
+    },
     "variables": {
         "policySetName": "azure-monitor-alerts-nsg-rules",
         "policySetDisplayName": "Activity Log Alert Monitor Network Security Group Rules",
         "policySetDescription": "Initiative to define Network Security Group Alert rules for creation or modify",
-        "policyDefinitionForNSG": "azure-activity-log-alert-monitor-for-nsg-rules"
+        "policyDefinitionForNSG": "azure-activity-log-alert-monitor-for-nsg-rules",
+        "mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]"
 
     },
     "resources": [
@@ -18,7 +27,7 @@
                 "description": "[variables('policySetDescription')]",
                 "policyType": "Custom",
                 "metadata": {
-                    "category": "Tags"
+                    "category": "Azure Security Center"
                 },
                 "parameters": {
                     "AlertRuleActionGroupName": {
@@ -71,7 +80,7 @@
                 },
                 "policyDefinitions": [
                     {
-                    "policyDefinitionId": "[concat(subscription().id, '/providers/Microsoft.Authorization/policyDefinitions/', variables('policyDefinitionForNSG'))]",
+                    "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policyDefinitions', variables('policyDefinitionForNSG'))]",
                     "parameters": {
                         "actionGroupName": {
                         "value": "[[parameters('AlertRuleActionGroupName')]"
@@ -90,7 +99,7 @@
                     "groupNames": []
                     },
                     {
-                    "policyDefinitionId": "[concat(subscription().id, '/providers/Microsoft.Authorization/policyDefinitions/', variables('policyDefinitionForNSG'))]",
+                    "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policyDefinitions', variables('policyDefinitionForNSG'))]",
                     "parameters": {
                         "actionGroupName": {
                         "value": "[[parameters('AlertRuleActionGroupName')]"
@@ -109,7 +118,7 @@
                     "groupNames": []
                     },
                     {
-                    "policyDefinitionId": "[concat(subscription().id, '/providers/Microsoft.Authorization/policyDefinitions/', variables('policyDefinitionForNSG'))]",
+                    "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policyDefinitions', variables('policyDefinitionForNSG'))]",
                     "parameters": {
                         "actionGroupName": {
                         "value": "[[parameters('AlertRuleActionGroupName')]"
@@ -128,7 +137,7 @@
                     "groupNames": []
                     },
                     {
-                    "policyDefinitionId": "[concat(subscription().id, '/providers/Microsoft.Authorization/policyDefinitions/', variables('policyDefinitionForNSG'))]",
+                    "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policyDefinitions', variables('policyDefinitionForNSG'))]",
                     "parameters": {
                         "actionGroupName": {
                         "value": "[[parameters('AlertRuleActionGroupName')]"

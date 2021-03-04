@@ -1,0 +1,115 @@
+{
+    "mode": "All",
+    "policyRule": {
+      "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Storage/storageAccounts/blobServices"
+          },
+          {
+            "anyOf": [
+              {
+                "field": "Microsoft.Storage/storageAccounts/blobServices/default.isVersioningEnabled",
+                "equals": "false"
+              },
+              {
+                "allOf": [
+                  {
+                    "field": "Microsoft.Storage/storageAccounts/blobServices/deleteRetentionPolicy.enabled",
+                    "equals": "false"
+                  },
+                  {
+                    "field": "Microsoft.Storage/storageAccounts/blobServices/deleteRetentionPolicy.days",
+                    "notEquals": "[parameters('blobSoftDeleteRetentionDays')]"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]",
+        "details": {
+          "type": "Microsoft.Storage/storageAccounts",
+          "roleDefinitionIds": [
+            "/providers/microsoft.authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635"
+          ],
+          "existenceCondition": {
+            "allOf": [
+              {
+                "field": "Microsoft.Storage/storageAccounts/blobServices/deleteRetentionPolicy.enabled",
+                "equals": "true"
+              },
+              {
+                "field": "Microsoft.Storage/storageAccounts/blobServices/deleteRetentionPolicy.days",
+                "Equals": "[parameters('blobSoftDeleteRetentionDays')]"
+              }
+            ]
+          },
+          "deployment": {
+            "properties": {
+              "mode": "incremental",
+              "template": {
+                "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                "contentVersion": "1.0.0.0",
+                "parameters": {
+                  "storageAccountName": {
+                    "type": "string"
+                  },
+                  "blobSoftDeleteRetentionDays": {
+                    "type": "int"
+                  }
+                },
+                "variables": {},
+                "resources": [
+                    {
+                        "name": "[concat(parameters('storageAccountName'), '/default')]",
+                        "type": "microsoft.storage/storageaccounts/blobServices",
+                        "apiVersion": "2019-06-01",
+                        "properties": {
+                            "deleteRetentionPolicy": {
+                                "enabled": true,
+                                "days": "[parameters('blobSoftDeleteRetentionDays')]"
+                            },
+                            "isVersioningEnabled": true
+                        }
+                    }
+                ]
+              },
+              "parameters": {
+                "storageAccountName": {
+                  "value": "[field('name')]"
+                },
+                "blobSoftDeleteRetentionDays": {
+                    "value": "[parameters('blobSoftDeleteRetentionDays')]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Action type",
+          "description": "Action type for policy"
+        },
+        "allowedValues": [
+          "DeployIfNotExists",
+          "Disable"
+        ],
+        "defaultValue": "DeployIfNotExists"
+      },
+      "blobSoftDeleteRetentionDays": {
+        "type": "Integer",
+        "metadata": {
+          "displayName": "blobSoftDeleteRetentionDays",
+          "description": null
+        }
+      }
+    }
+  }

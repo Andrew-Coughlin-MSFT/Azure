@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
 
     "variables": {
@@ -13,8 +13,8 @@
             "name": "[variables('policyName')]",
             "apiVersion": "2019-09-01",
             "properties": {
-                "displayName": "[variables('policyDisplayName')]",
                 "policyType": "Custom",
+                "displayName": "[variables('policyDisplayName')]",
                 "description": "[variables('policyDescription')]",
                 "metadata": {
                     "category": "Azure Security Center"
@@ -165,9 +165,6 @@
                                     "location": "Global",
                                     "properties": {
                                         "enabled": true,
-                                        "scopes": [
-                                        "[subscription().id]"
-                                        ],
                                         "condition": {
                                         "allOf": [
                                             {

@@ -9,14 +9,11 @@
                 "description": "Azure location for storing deployment metadata",
                 "name": "Deployment location"
             }
-        },
-        "targetMG":{
-            "type":"string"
         }
     },
     "variables": {
         "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/",
-        "parametersLink":"https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/main-deployment/azuredeployment.paramters.json",
+        "parametersLink":"https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/main-deployment/linkedtemplate.paramters.json",
         //"mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]",
 
         "linkedTemplates": {

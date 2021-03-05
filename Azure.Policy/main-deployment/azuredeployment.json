@@ -9,6 +9,9 @@
                 "description": "Azure location for storing deployment metadata",
                 "name": "Deployment location"
             }
+        },
+        "targetMG":{
+            "type":"string"
         }
     },
     "variables": {

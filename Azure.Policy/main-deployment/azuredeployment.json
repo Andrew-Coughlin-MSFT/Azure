@@ -9,11 +9,14 @@
                 "description": "Azure location for storing deployment metadata",
                 "name": "Deployment location"
             }
+        },
+        "targetMG": {
+            "type": "string"
         }
     },
     "variables": {
         "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/",
-        "parametersLink":"https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/main-deployment/linkedtemplate.paramters.json",
+        //"parametersLink": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/main-deployment/linkedtemplate.paramters.json",
         //"mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]",
 
         "linkedTemplates": {
@@ -46,10 +49,6 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').networksecuritygrouprules]",
                     "contentVersion": "1.0.0.0"
-                },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
                 }
             }
         },
@@ -62,10 +61,6 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').networksecuritygroup]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -80,10 +75,6 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').policyassignmentrules]",
                     "contentVersion": "1.0.0.0"
-                },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
                 }
             }
         },
@@ -97,10 +88,6 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').securitysolution]",
                     "contentVersion": "1.0.0.0"
-                },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
                 }
             }
         },
@@ -113,10 +100,6 @@
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').sqlsrvfirewallrules]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
                     "contentVersion": "1.0.0.0"
                 }
             }
@@ -137,9 +120,10 @@
                     "uri": "[variables('linkedTemplates').initnsgrules]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
                 }
             }
         },
@@ -157,9 +141,10 @@
                     "uri": "[variables('linkedTemplates').initnsg]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
                 }
             }
         },
@@ -169,7 +154,7 @@
             "name": "policyAssignmentInitiativeDeployment",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/policyAssignmentRulesPolicyDeployment"
+                "[resourceId('Microsoft.Resources/deployments', 'policyAssignmentRulesPolicyDeployment')]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -177,9 +162,10 @@
                     "uri": "[variables('linkedTemplates').initpolicyassignment]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
                 }
             }
         },
@@ -197,9 +183,10 @@
                     "uri": "[variables('linkedTemplates').initsecuritysolution]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
                 }
             }
         },
@@ -217,9 +204,10 @@
                     "uri": "[variables('linkedTemplates').initsqlserverfirewallrules]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parametersLink": {
-                    "uri": "[variables('parametersLink')]",
-                    "contentVersion": "1.0.0.0"
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
                 }
             }
         }

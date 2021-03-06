@@ -3,21 +3,13 @@
     "contentVersion": "1.0.0.0",
 
     "parameters": {
-        "location": {
-            "type": "string",
-            "metadata": {
-                "description": "Azure location for storing deployment metadata",
-                "name": "Deployment location"
-            }
-        },
         "targetMG": {
             "type": "string"
         }
     },
     "variables": {
         "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/",
-        //"parametersLink": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/main-deployment/linkedtemplate.paramters.json",
-        //"mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]",
+        "mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]",
 
         "linkedTemplates": {
             // Policy definitions
@@ -43,7 +35,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "networkSecurityGroupRulesPolicyDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -56,7 +48,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "networkSecurityGroupPolicyDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -69,7 +61,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "policyAssignmentRulesPolicyDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -82,7 +74,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "securitySolutionPolicyDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -95,7 +87,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "sqlSrvFirewallRulesPolicyDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -110,7 +102,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "nsgRulesInitiativeDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "dependsOn": [
                 "Microsoft.Resources/deployments/networkSecurityGroupRulesPolicyDeployment"
             ],
@@ -131,7 +123,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "securityGroupInitiativeDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "dependsOn": [
                 "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment"
             ],
@@ -152,7 +144,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "policyAssignmentInitiativeDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Resources/deployments', 'policyAssignmentRulesPolicyDeployment')]"
             ],
@@ -173,7 +165,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "securitysolutionInitiativeDeployment",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "dependsOn": [
                 "Microsoft.Resources/deployments/securitySolutionPolicyDeployment"
             ],
@@ -194,7 +186,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "initsqlserverfirewallrules",
-            "location": "[parameters('location')]",
+            "location": "[deployment().location]",
             "dependsOn": [
                 "Microsoft.Resources/deployments/sqlSrvFirewallRulesPolicyDeployment"
             ],
@@ -209,6 +201,19 @@
                         "value": "[parameters('targetMG')]"
                     }
                 }
+            }
+        },
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "name": "asgn-intsql-srv-fw-rl",
+            "apiVersion": "2019-09-01",
+            "dependsOn": [
+                "Microsoft.Resources/deployments/sqlSrvFirewallRulesPolicyDeployment",
+                "Microsoft.Resources/deployments/initsqlserverfirewallrules"
+            ],
+            "properties": {
+                "scope": "[variables('mgScope')]",
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-sql-srv-fw-rules')]"
             }
         }
     ]

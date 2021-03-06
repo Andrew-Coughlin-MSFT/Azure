@@ -1,3 +1,5 @@
+//Deploy - Configure diagnostic settings for storage accounts to Log Analytics workspace
+
 {
     "mode": "All",
     "policyRule": {

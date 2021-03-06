@@ -291,10 +291,10 @@
             ],
             "properties": {
                 "parameters": {
-                    "AlertRuleActionGroupName": {
+                    "ActionGroupName": {
                         "value": "[parameters('AlertRuleActionGroupName')]"
                     },
-                    "RuleResourceGroupName": {
+                    "AlertResourceGroupName": {
                         "value": "[parameters('RuleResourceGroupName')]"
                     }
                 },

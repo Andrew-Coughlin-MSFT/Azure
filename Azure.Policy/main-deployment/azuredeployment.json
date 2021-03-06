@@ -226,7 +226,7 @@
             "apiVersion": "2019-09-01",
             "location": "[deployment().location]",
             "identity": {
-                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "principalId": "azure-monitor-alerts-nsg-rules",
                 "tenantId": "[parameters('targetMG')]",
                 "type": "SystemAssigned"
             },
@@ -254,7 +254,7 @@
             "apiVersion": "2019-09-01",
             "location": "[deployment().location]",
             "identity": {
-                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "principalId": "azure-monitor-alerts-nsg",
                 "tenantId": "[parameters('targetMG')]",
                 "type": "SystemAssigned"
             },
@@ -282,7 +282,7 @@
             "apiVersion": "2019-09-01",
             "location": "[deployment().location]",
             "identity": {
-                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "principalId": "azure-monitor-alerts-policy-assignment",
                 "tenantId": "[parameters('targetMG')]",
                 "type": "SystemAssigned"
             },
@@ -311,7 +311,7 @@
             "apiVersion": "2019-09-01",
             "location": "[deployment().location]",
             "identity": {
-                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "principalId": "azure-monitor-alerts-security-solution",
                 "tenantId": "[parameters('targetMG')]",
                 "type": "SystemAssigned"
             },
@@ -339,7 +339,7 @@
             "apiVersion": "2019-09-01",
             "location": "[deployment().location]",
             "identity": {
-                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "principalId": "azure-monitor-alerts-sql-srv-fw-rules",
                 "tenantId": "[parameters('targetMG')]",
                 "type": "SystemAssigned"
             },

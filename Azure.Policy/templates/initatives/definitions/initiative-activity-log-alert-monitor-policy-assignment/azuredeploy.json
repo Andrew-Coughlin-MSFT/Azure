@@ -30,7 +30,7 @@
                     "category": "Azure Security Center"
                 },
                 "parameters": {
-                    "ActionGroupName": {
+                    "AlertRuleActionGroupName": {
                     "type": "String",
                     "metadata": {
                         "displayName": "Action Group Name",
@@ -66,8 +66,8 @@
                     {
                     "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policyDefinitions', variables('policyDefinition'))]",
                     "parameters": {
-                        "actionGroupName": {
-                        "value": "[[parameters('ActionGroupName')]"
+                        "AlertRuleAlertRuleActionGroupName": {
+                        "value": "[[parameters('AlertRuleAlertRuleActionGroupName')]"
                         },
                         "activityLogAlertName": {
                         "value": "[[parameters('PolicyAssignmentCreateUpdateAlertName')]"
@@ -85,8 +85,8 @@
                     {
                     "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policyDefinitions', variables('policyDefinition'))]",
                     "parameters": {
-                        "actionGroupName": {
-                        "value": "[[parameters('ActionGroupName')]"
+                        "AlertRuleActionGroupName": {
+                        "value": "[[parameters('AlertRuleActionGroupName')]"
                         },
                         "activityLogAlertName": {
                         "value": "[[parameters('PolicyAssignmentDeleteAlertName')]"

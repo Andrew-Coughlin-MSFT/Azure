@@ -5,6 +5,21 @@
     "parameters": {
         "targetMG": {
             "type": "string"
+        },
+        "AlertRuleActionGroupName": {
+            "type": "String",
+            "metadata": {
+                "displayName": "Action Group Name",
+                "description": "Name of the action group to use with this alert."
+            }
+        },
+        "RuleResourceGroupName": {
+            "type": "String",
+            "metadata": {
+                "displayName": "Resource Group Name",
+                "description": "Name of the Resource Group that will contain the rule.",
+                "strongType": "existingResourceGroups"
+            }
         }
     },
     "variables": {
@@ -203,15 +218,113 @@
                 }
             }
         },
+
+
+        //Policy Assignments
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "name": "asgn-intnetwork-sec-grps",
+            "apiVersion": "2019-09-01",
+            "location": "[deployment().location]",
+            "identity": {
+                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "tenantId": "[parameters('targetMG')]",
+                "type": "SystemAssigned"
+            },
+            "dependsOn": [
+                "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment",
+                "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment"
+            ],
+            "properties": {
+                "parameters": {
+                    "AlertRuleActionGroupName": {
+                        "value": "[parameters('AlertRuleActionGroupName')]"
+                    },
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    }
+                },
+                "scope": "[variables('mgScope')]",
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-nsg')]"
+            }
+        },
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "name": "asgn-intpolicy-assignmnt",
+            "apiVersion": "2019-09-01",
+            "location": "[deployment().location]",
+            "identity": {
+                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "tenantId": "[parameters('targetMG')]",
+                "type": "SystemAssigned"
+            },
+            "dependsOn": [
+                "Microsoft.Resources/deployments/policyAssignmentRulesPolicyDeployment",
+                "Microsoft.Resources/deployments/policyAssignmentInitiativeDeployment"
+            ],
+            "properties": {
+                "parameters": {
+                    "AlertRuleActionGroupName": {
+                        "value": "[parameters('AlertRuleActionGroupName')]"
+                    },
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    }
+                },
+                "scope": "[variables('mgScope')]",
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-policy-assignment')]"
+            }
+        },
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "name": "asgn-intsec-pol-assign",
+            "apiVersion": "2019-09-01",
+            "location": "[deployment().location]",
+            "identity": {
+                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "tenantId": "[parameters('targetMG')]",
+                "type": "SystemAssigned"
+            },
+            "dependsOn": [
+                "Microsoft.Resources/deployments/securitySolutionPolicyDeployment",
+                "Microsoft.Resources/deployments/securitysolutionInitiativeDeployment"
+            ],
+            "properties": {
+                "parameters": {
+                    "AlertRuleActionGroupName": {
+                        "value": "[parameters('AlertRuleActionGroupName')]"
+                    },
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    }
+                },
+                "scope": "[variables('mgScope')]",
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-security-solution')]"
+            }
+        },
         {
             "type": "Microsoft.Authorization/policyAssignments",
             "name": "asgn-intsql-srv-fw-rl",
             "apiVersion": "2019-09-01",
+            "location": "[deployment().location]",
+            "identity": {
+                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "tenantId": "[parameters('targetMG')]",
+                "type": "SystemAssigned"
+            },
             "dependsOn": [
                 "Microsoft.Resources/deployments/sqlSrvFirewallRulesPolicyDeployment",
                 "Microsoft.Resources/deployments/initsqlserverfirewallrules"
             ],
             "properties": {
+                "parameters": {
+                    "AlertRuleActionGroupName": {
+                        "value": "[parameters('AlertRuleActionGroupName')]"
+                    },
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    }
+                },
                 "scope": "[variables('mgScope')]",
                 "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-sql-srv-fw-rules')]"
             }

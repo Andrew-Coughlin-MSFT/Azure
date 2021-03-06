@@ -223,6 +223,33 @@
         //Policy Assignments
         {
             "type": "Microsoft.Authorization/policyAssignments",
+            "name": "asgn-intntwk-sec-grps-rl",
+            "apiVersion": "2019-09-01",
+            "location": "[deployment().location]",
+            "identity": {
+                "principalId": "72ac3cfe-7e8f-48ad-875b-5e8d0965aa77",
+                "tenantId": "[parameters('targetMG')]",
+                "type": "SystemAssigned"
+            },
+            "dependsOn": [
+                "Microsoft.Resources/deployments/networkSecurityGroupRulesPolicyDeployment",
+                "Microsoft.Resources/deployments/nsgRulesInitiativeDeployment"
+            ],
+            "properties": {
+                "parameters": {
+                    "AlertRuleActionGroupName": {
+                        "value": "[parameters('AlertRuleActionGroupName')]"
+                    },
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    }
+                },
+                "scope": "[variables('mgScope')]",
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-nsg-rules')]"
+            }
+        },
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
             "name": "asgn-intnetwork-sec-grps",
             "apiVersion": "2019-09-01",
             "location": "[deployment().location]",
@@ -233,7 +260,7 @@
             },
             "dependsOn": [
                 "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment",
-                "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment"
+                "Microsoft.Resources/deployments/securityGroupInitiativeDeployment"
             ],
             "properties": {
                 "parameters": {

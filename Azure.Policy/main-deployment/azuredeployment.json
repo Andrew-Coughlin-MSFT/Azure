@@ -17,7 +17,8 @@
             "type": "String",
             "metadata": {
                 "displayName": "Resource Group Name",
-                "description": "Name of the Resource Group that will contain the rule."
+                "description": "Name of the Resource Group that will contain the rule.",
+                "strongType": "existingResourceGroups"
             }
         }
     },
@@ -68,6 +69,11 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').networksecuritygroup]",
                     "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
                 }
             }
         },

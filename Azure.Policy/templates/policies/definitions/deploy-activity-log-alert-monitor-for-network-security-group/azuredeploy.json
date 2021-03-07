@@ -1,11 +1,7 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters":{
-        "targetMG": {
-            "type": "string"
-        }
-    },
+
     "variables": {
         "policyName": "azure-activity-log-alert-monitor-for-network-security-group",
         "policyDisplayName": "Activity Log Alert Monitor Network Security Groups",
@@ -170,7 +166,7 @@
                                                 "properties": {
                                                     "enabled": true,
                                                     "scopes": [
-                                                        "[parameters('targetMG')]"
+                                                        "/subscriptions/bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5"
                                                     ],
                                                     "condition": {
                                                         "allOf": [

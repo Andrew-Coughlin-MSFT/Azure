@@ -166,7 +166,7 @@
                                                 "properties": {
                                                     "enabled": true,
                                                     "scopes": [
-                                                        "/subscriptions/bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5"
+                                                        "[[subscription().id]"
                                                     ],
                                                     "condition": {
                                                         "allOf": [

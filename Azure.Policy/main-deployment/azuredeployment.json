@@ -232,8 +232,8 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "Microsoft.Resources/deployments/networkSecurityGroupRulesPolicyDeployment",
-                "Microsoft.Resources/deployments/nsgRulesInitiativeDeployment"
+                "[resourceId('Microsoft.Resources/deployments', 'networkSecurityGroupRulesPolicyDeployment')]",
+                "[resourceId('Microsoft.Resources/deployments', 'nsgRulesInitiativeDeployment')]"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group Rules",

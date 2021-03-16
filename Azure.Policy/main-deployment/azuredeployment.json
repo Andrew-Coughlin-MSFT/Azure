@@ -119,7 +119,7 @@
             "name": "nsgRulesInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'networkSecurityGroupRulesPolicyDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'networkSecurityGroupRulesPolicyDeployment')]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -140,7 +140,7 @@
             "name": "securityGroupInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'networkSecurityGroupPolicyDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'networkSecurityGroupPolicyDeployment')]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -161,7 +161,7 @@
             "name": "policyAssignmentInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'policyAssignmentRulesPolicyDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'policyAssignmentRulesPolicyDeployment')]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -182,7 +182,7 @@
             "name": "securitysolutionInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'securitySolutionPolicyDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'securitySolutionPolicyDeployment')]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -203,7 +203,7 @@
             "name": "initsqlserverfirewallrules",
             "location": "[deployment().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'sqlSrvFirewallRulesPolicyDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'sqlSrvFirewallRulesPolicyDeployment')]"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -232,8 +232,8 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'networkSecurityGroupRulesPolicyDeployment')]",
-                "[resourceId('Microsoft.Resources/deployments', 'nsgRulesInitiativeDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'networkSecurityGroupRulesPolicyDeployment')]",
+                "[tenantResourceId('Microsoft.Resources/deployments', 'nsgRulesInitiativeDeployment')]"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group Rules",
@@ -260,8 +260,8 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'networkSecurityGroupPolicyDeployment')]",
-                "[resourceId('Microsoft.Resources/deployments', 'securityGroupInitiativeDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'networkSecurityGroupPolicyDeployment')]",
+                "[tenantResourceId('Microsoft.Resources/deployments', 'securityGroupInitiativeDeployment')]"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group",
@@ -288,8 +288,8 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'policyAssignmentRulesPolicyDeployment')]",
-                "[resourceId('Microsoft.Resources/deployments', 'policyAssignmentInitiativeDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'policyAssignmentRulesPolicyDeployment')]",
+                "[tenantResourceId('Microsoft.Resources/deployments', 'policyAssignmentInitiativeDeployment')]"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Policy Assignment Alerts",
@@ -317,8 +317,8 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'securitySolutionPolicyDeployment')]",
-                "[resourceId('Microsoft.Resources/deployments', 'securitysolutionInitiativeDeployment')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'securitySolutionPolicyDeployment')]",
+                "[tenantResourceId('Microsoft.Resources/deployments', 'securitysolutionInitiativeDeployment')]"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Security Solution Alerts",
@@ -345,8 +345,8 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Resources/deployments', 'sqlSrvFirewallRulesPolicyDeployment')]",
-                "[resourceId('Microsoft.Resources/deployments', 'initsqlserverfirewallrules')]"
+                "[tenantResourceId('Microsoft.Resources/deployments', 'sqlSrvFirewallRulesPolicyDeployment')]",
+                "[tenantResourceId('Microsoft.Resources/deployments', 'initsqlserverfirewallrules')]"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor SQL Server Firewall Rules Alerts",

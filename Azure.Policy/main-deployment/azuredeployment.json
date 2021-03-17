@@ -119,7 +119,7 @@
             "name": "nsgRulesInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/networkSecurityGroupRulesPolicyDeployment"
+                "networkSecurityGroupRulesPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -140,7 +140,7 @@
             "name": "securityGroupInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment"
+                "networkSecurityGroupPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -161,7 +161,7 @@
             "name": "policyAssignmentInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/policyAssignmentRulesPolicyDeployment"
+                "policyAssignmentRulesPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -182,7 +182,7 @@
             "name": "securitysolutionInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/securitySolutionPolicyDeployment"
+                "securitySolutionPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -203,7 +203,7 @@
             "name": "initsqlserverfirewallrules",
             "location": "[deployment().location]",
             "dependsOn": [
-                "Microsoft.Resources/deployments/sqlSrvFirewallRulesPolicyDeployment"
+                "sqlSrvFirewallRulesPolicyDeployment"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -232,8 +232,7 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "Microsoft.Resources/deployments/networkSecurityGroupRulesPolicyDeployment",
-                "Microsoft.Resources/deployments/nsgRulesInitiativeDeployment"
+                "nsgRulesInitiativeDeployment"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group Rules",
@@ -260,8 +259,7 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "Microsoft.Resources/deployments/networkSecurityGroupPolicyDeployment",
-                "Microsoft.Resources/deployments/securityGroupInitiativeDeployment"
+                "securityGroupInitiativeDeployment"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group",
@@ -288,8 +286,7 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "Microsoft.Resources/deployments/policyAssignmentRulesPolicyDeployment",
-                "Microsoft.Resources/deployments/policyAssignmentInitiativeDeployment"
+                "policyAssignmentInitiativeDeployment"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Policy Assignment Alerts",
@@ -317,8 +314,7 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "Microsoft.Resources/deployments/securitySolutionPolicyDeployment",
-                "Microsoft.Resources/deployments/securitysolutionInitiativeDeployment"
+                "securitysolutionInitiativeDeployment"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Security Solution Alerts",
@@ -345,8 +341,7 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "Microsoft.Resources/deployments/sqlSrvFirewallRulesPolicyDeployment",
-                "Microsoft.Resources/deployments/initsqlserverfirewallrules"
+                "initsqlserverfirewallrules"
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor SQL Server Firewall Rules Alerts",

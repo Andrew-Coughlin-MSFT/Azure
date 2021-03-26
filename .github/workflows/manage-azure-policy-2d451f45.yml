@@ -1,0 +1,32 @@
+name: manage-azure-policy-2d451f45
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policies/Activity_Log_Alert_Monitor_Network_Security_Groups_Rules_azure-activity-log-alert-monitor-for-nsg-rules/**'
+#      - .github/workflows/manage-azure-policy-2d451f45.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_2d451f45}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/Activity_Log_Alert_Monitor_Network_Security_Groups_Rules_azure-activity-log-alert-monitor-for-nsg-rules/**

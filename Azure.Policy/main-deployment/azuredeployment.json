@@ -11,7 +11,8 @@
             "metadata": {
                 "displayName": "Action Group Name",
                 "description": "Name of the action group to use with this alert."
-            }
+            },
+            "defaultValue": "email_me"
         },
         "RuleResourceGroupName": {
             "type": "String",
@@ -19,7 +20,8 @@
                 "displayName": "Resource Group Name",
                 "description": "Name of the Resource Group that will contain the rule.",
                 "strongType": "existingResourceGroups"
-            }
+            },
+            "defaultValue":"rg-alerts"
         }
     },
     "variables": {
@@ -30,6 +32,7 @@
             // Policy definitions
 
             "networksecuritygrouprules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-network-security-group-rules/azuredeploy.json')]",
+            //"networksecuritygrouprules": "[concat('/deploy-activity-log-alert-monitor-for-network-security-group-rules/azuredeploy.json')]",
             "networksecuritygroup": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-network-security-group/azuredeploy.json')]",
             "policyassignmentrules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-policy-assignment-rules/azuredeploy.json')]",
             "securitysolution": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-security-solution/azuredpeloy.json')]",
@@ -56,6 +59,7 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').networksecuritygrouprules]",
                     "contentVersion": "1.0.0.0"
+                    //"relativePath":"[variables('linkedTemplates').networksecuritygrouprules]"
                 }
             }
         },
@@ -140,6 +144,7 @@
             "name": "securityGroupInitiativeDeployment",
             "location": "[deployment().location]",
             "dependsOn": [
+                "networkSecurityGroupRulesPolicyDeployment",
                 "networkSecurityGroupPolicyDeployment"
             ],
             "properties": {
@@ -232,7 +237,9 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
+                "networkSecurityGroupRulesPolicyDeployment",
                 "nsgRulesInitiativeDeployment"
+                
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group Rules",
@@ -259,7 +266,9 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
+                "networkSecurityGroupPolicyDeployment",
                 "securityGroupInitiativeDeployment"
+                
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group",
@@ -286,7 +295,9 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
+                "policyAssignmentRulesPolicyDeployment",
                 "policyAssignmentInitiativeDeployment"
+                
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Policy Assignment Alerts",
@@ -314,7 +325,9 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
+                "securitySolutionPolicyDeployment",
                 "securitysolutionInitiativeDeployment"
+                
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Security Solution Alerts",
@@ -341,7 +354,9 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
+                "sqlSrvFirewallRulesPolicyDeployment",
                 "initsqlserverfirewallrules"
+                
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor SQL Server Firewall Rules Alerts",

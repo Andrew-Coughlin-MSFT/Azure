@@ -2,9 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "location": {
-            "value": "Central US"
-        },
         "targetMG": {
             "value": "6f34bc28-ce0e-4936-a836-9730a5929bf7"
         }

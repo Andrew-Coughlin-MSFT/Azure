@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "targetsub": {
-            "value": ""
+            "value": "bde5ac7d-d5cc-4e8a-ae6c-73788d8a7af5"
         },
         "AlertRuleActionGroupName": {
             "value": "email_me"

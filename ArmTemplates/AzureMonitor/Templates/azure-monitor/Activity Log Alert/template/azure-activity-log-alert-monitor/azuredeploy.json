@@ -10,7 +10,13 @@
         },
         "operationName": {
             "type": "string"
+        },
+        "targetsub": {
+            "type": "string"
         }
+    },
+    "variables": {
+        "subscriptionScope": "[concat('/subscriptions/', parameters('targetsub'))]"
     },
     "resources": [
         {
@@ -21,7 +27,7 @@
             "properties": {
                 "enabled": true,
                 "scopes": [
-                    "[subscription().id]"
+                    "[variables('subscriptionScope')]"
                 ],
                 "condition": {
                     "allOf": [

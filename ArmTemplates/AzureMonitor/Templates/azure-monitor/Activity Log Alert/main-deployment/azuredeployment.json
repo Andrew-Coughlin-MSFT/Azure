@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
 
     "parameters": {
-        "targetMG": {
+        "targetsub": {
             "type": "string"
         },
         "AlertRuleActionGroupName": {
@@ -21,32 +21,36 @@
                 "description": "Name of the Resource Group that will contain the rule.",
                 "strongType": "existingResourceGroups"
             },
-            "defaultValue":"rg-alerts"
+            "defaultValue": "rg-alerts"
         }
     },
     "variables": {
-        "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/",
-        "mgScope": "[tenantResourceId('Microsoft.Management/managementGroups', parameters('targetMG'))]",
+        "templateBaseUrl": "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/ArmTemplates/AzureMonitor/Templates",
 
         "linkedTemplates": {
             // Policy definitions
-
-            "networksecuritygrouprules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-network-security-group-rules/azuredeploy.json')]",
-            //"networksecuritygrouprules": "[concat('/deploy-activity-log-alert-monitor-for-network-security-group-rules/azuredeploy.json')]",
-            "networksecuritygroup": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-network-security-group/azuredeploy.json')]",
-            "policyassignmentrules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-policy-assignment-rules/azuredeploy.json')]",
-            "securitysolution": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-security-solution/azuredpeloy.json')]",
-            "sqlsrvfirewallrules": "[concat(variables('templateBaseUrl'), 'policies/definitions/deploy-activity-log-alert-monitor-for-sql-server-firewall-rules/azuredeploy.json')]",
-
-            // Initiatives
-            "initnsgrules": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-network-security-group-rules/azuredeploy.json')]",
-            "initnsg": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-network-security-group/azuredeploy.json')]",
-            "initpolicyassignment": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-policy-assignment/azuredeploy.json')]",
-            "initsecuritysolution": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-security-solution/azuredeploy.json')]",
-            "initsqlserverfirewallrules": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-activity-log-alert-monitor-sql-server-firewall-rules/azuredeploy.json')]"
+            "ActivityLogTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity Log Alert/template/azure-activity-log-alert-monitor/azuredeploy.json')]"
+            
         }
     },
     "resources": [
-
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2020-06-01",
+            "name": "securityGroupInitiativeDeployment",
+            "location": "[deployment().location]",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "targetsub": {
+                        "value": "[parameters('targetsub')]"
+                    }
+                }
+            }
+        }
     ]
 }

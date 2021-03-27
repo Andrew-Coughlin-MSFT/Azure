@@ -30,14 +30,14 @@
         "linkedTemplates": {
             // Policy definitions
             "ActivityLogTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity Log Alert/template/azure-activity-log-alert-monitor/azuredeploy.json')]"
-            
+
         }
     },
     "resources": [
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
-            "name": "securityGroupInitiativeDeployment",
+            "name": "network-networkSecurityGroups-write",
             "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
@@ -48,6 +48,18 @@
                 "parameters": {
                     "targetsub": {
                         "value": "[parameters('targetsub')]"
+                    },
+                    "actionGroupName": {
+                        "value": "[parameters('AlertRuleActionGroupName')]"
+                    },
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    },
+                    "operationName":{
+                        "value":"Microsoft.Network/networkSecurityGroups/write"
+                    },
+                    "activityLogAlertName":{
+                        "value":"Activity Log Alert - NSG Write"
                     }
                 }
             }

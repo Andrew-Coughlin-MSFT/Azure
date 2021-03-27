@@ -1,9 +1,9 @@
 $BaseDir = 'C:\Azure\Azure\ArmTemplates\AzureMonitor\Templates\azure-monitor\Activity Log Alert\'
-$Params = @{
-    Name                  = 'ActivityMonitorAlerts'
-    Location              = 'centralus'
-    TemplateParameterFile = "$BaseDir\main-deployment\azuredeployment.json"
-    TemplateFile          = "$BaseDir\\main-deployment\azuredeployment.parameters.json"
-}
-##New-AzManagementGroupDeployment @Params -Verbose
-New-AzDeployment @Params -Verbose
+
+$resourceGroupName = "rg-alerts"
+$BaseDir = 'C:\Azure\Azure\ArmTemplates\AzureMonitor\Templates\azure-monitor\Activity Log Alert\'
+$templateUri = "$BaseDir\main-deployment\azuredeployment.json"
+$templateFile ="$BaseDir\\main-deployment\azuredeployment.parameters.json"
+#$location = "centralus"
+
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateUri $templateUri  -TemplateParameterFile $templateFile -Verbose

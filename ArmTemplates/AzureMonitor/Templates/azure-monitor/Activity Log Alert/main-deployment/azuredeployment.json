@@ -1,5 +1,5 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
 
     "parameters": {
@@ -13,15 +13,6 @@
                 "description": "Name of the action group to use with this alert."
             },
             "defaultValue": "email_me"
-        },
-        "RuleResourceGroupName": {
-            "type": "String",
-            "metadata": {
-                "displayName": "Resource Group Name",
-                "description": "Name of the Resource Group that will contain the rule.",
-                "strongType": "existingResourceGroups"
-            },
-            "defaultValue": "rg-alerts"
         }
     },
     "variables": {
@@ -38,7 +29,6 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "network-networkSecurityGroups-write",
-            "location": "[deployment().location]",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -52,9 +42,7 @@
                     "actionGroupName": {
                         "value": "[parameters('AlertRuleActionGroupName')]"
                     },
-                    "RuleResourceGroupName": {
-                        "value": "[parameters('RuleResourceGroupName')]"
-                    },
+
                     "operationName":{
                         "value":"Microsoft.Network/networkSecurityGroups/write"
                     },

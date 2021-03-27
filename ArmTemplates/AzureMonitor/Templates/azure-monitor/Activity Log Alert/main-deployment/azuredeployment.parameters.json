@@ -7,9 +7,6 @@
         },
         "AlertRuleActionGroupName": {
             "value": "email_me"
-        },
-        "RuleResourceGroupName": {
-            "value": "rg-alerts"
         }
     }
 }

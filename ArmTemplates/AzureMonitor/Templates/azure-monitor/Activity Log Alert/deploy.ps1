@@ -93,6 +93,7 @@ function AzAccountLogin() {
 #Configure these variables before executing this script
 
 $AlertRuleActionGroupName = "Activity_Log_Alerts" #action group, where you want the emails to go to when these alerts fire
+$AlertRuleActionGroupResourceGroup = 'rg-alerts' #resource group where the action group lives at.
 #Alteratively you can create the action group a different way just need to reference the name here and it won't recreate it.
 $myResourceGroupName = "rg-alerts" #resource group where you want the alerts to be created
 $emailAddress = "email@domain.com"  #email address to send the alerts when the alert is triggered
@@ -137,15 +138,15 @@ try {
             #Create Resource Group
             New-AzResourceGroup -Location $AzRegionName -Name $myResourceGroupName
             Write-Output "Creating Action Group"
-            Create_Action_Group -rgName $myResourceGroupName -actionGroupName $AlertRuleActionGroupName -Email $emailAddress
+            Create_Action_Group -rgName $AlertRuleActionGroupResourceGroup -actionGroupName $AlertRuleActionGroupName -Email $emailAddress
         }
         else {
             Write-Output "Resource Group Already Created, going to next step."
-            Get-AzActionGroup -Name $myResourceGroupName -ResourceGroupName $myResourceGroupName -ErrorVariable notPresent -ErrorAction SilentlyContinue
+            Get-AzActionGroup -Name $myResourceGroupName -ResourceGroupName $AlertRuleActionGroupResourceGroup -ErrorVariable notPresent -ErrorAction SilentlyContinue
             if ($notPresent) {
                 ##Action Group Doesn't exist
                 Write-Output "Creation Action Group"
-                Create_Action_Group -rgName $myResourceGroupName -actionGroupName $AlertRuleActionGroupName -Email $emailAddress
+                Create_Action_Group -rgName $AlertRuleActionGroupResourceGroup -actionGroupName $AlertRuleActionGroupName -Email $emailAddress
             }
         }
         #execute deployment for Azure Monitor Alerts

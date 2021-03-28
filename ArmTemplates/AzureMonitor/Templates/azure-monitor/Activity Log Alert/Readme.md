@@ -8,6 +8,8 @@ Implement Azure Monitor Alerts per CIS 1.1.0 framework
 <h3> Prerequisites</h3>
 * Powershell 5.1.X+ / 7.1.3+
 * Azure Powershell 5.7.0+
+* Item 1
+* Item 2
 
 ```powershell
 .\deploy.ps1 -AzureRegion "centralus"

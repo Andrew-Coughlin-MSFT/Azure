@@ -6,11 +6,8 @@
         Adds a file name extension to a supplied name.
         Takes any strings for the file name or extension.
 
-        .PARAMETER Name
-        Specifies the file name.
-
-        .PARAMETER Extension
-        Specifies the extension. "Txt" is the default.
+        .PARAMETER bSingleSubscription
+        Specifies if the script should run across all subscriptions or only one.  True = single subscription, False = multiple subscription.
 
         .INPUTS
         None. You cannot pipe objects to Add-Extension.

@@ -7,6 +7,3 @@ $Params = @{
     TemplateFile          = "$BaseDir\main-deployment\azuredeployment.json"
 }
 New-AzManagementGroupDeployment @Params -Verbose
-
-#New-AzResourceGroupDeployment -ResourceGroupName "RGName" -TemplateUri "https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Azure.Policy/templates/azuredeployment.json"
-# -QueryString "foo"

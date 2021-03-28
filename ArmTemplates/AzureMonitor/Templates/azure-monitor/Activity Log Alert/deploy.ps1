@@ -95,7 +95,7 @@ function AzAccountLogin() {
 $AlertRuleActionGroupName = "Activity_Log_Alerts" #action group, where you want the emails to go to when these alerts fire
 #Alteratively you can create the action group a different way just need to reference the name here and it won't recreate it.
 $myResourceGroupName = "rg-alerts" #resource group where you want the alerts to be created
-$emailAddress = "ancoughlin@microsoft.com"  #email address to send the alerts when the alert is triggered
+$emailAddress = "email@domain.com"  #email address to send the alerts when the alert is triggered
 
 ###############################################################################################################
 

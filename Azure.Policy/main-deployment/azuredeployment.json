@@ -59,7 +59,6 @@
                 "templateLink": {
                     "uri": "[variables('linkedTemplates').networksecuritygrouprules]",
                     "contentVersion": "1.0.0.0"
-                    //"relativePath":"[variables('linkedTemplates').networksecuritygrouprules]"
                 }
             }
         },

@@ -31,13 +31,16 @@
         "linkedTemplates": {
             // Policy definitions
             "networksecuritygroup": "[concat(variables('templateBaseUrl'), 'policies/definitions/audit-activity-log-alert-monitor-for-network-security-group/azuredeploy.json')]",
+            "networksecuritygrouprule" : "[concat(variables('templateBaseUrl'),'policies/definitions/audit-activity-log-alert-monitor-for-network-security-group-rules/azuredeploy.json')]",
+            
            
             // Initiatives
             "initnsg": "[concat(variables('templateBaseUrl'), 'initatives/definitions/initiative-audit-activity-log-alert-monitor-network-security-group/azuredeploy.json')]",
+            "initnsgrules": "[concat(variables('templateBaseUrl'),'initatives/definitions/initiative-activity-log-alert-monitor-network-security-group-rules/azuredeploy.json')]"
         }
     },
     "resources": [
-
+        //NSG Rules monitoring
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
@@ -51,7 +54,7 @@
                 }
             }
         },
-                {
+        {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
             "name": "nsgInitiativeDeployment",
@@ -72,7 +75,69 @@
                 }
             }
         },
-                {
+        {
+            "type": "Microsoft.Authorization/policyAssignments",
+            "name": "asgn-intntwk-sec-grps",
+            "apiVersion": "2019-09-01",
+            "location": "[deployment().location]",
+            "identity": {
+                "principalId": "azure-monitor-alerts-nsg",
+                "tenantId": "[parameters('targetMG')]",
+                "type": "SystemAssigned"
+            },
+            "dependsOn": [
+                "networkSecurityGroupPolicyDeployment",
+                "nsgInitiativeDeployment"
+                
+            ],
+            "properties": {
+                "displayName": "Activity Log Alert Monitor Network Security Group",
+                "parameters": {
+                    "RuleResourceGroupName": {
+                        "value": "[parameters('RuleResourceGroupName')]"
+                    }
+                },
+                "scope": "[variables('mgScope')]",
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'audit-azure-monitor-alerts-nsg')]"
+            }
+        },
+
+        //NSG Rules monitoring
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2020-06-01",
+            "name": "networkSecurityGroupRulesPolicyDeployment",
+            "location": "[deployment().location]",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[variables('linkedTemplates').networksecuritygrouprule]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2020-06-01",
+            "name": "nsgRulesInitiativeDeployment",
+            "location": "[deployment().location]",
+            "dependsOn": [
+                "networkSecurityGroupRulesPolicyDeployment"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[variables('linkedTemplates').initnsgrules]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters": {
+                    "targetMG": {
+                        "value": "[parameters('targetMG')]"
+                    }
+                }
+            }
+        },
+        {
             "type": "Microsoft.Authorization/policyAssignments",
             "name": "asgn-intntwk-sec-grps-rl",
             "apiVersion": "2019-09-01",
@@ -83,22 +148,19 @@
                 "type": "SystemAssigned"
             },
             "dependsOn": [
-                "networkSecurityGroupPolicyDeployment",
-                "nsgInitiativeDeployment"
+                "networkSecurityGroupRulesPolicyDeployment",
+                "nsgRulesInitiativeDeployment"
                 
             ],
             "properties": {
                 "displayName": "Activity Log Alert Monitor Network Security Group Rules",
                 "parameters": {
-                    "AlertRuleActionGroupName": {
-                        "value": "[parameters('AlertRuleActionGroupName')]"
-                    },
                     "RuleResourceGroupName": {
                         "value": "[parameters('RuleResourceGroupName')]"
                     }
                 },
                 "scope": "[variables('mgScope')]",
-                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'azure-monitor-alerts-nsg-rules')]"
+                "policyDefinitionId": "[extensionResourceId(variables('mgScope'), 'Microsoft.Authorization/policySetDefinitions/', 'audit-monitor-alerts-nsg-rules')]"
             }
         }
 

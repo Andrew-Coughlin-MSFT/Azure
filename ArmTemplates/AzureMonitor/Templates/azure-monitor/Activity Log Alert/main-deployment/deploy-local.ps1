@@ -62,9 +62,9 @@ $emailAddress = "ancoughlin@microsoft.com"  #email address to send the alerts wh
 ###############################################################################################################
 
 try {
-    $BaseDir = 'https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/ArmTemplates/AzureMonitor/Templates'
-    $templateUri = "$BaseDir/azure-monitor/Activity%20Log%20Alert/main-deployment/azuredeployment.json"
-    
+    $BaseDir = 'C:\Azure\Azure\ArmTemplates\AzureMonitor\Templates\azure-monitor\Activity Log Alert\'
+    $templateUri = "$BaseDir\main-deployment\azuredeployment.json"
+
 
     if ($bSingleSubscription -eq $false) {
         $subscriptions = Get-AzSubscription | Where-Object { $_.State -eq "Enabled" }

@@ -85,7 +85,7 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
-            "name": "network-classic-nsg-create-del",
+            "name": "network-classic-nsg-create-up",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -197,7 +197,7 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
-            "name": "network-class-nsg-rules-create-del",
+            "name": "network-class-nsg-rules-create-up",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
@@ -309,7 +309,7 @@
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2020-06-01",
-            "name": "security-sec-pol-create-modify",
+            "name": "pol-policies-create-update",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {

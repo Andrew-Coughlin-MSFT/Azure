@@ -137,19 +137,23 @@ try {
             }
             #Create Resource Group
             New-AzResourceGroup -Location $AzRegionName -Name $myResourceGroupName
-            Write-Output "Creating Action Group"
+            Write-Output "Creating Action Group."
             Create_Action_Group -rgName $AlertRuleActionGroupResourceGroup -actionGroupName $AlertRuleActionGroupName -Email $emailAddress
+            Write-Output "Resource Group Created."
         }
         else {
             Write-Output "Resource Group Already Created, going to next step."
             Get-AzActionGroup -Name $myResourceGroupName -ResourceGroupName $AlertRuleActionGroupResourceGroup -ErrorVariable notPresent -ErrorAction SilentlyContinue
             if ($notPresent) {
                 ##Action Group Doesn't exist
-                Write-Output "Creation Action Group"
+                Write-Output "Creation Action Group."
                 Create_Action_Group -rgName $AlertRuleActionGroupResourceGroup -actionGroupName $AlertRuleActionGroupName -Email $emailAddress
+                Write-Output "Created Action Group."
             }
         }
         #execute deployment for Azure Monitor Alerts
+        Write-Output "Subscription:"
+        Write-Output $subscription.Id
         $targetsub = $subscription.Id
         New-AzResourceGroupDeployment -ResourceGroupName $myResourceGroupName -TemplateUri $templateUri -targetsub $targetsub -AlertRuleActionGroupName $AlertRuleActionGroupName -Verbose
     }

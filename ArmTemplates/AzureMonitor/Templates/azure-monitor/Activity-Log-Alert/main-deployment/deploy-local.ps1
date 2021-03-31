@@ -62,7 +62,7 @@ $emailAddress = "ancoughlin@microsoft.com"  #email address to send the alerts wh
 ###############################################################################################################
 
 try {
-    $BaseDir = 'C:\Azure\Azure\ArmTemplates\AzureMonitor\Templates\azure-monitor\Activity Log Alert\'
+    $BaseDir = 'C:\Azure\Azure\ArmTemplates\AzureMonitor\Templates\azure-monitor\Activity-Log-Alert\'
     $templateUri = "$BaseDir\main-deployment\azuredeployment.json"
 
 

@@ -20,7 +20,7 @@
 
         "linkedTemplates": {
 
-            "ActivityLogTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity Log Alert/template/azure-activity-log-alert-monitor/azuredeploy.json')]"
+            "ActivityLogTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity Log Alert/template/azure-activity-log-alert-monitor-category-administrative/azuredeploy.json')]"
 
         }
     },

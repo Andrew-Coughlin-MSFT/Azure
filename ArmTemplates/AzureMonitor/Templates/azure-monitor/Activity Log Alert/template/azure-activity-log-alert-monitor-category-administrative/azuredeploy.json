@@ -33,15 +33,11 @@
                     "allOf": [
                         {
                             "field": "category",
-                            "equals": "Administrative",
-                            "containsAny": null,
-                            "odata.type": null
+                            "equals": "Administrative"
                         },
                         {
                             "field": "operationName",
-                            "equals": "[parameters('operationName')]",
-                            "containsAny": null,
-                            "odata.type": null
+                            "equals": "[parameters('operationName')]"
                         }
                     ],
                     "odata.type": null

@@ -21,7 +21,7 @@
         "linkedTemplates": {
 
             "ActivityLogAdministrativeTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity-Log-Alert/template/azure-activity-log-alert-monitor-category-administrative/azuredeploy.json')]",
-            "ActivityLogSecurityTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity-Log-Alert/template/azure-activity-log-alert-monitor-category-administrative/azuredeploy.json')]"
+            "ActivityLogSecurityTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity-Log-Alert/template/azure-activity-log-alert-monitor-category-security/azuredeploy.json')]"
 
         }
     },

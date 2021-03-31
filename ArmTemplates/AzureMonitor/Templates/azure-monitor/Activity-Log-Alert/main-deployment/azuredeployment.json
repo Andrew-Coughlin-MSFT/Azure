@@ -20,7 +20,8 @@
 
         "linkedTemplates": {
 
-            "ActivityLogTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity Log Alert/template/azure-activity-log-alert-monitor-category-administrative/azuredeploy.json')]"
+            "ActivityLogAdministrativeTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity-Log-Alert/template/azure-activity-log-alert-monitor-category-administrative/azuredeploy.json')]",
+            "ActivityLogSecurityTemplate": "[concat(variables('templateBaseUrl'), '/azure-monitor/Activity-Log-Alert/template/azure-activity-log-alert-monitor-category-administrative/azuredeploy.json')]"
 
         }
     },
@@ -33,7 +34,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -61,7 +62,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -89,7 +90,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -117,7 +118,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -145,7 +146,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -173,7 +174,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -201,7 +202,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -229,7 +230,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -257,7 +258,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -285,7 +286,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -313,7 +314,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogSecurityTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -341,7 +342,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogSecurityTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -369,7 +370,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogSecurityTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -397,7 +398,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {
@@ -425,7 +426,7 @@
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[variables('linkedTemplates').ActivityLogTemplate]",
+                    "uri": "[variables('linkedTemplates').ActivityLogAdministrativeTemplate]",
                     "contentVersion": "1.0.0.0"
                 },
                 "parameters": {

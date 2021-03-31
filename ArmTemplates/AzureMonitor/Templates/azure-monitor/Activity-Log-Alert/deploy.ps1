@@ -102,7 +102,7 @@ $emailAddress = "email@domain.com"  #email address to send the alerts when the a
 
 try {
     $BaseDir = 'https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/ArmTemplates/AzureMonitor/Templates'
-    $templateUri = "$BaseDir/azure-monitor/Activity%20Log%20Alert/main-deployment/azuredeployment.json"
+    $templateUri = "$BaseDir/azure-monitor/Activity-Log-Alert/main-deployment/azuredeployment.json"
     
     if ($bSingleSubscription -eq $false) {
         AzAccountLogin
@@ -152,8 +152,6 @@ try {
             }
         }
         #execute deployment for Azure Monitor Alerts
-        Write-Output "Subscription:"
-        Write-Output $subscription.Id
         $targetsub = $subscription.Id
         New-AzResourceGroupDeployment -ResourceGroupName $myResourceGroupName -TemplateUri $templateUri -targetsub $targetsub -AlertRuleActionGroupName $AlertRuleActionGroupName -Verbose
     }

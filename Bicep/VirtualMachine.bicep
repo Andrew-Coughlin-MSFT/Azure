@@ -31,22 +31,11 @@ param vmSize string = 'Standard_B2s'
 @description('Location for all resources.')
 param location string = resourceGroup().location
 
-@description('FQDN of the AD forest to create.')
-@minLength(5)
-param domainFQDN string = 'contoso.local'
-
 @description('Enable automatic Windows Updates.')
 param enableAutomaticUpdates bool = true
 
 @description('Enable Azure Hybrid Benefit to use your on-premises Windows Server licenses and reduce cost. See https://docs.microsoft.com/en-us/azure/virtual-machines/windows/hybrid-use-benefit-licensing for more information.')
 param enableHybridBenefitServerLicenses bool = false
-
-@description('The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated.')
-param artifactsLocation string = deployment().properties.templateLink.uri
-
-@description('The sasToken required to access _artifactsLocation. When the template is deployed using the accompanying scripts, a sasToken will be automatically generated.')
-@secure()
-param artifactsLocationSasToken string = ''
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var nicName = toLower('${vmName}-vmnic01')

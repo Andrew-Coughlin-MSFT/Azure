@@ -47,6 +47,9 @@ var networkSecurityGroupName = 'labresource-sn-NSG'
 var dcPrivateIPAddress = '10.4.0.4'
 var availabilitySetName = toLower('as${vmName}')
 var shutdownScheduleName = 'shutdown-computevm-labdc01'
+var domainName ='lab.local'
+var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/DSC/CreateADPDC.zip'
+var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
 
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   name: storageAccountName
@@ -196,6 +199,35 @@ resource vmDC_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' =
     targetResourceId: vm.id
   }
 }
+
+resource adPDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extensions@2019-12-01' = {
+  parent: vm
+  name: 'CreateADForest'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Powershell'
+    type: 'DSC'
+    typeHandlerVersion: '2.19'
+    autoUpgradeMinorVersion: true
+    settings: {
+      ModulesUrl: adPDCModulesURL
+      ConfigurationFunction: adPDCConfigurationFunction
+      Properties: {
+        DomainName: domainName
+        AdminCreds: {
+          UserName: adminUsername
+          Password: 'PrivateSettingsRef:AdminPassword'
+        }
+      }
+    }
+    protectedSettings: {
+      Items: {
+        AdminPassword: adminPassword
+      }
+    }
+  }
+}
+
 output hostname string = vm.name
 
 

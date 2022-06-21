@@ -67,9 +67,9 @@ resource as 'Microsoft.Compute/availabilitySets@2021-11-01' = {
     platformFaultDomainCount: 2
     platformUpdateDomainCount: 3
   }
-sku:{
-  name:'Aligned'
-}
+  sku:{
+    name:'Aligned'
+  }
 }
 
 resource securityGroup 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {

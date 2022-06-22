@@ -37,6 +37,8 @@ param enableAutomaticUpdates bool = true
 @description('Enable Azure Hybrid Benefit to use your on-premises Windows Server licenses and reduce cost. See https://docs.microsoft.com/en-us/azure/virtual-machines/windows/hybrid-use-benefit-licensing for more information.')
 param enableHybridBenefitServerLicenses bool = false
 
+param publicIPAddresses_test3_externalid string = '/subscriptions/ff459291-3ff7-4784-bf25-6ec179a61308/resourceGroups/lab-test3/providers/Microsoft.Network/publicIPAddresses/test3'
+
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var nicName = toLower('${vmName}-vmnic01')
 var addressPrefix = '10.4.0.0/16'
@@ -48,7 +50,7 @@ var dcPrivateIPAddress = '10.4.0.4'
 var availabilitySetName = toLower('as${vmName}')
 var shutdownScheduleName = 'shutdown-computevm-labdc01'
 var domainName ='lab.local'
-var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/DSC/CreateADPDC.zip'
+var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/DSC/CreateADPDC.zip?raw=true'
 var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
 
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
@@ -76,6 +78,25 @@ resource securityGroup 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   name: networkSecurityGroupName
   location: location
   properties: {
+    securityRules: [
+      {
+        name: 'Port_8080'
+        properties: {
+          protocol: 'TCP'
+          sourcePortRange: '*'
+          destinationPortRange: '3389'
+          sourceAddressPrefix: '*'
+          destinationAddressPrefix: '*'
+          access: 'Allow'
+          priority: 100
+          direction: 'Inbound'
+          sourcePortRanges: []
+          destinationPortRanges: []
+          sourceAddressPrefixes: []
+          destinationAddressPrefixes: []
+        }
+      }
+    ]
   }
 }
 
@@ -111,6 +132,9 @@ resource nic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
         name: 'ipconfig1'
         properties: {
           privateIPAllocationMethod: 'Static'
+          publicIPAddress: {
+            id: publicIPAddresses_test3_externalid
+          }
           privateIPAddress:dcPrivateIPAddress
           subnet: {
             id: resourceId('Microsoft.Network/virtualNetworks/subnets', vn.name, subnetName)
@@ -207,7 +231,8 @@ resource adPDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extension
   properties: {
     publisher: 'Microsoft.Powershell'
     type: 'DSC'
-    typeHandlerVersion: '2.19'
+    //typeHandlerVersion: '2.19'
+    typeHandlerVersion: '2.83'
     autoUpgradeMinorVersion: true
     settings: {
       ModulesUrl: adPDCModulesURL

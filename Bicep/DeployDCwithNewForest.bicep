@@ -224,14 +224,13 @@ resource vmDC_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' =
   }
 }
 
-resource adPDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extensions@2019-12-01' = {
+resource adPDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extensions@2022-03-01' = {
   parent: vm
   name: 'CreateADForest'
   location: location
   properties: {
     publisher: 'Microsoft.Powershell'
     type: 'DSC'
-    //typeHandlerVersion: '2.19'
     typeHandlerVersion: '2.83'
     autoUpgradeMinorVersion: true
     settings: {
@@ -247,7 +246,7 @@ resource adPDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extension
     }
     protectedSettings: {
       Items: {
-        AdminPassword: adminPassword
+        AdminPassword: 'Password123456!'
       }
     }
   }

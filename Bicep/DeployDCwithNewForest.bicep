@@ -35,7 +35,7 @@ param location string = resourceGroup().location
 param enableAutomaticUpdates bool = true
 
 @description('Enable Azure Hybrid Benefit to use your on-premises Windows Server licenses and reduce cost. See https://docs.microsoft.com/en-us/azure/virtual-machines/windows/hybrid-use-benefit-licensing for more information.')
-param enableHybridBenefitServerLicenses bool = false
+param enableHybridBenefitServerLicenses bool = true
 
 param publicIPAddresses_test3_externalid string = '/subscriptions/ff459291-3ff7-4784-bf25-6ec179a61308/resourceGroups/lab-test3/providers/Microsoft.Network/publicIPAddresses/test3'
 

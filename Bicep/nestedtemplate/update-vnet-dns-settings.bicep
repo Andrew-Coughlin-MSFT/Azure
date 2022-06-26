@@ -19,6 +19,35 @@ resource virtualNetworkName_resource 'Microsoft.Network/virtualNetworks@2020-08-
         virtualNetworkAddressRange
       ]
     }
+    subnets: [
+      {
+        name: 'server-sn'
+        properties: {
+          addressPrefix: '10.4.0.0/24'
+          networkSecurityGroup: {
+            id: resourceId('Microsoft.Network/networkSecurityGroups','nsg-server-sn')
+          }
+        }
+      }
+      {
+        name:'jumpbox-sn'
+        properties:{
+          addressPrefix:'10.4.1.0/24'
+          networkSecurityGroup: {
+            id: resourceId('Microsoft.Network/networkSecurityGroups','nsg-jumpbox-sn')
+          }
+        }
+      }
+      {
+        name:'pe-sn'
+        properties:{
+          addressPrefix:'10.4.2.0/24'
+          networkSecurityGroup: {
+            id: resourceId('Microsoft.Network/networkSecurityGroups','nsg-pe-sn')
+          }
+        }
+      }
+    ]
     dhcpOptions: {
       dnsServers: DNSServerAddress
     }

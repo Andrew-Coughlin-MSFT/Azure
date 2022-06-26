@@ -6,11 +6,11 @@ param adminUsername string
 @secure()
 param adminPassword string
 
-@description('Virtual Machine Name.')
+@description('Virtual Machine Name for domain controller.')
 @maxLength(15)
 param vmDCName string
 
-@description('Virtual Machine Name.')
+@description('Virtual Machine Name for jumpbox.')
 @maxLength(15)
 param vmJumpboxName string
 
@@ -102,8 +102,5 @@ resource resourceGroupLock 'Microsoft.Authorization/locks@2017-04-01'={
     notes:'Resource group and its resources should not be deleted.'
   }
 }
-
-output domaincontroller string = domaincontroller.name
-output jumpbox string = jumpboxvm.name
 
 

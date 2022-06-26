@@ -14,16 +14,17 @@ param vmName string
 @allowed([
  '2019-datacenter-gensecond'
  '2019-datacenter-core-gensecond'
+ '2019-datacenter-core-g2'
  '2019-datacenter-core-smalldisk-gensecond'
- '2019-datacenter-core-with-containers-gensecond'
- '2019-datacenter-core-with-containers-smalldisk-g2'
- '2019-datacenter-smalldisk-gensecond'
- '2019-datacenter-with-containers-gensecond'
- '2019-datacenter-with-containers-smalldisk-g2'
  '2016-datacenter-gensecond'
+ '2016-datacenter-server-core-g2'
  '2022-datacenter-g2'
+ '2022-datacenter-azure-edition-core'
 ])
-param OSVersion string = '2022-datacenter-g2'
+param OSVersion string = '2022-datacenter-azure-edition-core'
+
+@description('Domain to create.')
+param serverDomainName string
 
 @description('Size of the virtual machine.')
 param vmSize string = 'Standard_B2s'
@@ -37,19 +38,19 @@ param enableAutomaticUpdates bool = true
 @description('Enable Azure Hybrid Benefit to use your on-premises Windows Server licenses and reduce cost. See https://docs.microsoft.com/en-us/azure/virtual-machines/windows/hybrid-use-benefit-licensing for more information.')
 param enableHybridBenefitServerLicenses bool = true
 
-param publicIPAddresses_test3_externalid string = '/subscriptions/ff459291-3ff7-4784-bf25-6ec179a61308/resourceGroups/lab-test3/providers/Microsoft.Network/publicIPAddresses/test3'
+param publicIPAddresses_test3_externalid string = '/subscriptions/ff459291-3ff7-4784-bf25-6ec179a61308/resourceGroups/lab-test4/providers/Microsoft.Network/publicIPAddresses/test4'
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var nicName = toLower('${vmName}-vmnic01')
 var addressPrefix = '10.4.0.0/16'
-var subnetName = 'labresource-sn'
+var subnetName = 'server-sn'
 var subnetPrefix = '10.4.0.0/24'
-var virtualNetworkName = 'vNet-AVD'
-var networkSecurityGroupName = 'labresource-sn-NSG'
+var virtualNetworkName = 'vNet-LAB'
+var networkSecurityGroupName = 'nsg-server-sn'
 var dcPrivateIPAddress = '10.4.0.4'
 var availabilitySetName = toLower('as${vmName}')
-var shutdownScheduleName = 'shutdown-computevm-labdc01'
-var domainName ='lab.local'
+var shutdownScheduleName = 'shutdown-computevm-${vmName}'
+var domainName = serverDomainName
 var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/DSC/CreateADPDC.zip?raw=true'
 var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
 
@@ -80,7 +81,7 @@ resource securityGroup 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   properties: {
     securityRules: [
       {
-        name: 'Port_8080'
+        name: 'Port_3389'
         properties: {
           protocol: 'TCP'
           sourcePortRange: '*'

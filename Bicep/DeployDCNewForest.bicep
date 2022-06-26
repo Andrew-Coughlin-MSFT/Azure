@@ -137,7 +137,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
         enableAutomaticUpdates: enableAutomaticUpdates
         provisionVMAgent: true
         patchSettings: {
-          patchMode: (enableAutomaticUpdates ? 'AutomaticByOS' : 'Manual')
+          patchMode: (enableAutomaticUpdates ? 'AutomaticByPlatform' : 'Manual')
           assessmentMode: 'ImageDefault'
         }
       }
@@ -243,6 +243,15 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
   dependsOn: [
     adPDCVMName_CreateADForest
   ]
+}
+
+resource resourceGroupLock 'Microsoft.Authorization/locks@2017-04-01'={
+  name:'resourceLock'
+  scope: resourceGroup()
+  properties:{
+    level:'CanNotDelete'
+    notes:'Resource group and its resources should not be deleted.'
+  }
 }
 
 output hostname string = vm.name

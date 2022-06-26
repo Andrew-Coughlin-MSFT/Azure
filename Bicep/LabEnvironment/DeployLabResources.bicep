@@ -14,6 +14,10 @@ param vmDCName string
 @maxLength(15)
 param vmJumpboxName string
 
+@description('Virtual Machine Name for ad connect.')
+@maxLength(15)
+param vmADCName string
+
 @description('Domain to create.')
 param serverDomainName string
 
@@ -66,11 +70,11 @@ module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
     location:location
     adminPassword:adminPassword
     adminUsername:adminUsername
-    // serverDomainName:serverDomainName
     vmName:vmJumpboxName
-    // ouPath:ouPath
     vmSize:vmSize
     stg:stg
+    // ouPath:ouPath
+    // serverDomainName:serverDomainName
   }
   dependsOn:[
    vn 
@@ -91,6 +95,24 @@ module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
   }
   dependsOn:[
     vn 
+   ]
+}
+
+module adconnectserver 'nestedtemplate/DeployADConnectServer.bicep'={
+  name:'CreateADConnectServer'
+  params:{
+    location:location
+    adminPassword:adminPassword
+    adminUsername:adminUsername
+    stg:stg
+    vmName:vmADCName
+    vmSize:vmSize
+    // ouPath:ouPath
+    // serverDomainName:serverDomainName
+  }
+  dependsOn:[
+    vn 
+    domaincontroller
    ]
 }
 

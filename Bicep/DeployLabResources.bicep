@@ -233,7 +233,7 @@ resource vmJumpBox 'Microsoft.Compute/virtualMachines@2021-03-01' = {
       imageReference: {
         publisher: 'MicrosoftWindowsServer'
         offer: 'WindowsServer'
-        sku: OSVersion
+        sku: '2022-datacenter-g2'
         version: 'latest'
       }
       osDisk: {

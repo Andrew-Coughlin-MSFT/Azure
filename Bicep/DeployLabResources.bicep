@@ -10,6 +10,10 @@ param adminPassword string
 @maxLength(15)
 param vmDCName string
 
+@description('Virtual Machine Name.')
+@maxLength(15)
+param vmJumpboxName string
+
 @description('The Windows version for the VM. This will pick a fully patched Gen2 image of this given Windows version.')
 @allowed([
  '2019-datacenter-gensecond'
@@ -38,8 +42,19 @@ param enableAutomaticUpdates bool = true
 @description('Enable Azure Hybrid Benefit to use your on-premises Windows Server licenses and reduce cost. See https://docs.microsoft.com/en-us/azure/virtual-machines/windows/hybrid-use-benefit-licensing for more information.')
 param enableHybridBenefitServerLicenses bool = true
 
+@description('Unique DNS Name for the Public IP used to access the Virtual Machine.')
+param vmJumpboxdnsLabelPrefix string = toLower('${vmJumpboxName}-${uniqueString(resourceGroup().id, vmJumpboxName)}')
+
+@description('SKU for the Public IP used to access the Virtual Machine.')
+@allowed([
+  'Basic'
+  'Standard'
+])
+param publicIpSku string = 'Basic'
+
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var vmDCnicName = toLower('${vmDCName}-vmnic01')
+var vmJumpnicName = toLower('${vmJumpboxName}-vmnic01')
 var addressPrefix = '10.4.0.0/16'
 var subnetName = 'server-sn'
 var subnetPrefix = '10.4.0.0/24'
@@ -47,6 +62,7 @@ var virtualNetworkName = 'vNet-LAB'
 var vmDCPrivateIPAddress = '10.4.0.4'
 var availabilitySetVMDCName = toLower('as${vmDCName}')
 var shutdownSchedulevmDCName = 'shutdown-computevm-${vmDCName}'
+var shutdownSchedulevmJumpboxName = 'shutdown-computevm-${vmJumpboxName}'
 var domainName = serverDomainName
 var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/DSC/CreateADPDC.zip?raw=true'
 var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
@@ -60,6 +76,19 @@ resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   kind: 'Storage'
 }
 
+resource vmJumpBoxpip 'Microsoft.Network/publicIPAddresses@2021-08-01' = {
+  name:'${vmJumpboxName}-pip'
+  location:location
+  sku:{
+    name:publicIpSku
+  }
+  properties:{
+    publicIPAllocationMethod:'Dynamic'
+    dnsSettings:{
+      domainNameLabel:vmJumpboxdnsLabelPrefix
+    }
+  }
+}
 resource asvmDC 'Microsoft.Compute/availabilitySets@2021-11-01' = {
   name:availabilitySetVMDCName
   location: location
@@ -82,6 +111,29 @@ resource vmDCnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
         properties: {
           privateIPAllocationMethod: 'Static'
           privateIPAddress:vmDCPrivateIPAddress
+          subnet: {
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, subnetName)
+          }
+        }
+      }
+    ]
+  }
+  dependsOn:[
+    vn
+  ]
+}
+resource vmJumpnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
+  name: vmJumpnicName
+  location: location
+  properties: {
+    ipConfigurations: [
+      {
+        name: 'ipconfig1'
+        properties: {
+          privateIPAllocationMethod: 'Dynamic'
+          publicIPAddress:{
+            id:vmJumpBoxpip.id
+          }
           subnet: {
             id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, subnetName)
           }
@@ -155,6 +207,57 @@ resource vmDC 'Microsoft.Compute/virtualMachines@2021-03-01' = {
   }
 }
 
+resource vmJumpBox 'Microsoft.Compute/virtualMachines@2021-03-01' = {
+  name: vmJumpboxName
+  location: location
+  properties: {
+    hardwareProfile: {
+      vmSize: vmSize
+    }
+    osProfile: {
+      computerName: vmJumpboxName
+      adminUsername: adminUsername
+      adminPassword: adminPassword
+      windowsConfiguration: {
+        enableAutomaticUpdates: enableAutomaticUpdates
+        provisionVMAgent: true
+        patchSettings: {
+          patchMode: (enableAutomaticUpdates ? 'AutomaticByPlatform' : 'Manual')
+          assessmentMode: 'ImageDefault'
+        }
+      }
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'MicrosoftWindowsServer'
+        offer: 'WindowsServer'
+        sku: OSVersion
+        version: 'latest'
+      }
+      osDisk: {
+        createOption: 'FromImage'
+        managedDisk: {
+          storageAccountType: 'StandardSSD_LRS'
+        }
+      }
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: vmJumpnic.id
+        }
+      ]
+    }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+        storageUri: stg.properties.primaryEndpoints.blob
+      }
+    }
+    licenseType: (enableHybridBenefitServerLicenses ? 'Windows_Server' : json('null'))
+  }
+}
+
 resource vmDC_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' = {
   name: shutdownSchedulevmDCName
   location: location
@@ -170,6 +273,24 @@ resource vmDC_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' =
       timeInMinutes: 30
     }
     targetResourceId: vmDC.id
+  }
+}
+
+resource vmJumpbox_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' = {
+  name: shutdownSchedulevmJumpboxName
+  location: location
+  properties: {
+    status: 'Enabled'
+    taskType: 'ComputeVmShutdownTask'
+    dailyRecurrence: {
+      time: '19:00'
+    }
+    timeZoneId: 'Central Standard Time'
+    notificationSettings: {
+      status: 'Disabled'
+      timeInMinutes: 30
+    }
+    targetResourceId: vmJumpBox.id
   }
 }
 

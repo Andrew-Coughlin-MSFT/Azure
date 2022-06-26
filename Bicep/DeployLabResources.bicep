@@ -89,6 +89,7 @@ resource vmJumpBoxpip 'Microsoft.Network/publicIPAddresses@2021-08-01' = {
     }
   }
 }
+
 resource asvmDC 'Microsoft.Compute/availabilitySets@2021-11-01' = {
   name:availabilitySetVMDCName
   location: location
@@ -122,6 +123,7 @@ resource vmDCnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
     vn
   ]
 }
+
 resource vmJumpnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
   name: vmJumpnicName
   location: location
@@ -321,6 +323,7 @@ resource vmDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extensions
     }
   }
 }
+
 module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
   name: 'UpdateVNetDNS'
   params: {
@@ -337,6 +340,7 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
     vmDCVMName_CreateADForest
   ]
 }
+
 module vn 'nestedtemplate/create-virtual-networks.bicep' ={
   name: 'CreateVirtualNetwork'
   params: {

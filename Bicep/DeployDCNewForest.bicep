@@ -223,7 +223,7 @@ resource adPDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extension
     }
     protectedSettings: {
       Items: {
-        AdminPassword: 'Password123456!'
+        AdminPassword: adminPassword
       }
     }
   }

@@ -1,5 +1,5 @@
 # Azure
-
+This is a repo of sample work that I have done over time.  Hope you find this helpful.
 
 
 # Disclaimer

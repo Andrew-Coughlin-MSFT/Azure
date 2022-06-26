@@ -18,6 +18,13 @@ resource nsgServerSn 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   }
 }
 
+resource nsgPeSn 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
+  name: 'nsg-pe-sn'
+  location: location
+  properties: {
+  }
+}
+
 resource nsgJumpboxSn 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   name: 'nsg-jumpbox-sn'
   location: location
@@ -70,6 +77,15 @@ resource virtualNetworkName_resource 'Microsoft.Network/virtualNetworks@2020-08-
           addressPrefix:'10.4.1.0/24'
           networkSecurityGroup: {
             id: nsgJumpboxSn.id
+          }
+        }
+      }
+      {
+        name:'pe-sn'
+        properties:{
+          addressPrefix:'10.4.2.0/24'
+          networkSecurityGroup: {
+            id: nsgPeSn.id
           }
         }
       }

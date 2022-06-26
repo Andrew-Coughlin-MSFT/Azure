@@ -56,8 +56,8 @@ var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var vmDCnicName = toLower('${vmDCName}-vmnic01')
 var vmJumpnicName = toLower('${vmJumpboxName}-vmnic01')
 var addressPrefix = '10.4.0.0/16'
-var subnetName = 'server-sn'
-var subnetPrefix = '10.4.0.0/24'
+var vmDCsubnetName = 'server-sn'
+var vmJumpboxsubnetName = 'jumpbox-sn'
 var virtualNetworkName = 'vNet-LAB'
 var vmDCPrivateIPAddress = '10.4.0.4'
 var availabilitySetVMDCName = toLower('as${vmDCName}')
@@ -113,7 +113,7 @@ resource vmDCnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
           privateIPAllocationMethod: 'Static'
           privateIPAddress:vmDCPrivateIPAddress
           subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, subnetName)
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, vmDCsubnetName)
           }
         }
       }
@@ -137,7 +137,7 @@ resource vmJumpnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
             id:vmJumpBoxpip.id
           }
           subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, subnetName)
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, vmJumpboxsubnetName)
           }
         }
       }
@@ -329,8 +329,6 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
   params: {
     virtualNetworkName: virtualNetworkName
     virtualNetworkAddressRange: addressPrefix
-    subnetName: subnetName
-    subnetRange: subnetPrefix
     DNSServerAddress: [
       vmDCPrivateIPAddress
     ]

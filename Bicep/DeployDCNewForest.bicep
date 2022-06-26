@@ -200,6 +200,7 @@ resource vmDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extensions
     }
   }
 }
+
 module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
   name: 'UpdateVNetDNS'
   params: {

@@ -337,7 +337,6 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
     vmDCVMName_CreateADForest
   ]
 }
-
 module vn 'nestedtemplate/create-virtual-networks.bicep' ={
   name: 'CreateVirtualNetwork'
   params: {

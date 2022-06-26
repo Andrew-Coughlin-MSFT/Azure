@@ -51,7 +51,7 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
     domaincontroller
   ]
 }
-module vn 'nestedtemplate/create-virtual-networks.bicep' ={
+module vn './nestedtemplate/create-virtual-networks.bicep' ={
   name: 'CreateVirtualNetwork'
   params: {
     location:location
@@ -60,7 +60,7 @@ module vn 'nestedtemplate/create-virtual-networks.bicep' ={
     vmName:vmDCName
   }
 }
-module jumpboxvm 'nestedtemplate/DeployJumpboxServer.bicep'={
+module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
   name:'CreateJumpboxVM'
   params:{
     location:location
@@ -78,7 +78,7 @@ module jumpboxvm 'nestedtemplate/DeployJumpboxServer.bicep'={
   ]
 }
 
-module domaincontroller 'nestedtemplate/DeployDomainForest.bicep'={
+module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
   name:'CreateDomainControllerForest'
   params:{
     location:location

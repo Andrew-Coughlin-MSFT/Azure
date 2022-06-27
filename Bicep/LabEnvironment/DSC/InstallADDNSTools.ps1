@@ -5,7 +5,8 @@ configuration InstallADDNSTools
         [Int]$RetryCount=20,
         [Int]$RetryIntervalSec=30
     )
-
+    
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
      Node localhost
     {
         LocalConfigurationManager

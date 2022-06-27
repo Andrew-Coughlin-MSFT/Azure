@@ -29,7 +29,7 @@ configuration InstallADDNSTools
         WindowsFeature GPMC
         {
             Ensure = "Present"
-            Name = "RSAT-GroupPolicy-Management-Tools"
+            Name = "GPMC"
         }
    }
 }

@@ -17,7 +17,6 @@ configuration InstallADDNSTools
         {
             Ensure = "Present"
             Name = "RSAT-DNS-Server"
-            DependsOn = "[WindowsFeature]DNS"
         }
 
         WindowsFeature ADDSTools
@@ -25,6 +24,12 @@ configuration InstallADDNSTools
             Ensure = "Present"
             Name = "RSAT-ADDS-Tools"
             DependsOn = "[WindowsFeature]ADDSInstall"
+        }
+
+        WindowsFeature GPMC
+        {
+            Ensure = "Present"
+            Name = "RSAT-GroupPolicy-Management-Tools"
         }
    }
 }

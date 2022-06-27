@@ -24,7 +24,6 @@ configuration InstallADDNSTools
         {
             Ensure = "Present"
             Name = "RSAT-ADDS-Tools"
-            DependsOn = "[WindowsFeature]ADDSInstall"
         }
 
         WindowsFeature GPMC

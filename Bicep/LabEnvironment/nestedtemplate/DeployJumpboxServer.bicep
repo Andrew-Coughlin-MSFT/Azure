@@ -62,6 +62,8 @@ var vmsubnetName = 'jumpbox-sn'
 var virtualNetworkName = 'vNet-LAB'
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
 // var domainName = serverDomainName
+var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/LabEnvironment/DSC/InstallADDNSTools.zip?raw=true'
+var adPDCConfigurationFunction = 'InstallADDNSTools.ps1\\InstallADDNSTools'
 
 resource vmpip 'Microsoft.Network/publicIPAddresses@2021-08-01' = {
   name:'${vmName}-pip'
@@ -166,6 +168,21 @@ resource vmnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
   }
 }
 
+resource vmInstallADDNS_Tools 'Microsoft.Compute/virtualMachines/extensions@2022-03-01' = {
+  parent: vm
+  name: 'InstallADDNSTools'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Powershell'
+    type: 'DSC'
+    typeHandlerVersion: '2.83'
+    autoUpgradeMinorVersion: true
+    settings: {
+      ModulesUrl: adPDCModulesURL
+      ConfigurationFunction: adPDCConfigurationFunction
+    }
+  }
+}
 
 // resource virtualMachineExtension 'Microsoft.Compute/virtualMachines/extensions@2021-03-01' = {
 //   parent: vm

@@ -79,6 +79,7 @@ module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
   dependsOn:[
    vn 
    domaincontroller
+   UpdateVNetDNS
   ]
 }
 
@@ -113,16 +114,17 @@ module adconnectserver 'nestedtemplate/DeployADConnectServer.bicep'={
   dependsOn:[
     vn 
     domaincontroller
+    UpdateVNetDNS
    ]
 }
 
-resource resourceGroupLock 'Microsoft.Authorization/locks@2017-04-01'={
-  name:'resourceLock'
-  scope: resourceGroup()
-  properties:{
-    level:'CanNotDelete'
-    notes:'Resource group and its resources should not be deleted.'
-  }
-}
+// resource resourceGroupLock 'Microsoft.Authorization/locks@2017-04-01'={
+//   name:'resourceLock'
+//   scope: resourceGroup()
+//   properties:{
+//     level:'CanNotDelete'
+//     notes:'Resource group and its resources should not be deleted.'
+//   }
+// }
 
 

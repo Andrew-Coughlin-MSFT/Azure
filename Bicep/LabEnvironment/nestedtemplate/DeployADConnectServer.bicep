@@ -48,7 +48,7 @@ param stg object
 // param domainJoinOptions int = 3
 
 var vmnicName = toLower('${vmName}-vmnic01')
-var vmsubnetName = 'jumpbox-sn'
+var vmsubnetName = 'server-sn'
 var virtualNetworkName = 'vNet-LAB'
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
 // var domainName = serverDomainName
@@ -85,12 +85,19 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
         managedDisk: {
           storageAccountType: 'StandardSSD_LRS'
         }
+        deleteOption:'Delete'
       }
+    }
+    securityProfile:{
+      encryptionAtHost:true
     }
     networkProfile: {
       networkInterfaces: [
         {
           id: vmnic.id
+          properties:{
+            deleteOption:'Delete' 
+           }
         }
       ]
     }
@@ -103,21 +110,34 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     licenseType: (enableHybridBenefitServerLicenses ? 'Windows_Server' : json('null'))
   }
 }
-resource vm_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' = {
-  name: shutdownSchedule
-  location: location
-  properties: {
-    status: 'Enabled'
-    taskType: 'ComputeVmShutdownTask'
-    dailyRecurrence: {
-      time: '19:00'
-    }
-    timeZoneId: 'Central Standard Time'
-    notificationSettings: {
-      status: 'Disabled'
-      timeInMinutes: 30
-    }
-    targetResourceId: vm.id
+// resource vm_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' = {
+//   name: shutdownSchedule
+//   location: location
+//   properties: {
+//     status: 'Enabled'
+//     taskType: 'ComputeVmShutdownTask'
+//     dailyRecurrence: {
+//       time: '19:00'
+//     }
+//     timeZoneId: 'Central Standard Time'
+//     notificationSettings: {
+//       status: 'Disabled'
+//       timeInMinutes: 30
+//     }
+//     targetResourceId: vm.id
+//   }
+// }
+
+module vm_shutdownSchedule '../nestedtemplate/createShutdownSchedule.bicep' ={
+  name: 'CreateShutdownSchedule'
+  params:{
+    location:location
+    notificationSettingsStatus:'Disabled'
+    shutdownScheduleName:shutdownSchedule
+    shutdownStatus:'Enabled'
+    shutdownTime:'19:00'
+    timeZoneId:'Central Standard Time'
+    vmid:vm.id
   }
 }
 
@@ -139,6 +159,14 @@ resource vmnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
   }
 }
 
+module AzureIaasMalware '../nestedtemplate/DeployIaasAntimalware.bicep'={
+  name:'DeployIaasMalware'
+  params:{
+    location:location
+    scantype:'Quick'
+    vm:vm.name
+  }
+}
 
 // resource virtualMachineExtension 'Microsoft.Compute/virtualMachines/extensions@2021-03-01' = {
 //   parent: vm

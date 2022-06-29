@@ -1,4 +1,6 @@
 ##Setup OUs for Domain
+Install-WindowsFeature -Name "RSAT-AD-PowerShell" -IncludeAllSubFeature
+
 Import-Module -Name ActiveDirectory
 
 New-ADOrganizationalUnit -Name "All Users" -Path "DC=LAB,DC=LOCAL" -ProtectedFromAccidentalDeletion $true

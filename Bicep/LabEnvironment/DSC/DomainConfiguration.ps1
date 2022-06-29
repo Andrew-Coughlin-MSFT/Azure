@@ -1,4 +1,5 @@
 ##Setup OUs for Domain
+Import-Module -Name "ActiveDirectory"
 
 New-ADOrganizationalUnit -Name "All Users" -Path "DC=LAB,DC=LOCAL" -ProtectedFromAccidentalDeletion $true
 New-ADOrganizationalUnit -Name "All Groups" -Path "DC=LAB,DC=LOCAL" -ProtectedFromAccidentalDeletion $true

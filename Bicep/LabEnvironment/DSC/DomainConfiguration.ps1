@@ -5,6 +5,7 @@ $domain=$domainFQDN
 $domainDN = "DC=$($domain.replace(".", ",DC="))"
 
 ##Setup OUs for Domain
+Add-WindowsFeature RSAT-AD-PowerShell
 Import-Module -Name ActiveDirectory
 
 New-ADOrganizationalUnit -Name "All Users" -Path $domainDN -ProtectedFromAccidentalDeletion $true

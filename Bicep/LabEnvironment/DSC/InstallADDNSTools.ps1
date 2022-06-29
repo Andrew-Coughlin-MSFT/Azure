@@ -31,6 +31,7 @@ configuration InstallADDNSTools
             Ensure = "Present"
             Name = "GPMC"
         }
+        
         WindowsFeature ADDSTools
         {
             Ensure = "Present"

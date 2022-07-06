@@ -123,4 +123,4 @@ foreach ($url in $Urls){
     } 
 }
 
-$strOutput | Out-File c:\temp\blogs.txt
+$strOutput | Out-File .\blogs.txt

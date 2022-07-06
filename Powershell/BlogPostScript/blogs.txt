@@ -1,0 +1,299 @@
+Exchange Blogs:
+Announcing OAuth 2.0 Client Credentials Flow support for POP and IMAP protocols in Exchange Online
+06/30/2022 11:04:32
+Today we’re excited to announce the availability of OAuth 2.
+
+https://techcommunity.microsoft.com/t5/exchange-team-blog/announcing-oauth-2-0-client-credentials-flow-support-for-pop-and/ba-p/3562963
+
+
+CoreInfrastructureandSecurityBlog Blogs:
+Accessing Key Vault from Another Subscription Over Public Endpoint
+07/04/2022 00:00:00
+Introduction Hello everyone it has been a while Andrew Coughlin here and I am a Customer Engineer at Microsoft focusing on Azure IaaS.
+
+https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/accessing-key-vault-from-another-subscription-over-public/ba-p/3562578
+
+
+ITOpsTalkBlog Blogs:
+Connect to your on-prem server from anywhere!
+07/05/2022 00:00:00
+Hello Folks       A few weeks ago I wrote about upgrading my local network edge device with one capable of connecting to my Azure virtual network using a site-to-site VPN.
+
+https://techcommunity.microsoft.com/t5/itops-talk-blog/connect-to-your-on-prem-server-from-anywhere/ba-p/3565194
+
+
+AzUpdate S04E17: Azure Key Vault, Azure WAF and Azure Backup
+07/01/2022 00:00:00
+Hello folks       This week is the last episode of season 4.
+
+https://techcommunity.microsoft.com/t5/itops-talk-blog/azupdate-s04e17-azure-key-vault-azure-waf-and-azure-backup/ba-p/3563256
+
+
+Identity Blogs:
+Microsoft Entra change announcements - June 2022 train
+06/30/2022 12:00:00
+Hello Everyone       In March 2022 we announced our simplified change management process which allows customers to predictably plan their deployments.
+
+https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/microsoft-entra-change-announcements-june-2022-train/ba-p/2967455
+
+
+AzureDBSupport Blogs:
+Lesson Learned #217:Hands-On-Labs:40197-The service has encountered an error processing your request
+07/05/2022 16:42:24
+We used to have cases where our customer faced the following error messages like following:     Msg 40197 Level 20 State 4 Line 6 -The service has encountered an error processing your request.
+
+https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-217-hands-on-labs-40197-the-service-has/ba-p/3566124
+
+
+Lesson Learned #216: Hands-On-Labs: How redirect connection policy type works
+07/04/2022 11:29:25
+We used to have cases where our customers asked questions about redirect connection type policy:        How works? What is the configuration needed and errors message related about an incorrect setup etc.
+
+https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-216-hands-on-labs-how-redirect-connection-policy/ba-p/3565043
+
+
+Lesson Learned #215: Hands-On-Labs: Communication link failed error message using ODBC.
+07/04/2022 09:42:50
+We used to have cases where our customer faced the following error messages like following:    ERROR [08S01] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: An existing connection was forcibly closed by the remote host.
+
+https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-215-hands-on-labs-communication-link-failed-error/ba-p/3565011
+
+
+Lesson Learned #214: Hands-On-Labs: How to manage an idle connection state issue
+07/03/2022 13:27:07
+We used to have cases where our customers leave the connection open without any activity as you could see in this URL we are going to explain why the connection is dropped due to an idle connection state issue.
+
+https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-214-hands-on-labs-how-to-manage-an-idle/ba-p/3564453
+
+
+Lesson Learned #213: Cannot set the AccessToken property if the Integrated Security has been set
+07/01/2022 01:43:26
+Today I worked on a service request where using SQLPackage and Azure Active Directory user our customer got the following error message "Error exporting database:Could not connect to database server.
+
+https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-213-cannot-set-the-accesstoken-property-if-the/ba-p/3563343
+
+
+microsoft_365blog Blogs:
+Announcing the availability of Quick Access filters in Office app for Android
+06/30/2022 09:00:53
+The Office Mobile team is excited to announce the availability of Quick Access filters in Office Mobile on Android phones and tablets! This feature can help you increase your productivity while customizing Office on your Android mobile device so it works best for you.
+
+https://techcommunity.microsoft.com/t5/microsoft-365-blog/announcing-the-availability-of-quick-access-filters-in-office/ba-p/3561864
+
+
+MicrosoftSecurityandCompliance Blogs:
+How Microsoft Defender for Identity protects against DFSCoerce
+07/01/2022 09:27:13
+Almost a year has passed since the “PetitPotam” attack vector was initially discovered.
+
+https://techcommunity.microsoft.com/t5/security-compliance-and-identity/how-microsoft-defender-for-identity-protects-against-dfscoerce/ba-p/3562912
+
+
+AppsonAzureBlog Blogs:
+Beginners Guide to secure cloud-native applications with Calico in Microsoft Azure
+06/30/2022 08:52:01
+Authors: Dhiraj Sehgal Steve Griffith and Tommy Falgout       This is a 4-module workshop that walks you through the following to become and remain secure quickly:     Implement simple and straightforward security controls in place  Monitor if the security policies are working as expected  Address a security gap with security policy  Troubleshoot a workload-to-workload communication issue        Since AKS users are busy running cloud-native applications and to get started this blog post should provide you a brief overview of what you can expect from each module in the workshop.
+
+https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beginners-guide-to-secure-cloud-native-applications-with-calico/ba-p/3562827
+
+
+AzureDevCommunityBlog Blogs:
+Blazor Test App for Azure AD B2C Custom Policies
+07/05/2022 09:00:00
+Azure AD B2C can be both fun and frustrating.
+
+https://techcommunity.microsoft.com/t5/azure-developer-community-blog/blazor-test-app-for-azure-ad-b2c-custom-policies/ba-p/3565415
+
+
+AzureSynapseAnalyticsBlog Blogs:
+How to provide statement id in the serverless SQL pool support ticket?
+07/05/2022 08:00:00
+Serverless SQL pool is a query service that enables you to analyze data in Azure Data Lake storage Cosmos DB or Data verse without a need to manage the resources tune your queries or do any other administration task to enable your data analyst to query data.
+
+https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-provide-statement-id-in-the-serverless-sql-pool-support/ba-p/3532926
+
+
+AzureSQLBlog Blogs:
+Azure SQL Security: Database Protection with Defender for Cloud (Ep. 5) | Data Exposed
+06/30/2022 09:00:00
+In this episode of Data Exposed with Anna Hoffman and Ido Keshet learn about how defender for SQL (and defender for cloud) can address the top security concerns.
+
+https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-security-database-protection-with-defender-for-cloud/ba-p/3555110
+
+
+AzurePaaSBlog Blogs:
+How to Migrate Schema Registry from Confluent to Azure Event Hub
+07/05/2022 16:08:48
+In many event streaming and messaging scenarios the event or message payload contains structured data.
+
+https://techcommunity.microsoft.com/t5/azure-paas-blog/how-to-migrate-schema-registry-from-confluent-to-azure-event-hub/ba-p/3565403
+
+
+FastTrackforAzureBlog Blogs:
+Everything you want to know about ephemeral OS disks and Azure Kubernetes Service (AKS)
+07/05/2022 04:28:05
+This article analyzes in-depth the available configuration settings for the ephemeral OS disk in Azure Kubernetes Service (AKS).
+
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/everything-you-want-to-know-about-ephemeral-os-disks-and-azure/ba-p/3565605
+
+
+Azure Container Apps: working with storage
+07/01/2022 12:28:52
+Overview     In this article you will learn how to work with storage in ACA (Azure Container Apps).
+
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-container-apps-working-with-storage/ba-p/3561853
+
+
+Can I call external executables from an Azure Function in an Azure App Service? Yes! (2/2)
+07/01/2022 12:13:22
+This is the second of two blog posts for this topic; this one takes the Node.
+
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/can-i-call-external-executables-from-an-azure-function-in-an/ba-p/3563810
+
+
+Can I call external executables from an Azure Function in an Azure App Service? Yes! (1/2)
+07/01/2022 09:02:41
+This is the first of two blog posts for this topic; this one will get you a local Node.
+
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/can-i-call-external-executables-from-an-azure-function-in-an/ba-p/3563676
+
+
+Oh oh! I'm running "out-of-properties"  a.k.a. How can I extend my IoT Messages Enrichment limits?
+07/01/2022 07:29:51
+"Message enrichments is the ability of an IoT hub to stamp messages with additional information before the messages are sent to the designated endpoint.
+
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/oh-oh-i-m-running-quot-out-of-properties-quot-a-k-a-how-can-i/ba-p/3562969
+
+
+Create a Private Link Service using Bicep
+07/01/2022 04:43:07
+Create a Private Link Service using Bicep This sample shows how to use Bicep to create an Azure Private Link Service that can be accessed by a third party via an Azure Private Endpoint.
+
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/create-a-private-link-service-using-bicep/ba-p/3563427
+
+
+AzureDataFactoryBlog Blogs:
+Introducing the Azure Data Factory Studio Preview Experience
+07/01/2022 14:33:35
+We are excited to introduce the Azure Data Factory studio preview experience where users can try new UI updates and provide feedback!       You may have seen a new banner in your data factory:              Or a new option in your data factory settings:              By enabling the studio preview experience you’ll be able to test UI changes in the ADF pipeline and mapping data flow experience.
+
+https://techcommunity.microsoft.com/t5/azure-data-factory-blog/introducing-the-azure-data-factory-studio-preview-experience/ba-p/3563880
+
+
+IntegrationsonAzureBlog Blogs:
+Workflow expression function xml() behavior when converting numbers with decimal
+07/04/2022 09:24:27
+The xml() expression function returns the XML version for a string that contains a JSON object.
+
+https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/workflow-expression-function-xml-behavior-when-converting/ba-p/3551635
+
+
+ADforPostgreSQL Blogs:
+PostgreSQL v14 is now available in Flexible Server PostgreSQL!
+06/30/2022 12:44:28
+We are glad to announce that support for PostgreSQL 14 (14.
+
+https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/postgresql-v14-is-now-available-in-flexible-server-postgresql/ba-p/3563025
+
+
+AzureDataExplorer Blogs:
+Aviation flight data analytics with Azure Synapse Analytics
+07/05/2022 22:59:53
+   In this blog we will cover flight data analytics use case specific to aviation industry.
+
+https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/aviation-flight-data-analytics-with-azure-synapse-analytics/ba-p/3566273
+
+
+Geospatial Analytics for Connected Vehicle with Synapse Data Explorer
+07/05/2022 21:30:08
+       Connected car technology is evolving at a fast pace and has become the new norm of digital transformation in the automobile industry.
+
+https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/geospatial-analytics-for-connected-vehicle-with-synapse-data/ba-p/3566185
+
+
+ADX Web Explorer updates – June 2022
+07/04/2022 22:40:36
+Welcome back to our monthly ADX web explorer updates! Continue reading to learn about improvements and new features in the Query area as well as new One Click capabilities:    Show only rows that fit the search Support Ysplit=panels Create tables graphically Generate sample app supports manual table creation    Results exploration - show only rows that fit the search We are focused on continuously improving the results exploration experience in ADX web UI to make it easy and intuitive.
+
+https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/adx-web-explorer-updates-june-2022/ba-p/3564911
+
+
+AzureMonitorStatusBlog Blogs:
+Experiencing Alerting failure for Log Search Alerts - 07/06 - Investigating
+07/06/2022 03:29:50
+Initial Update: Wednesday 06 July 2022 10:25 UTC    We are aware of issues within Log Search Alerts and are actively investigating.
+
+https://techcommunity.microsoft.com/t5/azure-monitor-status/experiencing-alerting-failure-for-log-search-alerts-07-06/ba-p/3566499
+
+
+AzureArcBlog Blogs:
+Directly Connected Mode Data Controller for Azure Arc-enabled Data Services
+06/30/2022 16:32:27
+Azure Arc-enabled Data Services offers two options for connectivity modes to customers: directly connected mode and indirectly connected mode.
+
+https://techcommunity.microsoft.com/t5/azure-arc-blog/directly-connected-mode-data-controller-for-azure-arc-enabled/ba-p/3562855
+
+
+ADforMySQL Blogs:
+Cross region replication using Data-in replication with Azure Database for MySQL - Flexible Server
+07/05/2022 09:20:34
+MySQL workloads are often read-heavy and support customers with operations in different geographical locations.
+
+https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/cross-region-replication-using-data-in-replication-with-azure/ba-p/3563231
+
+
+AzureVirtualDesktopBlog Blogs:
+Microsoft Teams media optimizations is now Generally Available on Azure Virtual Desktop for macOS
+06/30/2022 15:20:13
+We are happy to announce that Microsoft Teams media optimizations on Azure Virtual Desktop for macOS is now Generally Available.
+
+https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/microsoft-teams-media-optimizations-is-now-generally-available/ba-p/3563125
+
+
+MessagingonAzureBlog Blogs:
+Introducing Azure Event Hubs Dedicated Self-Serve Scaling experience –Public Preview
+06/30/2022 08:16:12
+Since GA of Azure Event Hubs dedicated clusters 3 years ago the service has been catering to high demand critical workloads of customers.
+
+https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/introducing-azure-event-hubs-dedicated-self-serve-scaling/ba-p/3562782
+
+
+AzureMarketplaceBlog Blogs:
+New transactable offers from Collabcloud, EDUardo, Senserva, and Youredi
+07/05/2022 05:12:35
+    Microsoft partners like Collabcloud EDUardo Senserva and Youredi deliver transact-capable offers which allow you to purchase directly from Azure Marketplace.
+
+https://techcommunity.microsoft.com/t5/azure-marketplace-blog/new-transactable-offers-from-collabcloud-eduardo-senserva-and/ba-p/3175828
+
+
+AzureCommunicationServicesBlog Blogs:
+Azure Communication Services UI Library Now Available for iOS and Android
+06/30/2022 13:27:02
+Our team at Azure Communication Services is excited to announce general availability (GA) of our UI Library for iOS & Android.
+
+https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-ui-library-now-available-for-ios/ba-p/3556319
+
+
+Azure Updates:
+How to choose the right Azure services for your applications—It’s not A or B
+07/05/2022 10:00:10
+Which Azure service is best to run my apps on? This is an important decision because the services you choose will dictate your resource planning budget timelines and ultimately the time to market for your business.
+
+https://azure.microsoft.com/blog/how-to-choose-the-right-azure-services-for-your-applications-it-s-not-a-or-b/
+
+
+Choose the right size for your workload with NVads A10 v5 virtual machines, now generally available
+07/05/2022 08:00:09
+Introducing the general availability of NVads A10 v5 GPU accelerated virtual machines now available in US South Central US West2 US West3 Europe West and Europe North regions.
+
+https://azure.microsoft.com/blog/choose-the-right-size-for-your-workload-with-nvads-a10-v5-virtual-machines-now-generally-available/
+
+
+MLOps Blog Series Part 3: Testing scalability of secure machine learning systems using MLOps
+06/30/2022 08:10:01
+The capacity of a system to adjust to changes by adding or removing resources to meet demand is known as scalability.
+
+https://azure.microsoft.com/blog/mlops-blog-series-part-3-testing-scalability-of-secure-machine-learning-systems-using-mlops/
+
+
+

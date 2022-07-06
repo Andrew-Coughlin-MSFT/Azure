@@ -100,8 +100,14 @@ foreach ($url in $Urls){
                     if ($icountposts -eq 0)
                     {
                         #Check if this is the first post for the blog, add the area to the top. 
-                        $Blogsite = $url.Split("=")
-                        $strOutput = $strOutput + $Blogsite[2].remove($Blogsite[2].IndexOf("&"))+" Blogs:`r`n"
+                        try{
+                            $Blogsite = $url.Split("=")
+                            $strOutput = $strOutput + $Blogsite[2].remove($Blogsite[2].IndexOf("&"))+" Blogs:`r`n"
+                        }
+                        catch {
+                            #Azure Update RSS feed is formated differently, handle that condition.
+                            $strOutput = $strOutput + "Azure Updates:`r`n"
+                        }
                     }              
                     $description = $post.description | ConvertFrom-Html
                     $description = $description.replace("`n",", ").replace("`r",", ")
@@ -115,9 +121,6 @@ foreach ($url in $Urls){
     else {
         Write-Host "Collected posts: 0 on $($url)"
     } 
-}
-else {
-    Write-Host "No response for $($url)"
 }
 
 $strOutput | Out-File c:\temp\blogs.txt

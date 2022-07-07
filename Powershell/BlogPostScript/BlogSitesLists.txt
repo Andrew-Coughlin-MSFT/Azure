@@ -18,7 +18,6 @@ https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rs
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=ADforPostgreSQL&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=AzureArchitectureBlog&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=AzureDataExplorer&size=15
-https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=AzureMonitorStatusBlog&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=AzureNetworkSecurityBlog&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=AzureArcBlog&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=5150452619115302317&board=ADforMySQL&size=15

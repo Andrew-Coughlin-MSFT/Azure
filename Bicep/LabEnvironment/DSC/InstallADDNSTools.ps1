@@ -32,7 +32,7 @@ configuration InstallADDNSTools
             Name = "GPMC"
         }
         
-        WindowsFeature ADDSTools
+        WindowsFeature ADDSPSTools
         {
             Ensure = "Present"
             Name ="RSAT-AD-PowerShell"

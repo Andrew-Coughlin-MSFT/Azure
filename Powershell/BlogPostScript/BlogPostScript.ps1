@@ -85,7 +85,7 @@ Function ConvertFrom-Html
 $Urls = Get-Content -Path (Read-Host -Prompt 'Get path')
 $iCount = 0
 $now = Get-Date
-[string]$strOutput =""
+[string]$strOutput ="<html><body>"
 foreach ($url in $Urls){
     Write-ProgressHelper -StepNumber $iCount -Message "Working on $($url)" -Steps $urls.Count
     $Responses = Invoke-RestMethod -Uri $url -UseBasicParsing -ContentType "application/xml"
@@ -102,7 +102,7 @@ foreach ($url in $Urls){
                         #Check if this is the first post for the blog, add the area to the top. 
                         try{
                             $Blogsite = $url.Split("=")
-                            $strOutput = $strOutput + $Blogsite[2].remove($Blogsite[2].IndexOf("&"))+" Blogs:`r`n"
+                            $strOutput = $strOutput + "<h1>"+$Blogsite[2].remove($Blogsite[2].IndexOf("&"))+" Blogs:`r`n</h1>"
                         }
                         catch {
                             #Azure Update RSS feed is formated differently, handle that condition.
@@ -112,7 +112,7 @@ foreach ($url in $Urls){
                     $description = $post.description | ConvertFrom-Html
                     $description = $description.replace("`n",", ").replace("`r",", ")
                     $description = $description.replace(",","")
-                    $strOutput = $strOutput +$post.title.ToString()+"`r`n"+[datetime]$postdate.ToString()+"`r`n"+$description.Remove($description.IndexOf(".")+1)+"`r`n`r`n"+$post.link.ToString()+"`r`n`r`n`r`n"
+                    $strOutput = $strOutput +"<h2>"+$post.title.ToString()+"</h2>"+"`r`n"+"<p>"+[datetime]$postdate.ToString()+"</p>"+"`r`n"+"<p>"+$description.Remove($description.IndexOf(".")+1)+"</p>"+"<p>&nbsp;</p>"+"<p><a href="+$post.link.ToString()+">"+$post.link.ToString()+"</a></p>"+"<p>&nbsp;&nbsp;</p>"
                     $icountposts++
                 }
             }
@@ -122,5 +122,5 @@ foreach ($url in $Urls){
         Write-Host "Collected posts: 0 on $($url)"
     } 
 }
-
-$strOutput | Out-File .\blogs.txt
+$strOutput = $strOutput + "</body></html>"
+$strOutput | Out-File .\blogs.htm

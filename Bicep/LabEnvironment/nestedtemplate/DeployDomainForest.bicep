@@ -118,24 +118,8 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     licenseType: (enableHybridBenefitServerLicenses ? 'Windows_Server' : json('null'))
   }
 }
-// resource vm_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' = {
-//   name: shutdownSchedule
-//   location: location
-//   properties: {
-//     status: 'Enabled'
-//     taskType: 'ComputeVmShutdownTask'
-//     dailyRecurrence: {
-//       time: '19:00'
-//     }
-//     timeZoneId: 'Central Standard Time'
-//     notificationSettings: {
-//       status: 'Disabled'
-//       timeInMinutes: 30
-//     }
-//     targetResourceId: vm.id
-//   }
-// }
-module vm_shutdownSchedule '../nestedtemplate/createShutdownSchedule.bicep' ={
+
+module vm_shutdownSchedule '../nestedtemplate/create-shutdown-schedule.bicep' ={
   name: 'CreateShutdownSchedule'
   params:{
     location:location
@@ -206,13 +190,16 @@ resource vmDCVMName_CreateADForest 'Microsoft.Compute/virtualMachines/extensions
   }
 }
 
-module AzureIaasMalware '../nestedtemplate/DeployIaasAntimalware.bicep'={
+module AzureIaasMalware '../nestedtemplate/deploy-iaas-antimalware.bicep'={
   name:'DeployIaasMalware'
   params:{
     location:location
     scantype:'Quick'
     vm:vm.name
   }
+  dependsOn:[
+    vmDCVMName_CreateADForest
+  ]
 }
 
 module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
@@ -225,4 +212,15 @@ module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
     AzureIaasMalware
   ]
 }
+
+// module ConfigureDomainOu '../nestedtemplate/configure-domain-ous.bicep'={
+// name:'ConfigureDomainOU'
+// params:{
+//   location:location
+//   domainFQDN:domainName
+// }
+// dependsOn:[
+//   vmDCVMName_CreateADForest
+// ]
+// }
 

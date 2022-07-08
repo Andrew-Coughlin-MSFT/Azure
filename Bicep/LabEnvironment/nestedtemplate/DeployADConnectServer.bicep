@@ -23,8 +23,8 @@ param vmName string
 ])
 param OSVersion string = '2022-datacenter-g2'
 
-// @description('Domain to create.')
-// param serverDomainName string
+@description('Domain to join.')
+param serverDomainName string
 
 @description('Size of the virtual machine.')
 param vmSize string = 'Standard_B2s'
@@ -42,16 +42,16 @@ param enableHybridBenefitServerLicenses bool = true
 param stg object
 
 // @description('Organizational Unit path in which the nodes and cluster will be present.')
-// param ouPath string
+param ouPath string
 
 // @description('Set of bit flags that define the join options. Default value of 3 is a combination of NETSETUP_JOIN_DOMAIN (0x00000001) & NETSETUP_ACCT_CREATE (0x00000002) i.e. will join the domain and create the account on the domain. For more information see https://msdn.microsoft.com/en-us/library/aa392154(v=vs.85).aspx')
-// param domainJoinOptions int = 3
+param domainJoinOptions int = 3
 
 var vmnicName = toLower('${vmName}-vmnic01')
 var vmsubnetName = 'server-sn'
 var virtualNetworkName = 'vNet-LAB'
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
-// var domainName = serverDomainName
+var domainName = serverDomainName
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
   name: vmName
@@ -110,25 +110,8 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     licenseType: (enableHybridBenefitServerLicenses ? 'Windows_Server' : json('null'))
   }
 }
-// resource vm_shutdownResourceName 'Microsoft.DevTestLab/schedules@2018-09-15' = {
-//   name: shutdownSchedule
-//   location: location
-//   properties: {
-//     status: 'Enabled'
-//     taskType: 'ComputeVmShutdownTask'
-//     dailyRecurrence: {
-//       time: '19:00'
-//     }
-//     timeZoneId: 'Central Standard Time'
-//     notificationSettings: {
-//       status: 'Disabled'
-//       timeInMinutes: 30
-//     }
-//     targetResourceId: vm.id
-//   }
-// }
 
-module vm_shutdownSchedule '../nestedtemplate/createShutdownSchedule.bicep' ={
+module vm_shutdownSchedule '../nestedtemplate/create-shutdown-schedule.bicep' ={
   name: 'CreateShutdownSchedule'
   params:{
     location:location
@@ -159,7 +142,7 @@ resource vmnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
   }
 }
 
-module AzureIaasMalware '../nestedtemplate/DeployIaasAntimalware.bicep'={
+module AzureIaasMalware '../nestedtemplate/deploy-iaas-antimalware.bicep'={
   name:'DeployIaasMalware'
   params:{
     location:location
@@ -168,24 +151,17 @@ module AzureIaasMalware '../nestedtemplate/DeployIaasAntimalware.bicep'={
   }
 }
 
-// resource virtualMachineExtension 'Microsoft.Compute/virtualMachines/extensions@2021-03-01' = {
-//   parent: vm
-//   name: 'joindomain'
-//   location: location
-//   properties: {
-//     publisher: 'Microsoft.Compute'
-//     type: 'JsonADDomainExtension'
-//     typeHandlerVersion: '1.3'
-//     autoUpgradeMinorVersion: true
-//     settings: {
-//       name: domainName
-//       ouPath: ouPath
-//       user: '${domainName}\\${adminUsername}'
-//       restart: true
-//       options: domainJoinOptions
-//     }
-//     protectedSettings: {
-//       Password: adminPassword
-//     }
-//   }
-// }
+module JoinVmToDomain '../nestedtemplate/join-domain-extension.bicep'={
+  name:'JoinVmToDomain'
+  params:{
+    adminPassword:adminPassword
+    adminUsername:adminUsername
+    domainJoinOptions:domainJoinOptions
+    domainName:domainName
+    location:location
+    ouPath:ouPath
+  }
+  dependsOn:[
+    AzureIaasMalware
+  ]
+}

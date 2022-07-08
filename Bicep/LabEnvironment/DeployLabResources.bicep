@@ -21,6 +21,9 @@ param vmADCName string
 @description('Domain to create.')
 param serverDomainName string
 
+ @description('Organizational Unit path in which the nodes and cluster will be present.')
+param ouPath string ='OU=W2K22,OU=All Servers,DC=LAB,DC=LOCAL'
+
 @description('Size of the virtual machine.')
 param vmSize string = 'Standard_B2s'
 
@@ -39,7 +42,15 @@ resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   sku: {
     name: 'Standard_LRS'
   }
-  kind: 'Storage'
+  kind: 'StorageV2'
+  properties:{
+    minimumTlsVersion:'TLS1_2'
+
+    networkAcls:{
+      defaultAction:'Deny'
+      bypass:'AzureServices'
+    }
+  }
 }
 module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
   name: 'UpdateVNetDNS'
@@ -73,8 +84,8 @@ module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
     vmName:vmJumpboxName
     vmSize:vmSize
     stg:stg
-    // ouPath:ouPath
-    // serverDomainName:serverDomainName
+    ouPath:ouPath
+    serverDomainName:serverDomainName
   }
   dependsOn:[
    vn 
@@ -108,8 +119,8 @@ module adconnectserver 'nestedtemplate/DeployADConnectServer.bicep'={
     stg:stg
     vmName:vmADCName
     vmSize:vmSize
-    // ouPath:ouPath
-    // serverDomainName:serverDomainName
+    ouPath:ouPath
+    serverDomainName:serverDomainName
   }
   dependsOn:[
     vn 

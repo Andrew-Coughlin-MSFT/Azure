@@ -160,6 +160,7 @@ module JoinVmToDomain '../nestedtemplate/join-domain-extension.bicep'={
     domainName:domainName
     location:location
     ouPath:ouPath
+    vmName:vmName
   }
   dependsOn:[
     AzureIaasMalware

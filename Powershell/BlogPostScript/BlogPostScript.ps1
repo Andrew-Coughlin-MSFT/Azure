@@ -112,7 +112,7 @@ foreach ($url in $Urls){
                     $description = $post.description | ConvertFrom-Html
                     $description = $description.replace("`n",", ").replace("`r",", ")
                     $description = $description.replace(",","")
-                    $strOutput = $strOutput +"<h2>"+$post.title.ToString()+"</h2>"+"`r`n"+"<p>"+[datetime]$postdate.ToString()+"</p>"+"`r`n"+"<p>"+$description.Remove($description.IndexOf(".")+1)+"</p>"+"<p>&nbsp;</p>"+"<p><a href="+$post.link.ToString()+">"+$post.link.ToString()+"</a></p>"+"<p>&nbsp;&nbsp;</p>"
+                    $strOutput = $strOutput +"<h2>"+$post.title.ToString()+"</h2>"+"`r`n"+"<p>"+[datetime]$postdate.ToString()+"</p>"+"`r`n"+"<p>"+$description.Remove($description.IndexOf(".")+1)+"</p>"+"<p>&nbsp;</p>"+"<p><a href="+$post.link.ToString()+">"+$post.title.ToString() +"</a></p>"+"<p>&nbsp;&nbsp;</p>"
                     $icountposts++
                 }
             }

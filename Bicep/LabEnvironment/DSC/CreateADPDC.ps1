@@ -16,6 +16,8 @@
     [System.Management.Automation.PSCredential ]$DomainCreds = New-Object System.Management.Automation.PSCredential ("${DomainName}\$($Admincreds.UserName)", $Admincreds.Password)
     $Interface=Get-NetAdapter|Where-Object Name -Like "Ethernet*"|Select-Object -First 1
     $InterfaceAlias=$($Interface.Name)
+    #Convert FQDN to Distinguished Name
+    $DN = 'CN=' + $DomainName.Replace('.',',CN=')
 
     Node localhost
     {
@@ -104,75 +106,65 @@
         xADOrganizationalUnit AllUsersOU
         {
             Name ="All Users"
-            Path = "DC=lab,DC=local"
+            Path = $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADDomain]FirstDS"
         }
         xADOrganizationalUnit AllGroupsOU
         {
             Name = "All Groups"
-            Path = "DC=lab,DC=local"
+            Path = $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADDomain]FirstDS"
         }
         xADOrganizationalUnit AllServiceAccountsOU
         {
             Name = "All Service Accounts"
-            Path = "DC=lab,DC=local"
+            Path = $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADDomain]FirstDS"
         }
         xADOrganizationalUnit AllServersOU
         {
             Name = "All Servers"
-            Path = "DC=lab,DC=local"
+            Path = $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADDomain]FirstDS"
         }
         xADOrganizationalUnit AllDesktopsOU
         {
             Name = "All Desktops"
-            Path = "DC=lab,DC=local"
+            Path = $DN
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADDomain]FirstDS"
+        }
+        xADOrganizationalUnit AzureFilesOU
+        {
+            Name = "AzureFiles"
+            Path = $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADDomain]FirstDS"
         }
         xADOrganizationalUnit AllServersW2K19OU
         {
             Name = "W2K19"
-            Path = "OU=All Servers,DC=lab,DC=local"
+            Path = 'OU=All Servers,' + $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADOrganizationalUnit]AllServersOU"
         }
         xADOrganizationalUnit AllServersW2K22OU
         {
             Name = "W2K22"
-            Path = "OU=All Servers,DC=lab,DC=local"
+            Path = 'OU=All Servers,' + $DN
             ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADOrganizationalUnit]AllServersOU"
         }
-
-        # Script CreateADOUs
-	    # {
-        #     SetScript = {
-        #         Write-Verbose -Verbose $DomainName 
-        #         $domain=$DomainName
-        #         $domainDN = "DC=$($domain.replace(".", ",DC="))"
-        #         Write-Verbose -Verbose $domainDN  
-                
-        #         New-ADOrganizationalUnit -Name "All Users" -Path $domainDN -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "All Groups" -Path $domainDN -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "All Server Accounts" -Path $domainDN -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "All Servers" -Path $domainDN -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "W2K19" -Path "OU=All Servers,$domainDN" -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "W2K22" -Path "OU=All Servers,$domainDN" -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "All Desktops" -Path $domainDN -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "Autopilot Domain Join" -Path "OU=All Desktops,$domainDN" -ProtectedFromAccidentalDeletion $true
-        #         New-ADOrganizationalUnit -Name "AzureFiles" -Path $domainDN -ProtectedFromAccidentalDeletion $true
-        #     }
-        #     GetScript =  { @{} }
-        #     TestScript = { $false }
-	    #     DependsOn = "[xADDomain]FirstDS"
-        # }
-
+        xADOrganizationalUnit AllServersAutoPilotDomainJoinOU
+        {
+            Name = "Autopilot Domain Join"
+            Path = 'OU=All Desktops,' + $DN
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADOrganizationalUnit]AllDesktopsOU"
+        }
    }
 } 

@@ -5,8 +5,8 @@ This is a repo of sample work that I have done over time.  Hope you find this he
 In order to make sure this deployment is successful you need to register "EncryptionAtHost" feature, to do this follow these instructions per subscription you will be deploying to: https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal#prerequisites
 
 # Deployment
-$rgname = "<rg-name>"
-$location = "azure region name>"
+$rgname = "<rg-name>" <br/>
+$location = "<azure region name>"<br/>
 New-AzResourceGroup -Name $rgname -Location $location
 
 New-AzResourceGroupDeployment -ResourceGroupName $rgname -TemplateFile <path-to-template>\DeployLabResources.bicep -adminUsername <username> -vmDCName <DCName> -serverDomainName <Domain.fqdn> -vmJumpboxName <JumpboxName> -vmADCName <ADConnectServerName>

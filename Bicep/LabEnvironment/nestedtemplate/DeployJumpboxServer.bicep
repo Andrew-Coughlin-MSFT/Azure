@@ -214,24 +214,3 @@ module JoinVmToDomain '../nestedtemplate/join-domain-extension.bicep'={
     AzureIaasMalware
   ]
 }
-// resource virtualMachineExtension 'Microsoft.Compute/virtualMachines/extensions@2021-03-01' = {
-//   parent: vm
-//   name: 'joindomain'
-//   location: location
-//   properties: {
-//     publisher: 'Microsoft.Compute'
-//     type: 'JsonADDomainExtension'
-//     typeHandlerVersion: '1.3'
-//     autoUpgradeMinorVersion: true
-//     settings: {
-//       name: domainName
-//       ouPath: ouPath
-//       user: '${domainName}\\${adminUsername}'
-//       restart: true
-//       options: domainJoinOptions
-//     }
-//     protectedSettings: {
-//       Password: adminPassword
-//     }
-//   }
-// }

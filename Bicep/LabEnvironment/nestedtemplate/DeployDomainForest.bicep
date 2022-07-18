@@ -213,14 +213,3 @@ module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
   ]
 }
 
-// module ConfigureDomainOu '../nestedtemplate/configure-domain-ous.bicep'={
-// name:'ConfigureDomainOU'
-// params:{
-//   location:location
-//   domainFQDN:domainName
-// }
-// dependsOn:[
-//   vmDCVMName_CreateADForest
-// ]
-// }
-

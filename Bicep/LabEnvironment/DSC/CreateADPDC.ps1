@@ -14,7 +14,7 @@
     
     Import-DscResource -ModuleName xActiveDirectory, xStorage, xNetworking, PSDesiredStateConfiguration, xPendingReboot
     [System.Management.Automation.PSCredential ]$DomainCreds = New-Object System.Management.Automation.PSCredential ("${DomainName}\$($Admincreds.UserName)", $Admincreds.Password)
-    $Interface=Get-NetAdapter|Where Name -Like "Ethernet*"|Select-Object -First 1
+    $Interface=Get-NetAdapter|Where-Object Name -Like "Ethernet*"|Select-Object -First 1
     $InterfaceAlias=$($Interface.Name)
 
     Node localhost
@@ -100,6 +100,27 @@
             SysvolPath = "F:\SYSVOL"
 	        DependsOn = @("[xDisk]ADDataDisk", "[WindowsFeature]ADDSInstall")
         } 
+
+        Script CreateADOUs
+	    {
+            SetScript = {
+                $domain=$DomainName
+                $domainDN = "DC=$($domain.replace(".", ",DC="))"
+                
+                New-ADOrganizationalUnit -Name "All Users" -Path $domainDN -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "All Groups" -Path $domainDN -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "All Server Accounts" -Path $domainDN -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "All Servers" -Path $domainDN -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "W2K19" -Path "OU=All Servers,$domainDN" -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "W2K22" -Path "OU=All Servers,$domainDN" -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "All Desktops" -Path $domainDN -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "Autopilot Domain Join" -Path "OU=All Desktops,$domainDN" -ProtectedFromAccidentalDeletion $true
+                New-ADOrganizationalUnit -Name "AzureFiles" -Path $domainDN -ProtectedFromAccidentalDeletion $true
+            }
+            GetScript =  { @{} }
+            TestScript = { $false }
+	        DependsOn = "[xADDomain]FirstDS"
+        }
 
    }
 } 

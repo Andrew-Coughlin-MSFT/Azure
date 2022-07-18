@@ -1,5 +1,5 @@
 # Azure
-This is a repo of sample work that I have done over time.  Hope you find this helpful.
+This project will create 3 servers on Windows Server 2022.  Domain Controller, Jumpbox, and AD Connect Server.  With the virtual networks, NSG, shutdown schedules.  Will join the member servers to the domain and preconfigure the domain with specific OUs.
 
 # Prerequisites
 In order to make sure this deployment is successful you need to register "EncryptionAtHost" feature, to do this follow these instructions per subscription you will be deploying to: https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal#prerequisites

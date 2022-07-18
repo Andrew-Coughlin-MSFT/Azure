@@ -103,10 +103,52 @@
 
         xADOrganizationalUnit AllUsersOU
         {
-            Name:"All Users"
-            Path: "DC=lab,DC=local"
-            ProtectedFromAccidentalDeletion $true
+            Name ="All Users"
+            Path = "DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
             DependsOn = "[xADDomain]FirstDS"
+        }
+        xADOrganizationalUnit AllGroupsOU
+        {
+            Name = "All Groups"
+            Path = "DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADDomain]FirstDS"
+        }
+        xADOrganizationalUnit AllServiceAccountsOU
+        {
+            Name = "All Service Accounts"
+            Path = "DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADDomain]FirstDS"
+        }
+        xADOrganizationalUnit AllServersOU
+        {
+            Name = "All Servers"
+            Path = "DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADDomain]FirstDS"
+        }
+        xADOrganizationalUnit AllDesktopsOU
+        {
+            Name = "All Desktops"
+            Path = "DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADDomain]FirstDS"
+        }
+        xADOrganizationalUnit AllServersW2K19OU
+        {
+            Name = "W2K19"
+            Path = "OU=All Servers,DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADOrganizationalUnit]AllServersOU"
+        }
+        xADOrganizationalUnit AllServersW2K22OU
+        {
+            Name = "W2K22"
+            Path = "OU=All Servers,DC=lab,DC=local"
+            ProtectedFromAccidentalDeletion = $true
+            DependsOn = "[xADOrganizationalUnit]AllServersOU"
         }
 
         # Script CreateADOUs

@@ -21,7 +21,7 @@ param vmName string
  '2022-datacenter-g2'
  '2022-datacenter-azure-edition-core'
 ])
-param OSVersion string = '2022-datacenter-azure-edition-core'
+param OSVersion string = '2022-datacenter-g2'
 
 @description('Domain to create.')
 param serverDomainName string

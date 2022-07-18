@@ -17,7 +17,7 @@
     $Interface=Get-NetAdapter|Where-Object Name -Like "Ethernet*"|Select-Object -First 1
     $InterfaceAlias=$($Interface.Name)
     #Convert FQDN to Distinguished Name
-    $DN = 'CN=' + $DomainName.Replace('.',',CN=')
+    $DN = 'DC=' + $DomainName.Replace('.',',DC=')
 
     Node localhost
     {

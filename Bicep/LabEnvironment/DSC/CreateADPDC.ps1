@@ -104,8 +104,10 @@
         Script CreateADOUs
 	    {
             SetScript = {
+                Write-Verbose -Verbose $DomainName 
                 $domain=$DomainName
                 $domainDN = "DC=$($domain.replace(".", ",DC="))"
+                Write-Verbose -Verbose $domainDN  
                 
                 New-ADOrganizationalUnit -Name "All Users" -Path $domainDN -ProtectedFromAccidentalDeletion $true
                 New-ADOrganizationalUnit -Name "All Groups" -Path $domainDN -ProtectedFromAccidentalDeletion $true

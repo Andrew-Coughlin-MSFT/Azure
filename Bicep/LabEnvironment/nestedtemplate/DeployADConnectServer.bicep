@@ -166,3 +166,14 @@ module JoinVmToDomain '../nestedtemplate/join-domain-extension.bicep'={
     AzureIaasMalware
   ]
 }
+
+module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
+  name:'DeployAzureMonitorAgent'
+  params:{
+    location:location
+    vmName:vm.name
+  }
+  dependsOn:[
+    AzureIaasMalware
+  ]
+}

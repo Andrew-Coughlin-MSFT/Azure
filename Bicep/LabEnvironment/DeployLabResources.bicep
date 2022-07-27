@@ -136,6 +136,9 @@ module adconnectserver 'nestedtemplate/DeployADConnectServer.bicep'={
 //     level:'CanNotDelete'
 //     notes:'Resource group and its resources should not be deleted.'
 //   }
+//   dependsOn:[
+//     adconnectserver
+//   ]
 // }
 
 

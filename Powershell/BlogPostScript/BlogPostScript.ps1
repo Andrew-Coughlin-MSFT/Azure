@@ -102,7 +102,7 @@ foreach ($url in $Urls){
                         #Check if this is the first post for the blog, add the area to the top. 
                         try{
                             $Blogsite = $url.Split("=")
-                            $strOutput = $strOutput + "<h1>"+$Blogsite[2].remove($Blogsite[2].IndexOf("&"))+" Blogs:`r`n</h1>"
+                            $strOutput = $strOutput + "<h1><u>"+$Blogsite[2].remove($Blogsite[2].IndexOf("&"))+" Blogs:`r`n</u></h1>"
                         }
                         catch {
                             #Azure Update RSS feed is formated differently, handle that condition.

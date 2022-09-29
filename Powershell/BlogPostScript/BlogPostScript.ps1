@@ -9,6 +9,22 @@ function Write-ProgressHelper {
     Write-Progress -Activity 'Completion Status' -Status $Message -PercentComplete (($StepNumber / $steps) * 100)
 }
 
+function Remove-PastWeekOutput 
+{
+    param(
+        [string]$Path
+    )
+    if ((Test-Path -Path $Path) -eq $True)
+    {
+        Write-Host "test"
+        Remove-Item $Path
+    }
+    else {
+        Write-host "test2"
+    }
+
+}
+
  Function ConvertFrom-Html
  {
      <#
@@ -82,7 +98,9 @@ function Write-ProgressHelper {
      return $PlainText
  }
 
-$Urls = Get-Content -Path (Read-Host -Prompt 'Get path')
+$Path = (Read-Host -Prompt 'Get path')
+$Urls = Get-Content -Path $Path
+Remove-PastWeekOutput -Path .\blogs.htm
 $iCount = 0
 $now = Get-Date
 [string]$strOutput ="<html><body>"

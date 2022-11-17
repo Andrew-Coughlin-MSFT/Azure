@@ -1,3 +1,7 @@
+param(
+    [Parameter(Mandatory=$true)]
+    [string]$Path
+)
 
 function Write-ProgressHelper {
     param(
@@ -98,7 +102,8 @@ function Remove-PastWeekOutput
      return $PlainText
  }
 
-$Path = (Read-Host -Prompt 'Get path')
+
+#$Path = (Read-Host -Prompt 'Get path')
 $Urls = Get-Content -Path $Path
 Remove-PastWeekOutput -Path .\blogs.htm
 $iCount = 0

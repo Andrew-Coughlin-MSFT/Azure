@@ -129,7 +129,7 @@ foreach ($url in $Urls){
                         }
                         catch {
                             #Azure Update RSS feed is formated differently, handle that condition.
-                            $strOutput = $strOutput + "Azure Updates:`r`n"
+                            $strOutput = $strOutput + "<h1><u>Azure Update Blogs:</u></h1>"
                         }
                     }              
                     $description = $post.description | ConvertFrom-Html

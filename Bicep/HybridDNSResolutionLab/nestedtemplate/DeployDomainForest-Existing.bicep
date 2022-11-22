@@ -191,9 +191,7 @@ resource vmDCVMName_ConfigureBDC 'Microsoft.Compute/virtualMachines/extensions@2
       }
     }
   }
-  dependsOn:[
-    vmDCVMName_PrepareADBDC
-  ]
+
 }
 
 module AzureIaasMalware '../nestedtemplate/deploy-iaas-antimalware.bicep'={

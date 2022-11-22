@@ -110,8 +110,6 @@ module domaincontroller './nestedtemplate/DeployDomainForest-Existing.bicep'={
     serverDomainName:domainName
     virtualNetworkName:HubEastvirtualNetworkName
     vmsubnetName:vmsubnetName
-    adBDCPrepareFunction: adBDCPrepareFunction
-    adBDCModulesPrepareURL: adBDCModulesPrepareURL
     adBDCModulesConfigureURL:adBDCModulesConfigureURL
     adBDCConfigureFunction:adBDCConfigureFunction
   }

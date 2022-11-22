@@ -43,8 +43,6 @@ param stg object
 
 param vmsubnetName string
 param virtualNetworkName string
-param adBDCModulesPrepareURL string
-param adBDCPrepareFunction string
 param adBDCModulesConfigureURL string
 param adBDCConfigureFunction string
 
@@ -164,34 +162,6 @@ resource asvm 'Microsoft.Compute/availabilitySets@2021-11-01' = {
   }
   sku:{
     name:'Aligned'
-  }
-}
-
-resource vmDCVMName_PrepareADBDC 'Microsoft.Compute/virtualMachines/extensions@2022-03-01' = {
-  parent: vm
-  name: 'PrepareADBDC'
-  location: location
-  properties: {
-    publisher: 'Microsoft.Powershell'
-    type: 'DSC'
-    typeHandlerVersion: '2.83'
-    autoUpgradeMinorVersion: true
-    settings: {
-      ModulesUrl: adBDCModulesPrepareURL
-      ConfigurationFunction: adBDCPrepareFunction
-      Properties: {
-        DomainName: domainName
-        AdminCreds: {
-          UserName: adminUsername
-          Password: 'PrivateSettingsRef:AdminPassword'
-        }
-      }
-    }
-    protectedSettings: {
-      Items: {
-        AdminPassword: adminPassword
-      }
-    }
   }
 }
 

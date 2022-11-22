@@ -13,7 +13,7 @@
     )
 
     Import-DscResource -ModuleName xActiveDirectory, xPendingReboot, xStorage, xNetworking
-    $shortDomainName = $serverDomainNAme.Substring(0,$serverDomainNAme.IndexOf('.'))
+    $shortDomainName = $DomainName.Substring(0,$DomainName.IndexOf('.'))
     [System.Management.Automation.PSCredential ]$DomainCreds = New-Object System.Management.Automation.PSCredential ("${shortDomainName}\$($Admincreds.UserName)", $Admincreds.Password)
 
     Node localhost

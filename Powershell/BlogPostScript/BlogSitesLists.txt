@@ -132,3 +132,4 @@ https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rs
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8864831250609423092&board=SBS&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8864831250609423092&board=YammerBlog&size=15
 https://azurecomcdn.azureedge.net/en-us/blog/feed/
+https://azurecomcdn.azureedge.net/en-gb/blog/topics/security/feed/

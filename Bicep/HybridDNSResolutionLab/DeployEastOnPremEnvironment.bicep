@@ -17,7 +17,7 @@ param vmJumpboxName string
 @description('Domain to create.')
 param serverDomainName string
 
- @description('Organizational Unit path in which the nodes and cluster will be present.')
+@description('Organizational Unit path in which the nodes and cluster will be present.')
 param ouPath string ='OU=W2K22,OU=All Servers,DC=LAB,DC=LOCAL'
 
 @description('Size of the virtual machine.')
@@ -29,7 +29,7 @@ param location string = resourceGroup().location
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var HubEastaddressPrefix = '10.40.0.0/16'
 var HubEastvirtualNetworkName = 'vNet-East-OnPrem'
-var vmDCPrivateIPAddress = '10.40.1.5'
+var vmDCPrivateIPAddress = '10.40.1.4'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 

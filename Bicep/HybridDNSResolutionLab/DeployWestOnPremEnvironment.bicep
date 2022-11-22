@@ -29,12 +29,14 @@ param location string = resourceGroup().location
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var HubEastaddressPrefix = '10.50.0.0/16'
 var HubEastvirtualNetworkName = 'vNet-West-OnPrem'
-var vmDCPrivateIPAddress = '10.50.1.5'
+var vmDCPrivateIPAddress = '10.40.1.4'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
-var adPDCModulesURL ='https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Bicep/HybridDNSResolutionLab/DSC/CreateADPDC.ps1?raw=true'
-var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
+var adBDCModulesPrepareURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/CreateADPDC.zip?raw=true'
+var adBDCPrepareFunction = 'CreateADPDC.ps1\\CreateADPDC'
+var adBDCModulesConfigureURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/CreateADPDC.zip?raw=true'
+var adBDCConfigureFunction = 'CreateADPDC.ps1\\CreateADPDC'
 
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   name: storageAccountName
@@ -52,7 +54,7 @@ resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
     }
   }
 }
-module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
+module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings-onprem-west.bicep' = {
   name: 'UpdateVNetDNS'
   params: {
     virtualNetworkName: HubEastvirtualNetworkName
@@ -96,7 +98,7 @@ module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
   ]
 }
 
-module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
+module domaincontroller './nestedtemplate/DeployDomainForest-Existing.bicep'={
   name:'CreateDomainControllerForest'
   params:{
     location:location
@@ -108,8 +110,10 @@ module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
     serverDomainName:domainName
     virtualNetworkName:HubEastvirtualNetworkName
     vmsubnetName:vmsubnetName
-    adPDCConfigurationFunction: adPDCConfigurationFunction
-    adPDCModulesURL: adPDCModulesURL
+    adBDCPrepareFunction: adBDCPrepareFunction
+    adBDCModulesPrepareURL: adBDCModulesPrepareURL
+    adBDCModulesConfigureURL:adBDCModulesConfigureURL
+    adBDCConfigureFunction:adBDCConfigureFunction
   }
   dependsOn:[
     vn 

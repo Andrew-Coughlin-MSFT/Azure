@@ -16,8 +16,6 @@
     [System.Management.Automation.PSCredential ]$DomainCreds = New-Object System.Management.Automation.PSCredential ("${DomainName}\$($Admincreds.UserName)", $Admincreds.Password)
     $Interface=Get-NetAdapter|Where-Object Name -Like "Ethernet*"|Select-Object -First 1
     $InterfaceAlias=$($Interface.Name)
-    #Convert FQDN to Distinguished Name
-    $DN = 'DC=' + $DomainName.Replace('.',',DC=')
 
     Node localhost
     {
@@ -49,14 +47,6 @@
             Name = "RSAT-DNS-Server"
             DependsOn = "[WindowsFeature]DNS"
 	    }
-
-        xDnsServerAddress DnsServerAddress 
-        { 
-            Address        = '127.0.0.1' 
-            InterfaceAlias = $InterfaceAlias
-            AddressFamily  = 'IPv4'
-	        DependsOn = "[WindowsFeature]DNS"
-        }
 
         xWaitforDisk Disk2
         {

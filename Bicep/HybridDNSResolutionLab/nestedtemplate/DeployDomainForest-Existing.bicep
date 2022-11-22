@@ -150,6 +150,7 @@ resource vmnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
         }
       }
     ]
+    //add temporary dns settings
     dnsSettings: {
       dnsServers: [
         '10.40.1.4'
@@ -220,5 +221,24 @@ module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
   dependsOn:[
     AzureIaasMalware
   ]
+}
+
+//Update nic to remove temporary dns setting.
+resource vmnicUpdate 'Microsoft.Network/networkInterfaces@2021-02-01' = {
+  name: vmnicName
+  location: location
+  properties: {
+    ipConfigurations: [
+      {
+        name: 'ipconfig1'
+        properties: {
+          privateIPAllocationMethod: 'Dynamic'
+          subnet: {
+            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, vmsubnetName)
+          }
+        }
+      }
+    ]
+  }
 }
 

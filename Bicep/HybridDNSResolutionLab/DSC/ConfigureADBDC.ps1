@@ -23,6 +23,30 @@
             RebootNodeIfNeeded = $true
         }
         
+        WindowsFeature DNS 
+        { 
+            Ensure = "Present" 
+            Name = "DNS"		
+        }
+
+        Script EnableDNSDiags
+	    {
+      	    SetScript = { 
+		        Set-DnsServerDiagnostics -All $true
+                Write-Verbose -Verbose "Enabling DNS client diagnostics" 
+            }
+            GetScript =  { @{} }
+            TestScript = { $false }
+	        DependsOn = "[WindowsFeature]DNS"
+        }
+
+	    WindowsFeature DnsTools
+	    {
+	        Ensure = "Present"
+            Name = "RSAT-DNS-Server"
+            DependsOn = "[WindowsFeature]DNS"
+	    }
+
         xWaitforDisk Disk2
         {
                 DiskNumber = 2
@@ -41,6 +65,7 @@
         {
             Ensure = "Present"
             Name = "AD-Domain-Services"
+            DependsOn="[WindowsFeature]DNS" 
         }
 
         WindowsFeature ADDSTools

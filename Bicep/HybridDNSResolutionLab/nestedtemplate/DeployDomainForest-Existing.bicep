@@ -150,6 +150,11 @@ resource vmnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
         }
       }
     ]
+    dnsSettings: {
+      dnsServers: [
+        '10.40.1.4'
+      ]
+    }
   }
 }
 

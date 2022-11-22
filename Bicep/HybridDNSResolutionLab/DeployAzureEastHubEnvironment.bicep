@@ -27,8 +27,8 @@ param vmSize string = 'Standard_B2s'
 param location string = resourceGroup().location
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
-var addressPrefix = '10.4.0.0/16'
-var virtualNetworkName = 'vNet-LAB'
+var HubEastaddressPrefix = '10.10.0.0/16'
+var HubEastvirtualNetworkName = 'vNet-East-Hub1'
 var vmDCPrivateIPAddress = '10.4.0.4'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
@@ -52,8 +52,8 @@ resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
 module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
   name: 'UpdateVNetDNS'
   params: {
-    virtualNetworkName: virtualNetworkName
-    virtualNetworkAddressRange: addressPrefix
+    virtualNetworkName: HubEastvirtualNetworkName
+    virtualNetworkAddressRange: HubEastaddressPrefix
     DNSServerAddress: [
       vmDCPrivateIPAddress
     ]
@@ -67,9 +67,17 @@ module vn './nestedtemplate/create-virtual-networks.bicep' ={
   name: 'CreateVirtualNetwork'
   params: {
     location:location
-    virtualNetworkName: virtualNetworkName
-    virtualNetworkAddressRange: addressPrefix
+    virtualNetworkName: HubEastvirtualNetworkName
+    virtualNetworkAddressRange: HubEastaddressPrefix
     vmName:vmDCName
+  }
+}
+module vnspoke './nestedtemplate/create-virtual-networks-spoke.bicep' ={
+  name: 'CreateVirtualSpokeNetwork'
+  params: {
+    location:location
+    virtualNetworkName: HubEastvirtualNetworkName
+    virtualNetworkAddressRange: HubEastaddressPrefix
   }
 }
 module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
@@ -83,6 +91,8 @@ module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
     stg:stg
     ouPath:ouPath
     serverDomainName:serverDomainName
+    virtualNetworkName:HubEastvirtualNetworkName
+    vmsubnetName:vmsubnetName
   }
   dependsOn:[
    vn 
@@ -101,7 +111,8 @@ module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
     stg:stg
     vmSize:vmSize
     serverDomainName:domainName
-    
+    virtualNetworkName:HubEastvirtualNetworkName
+    vmsubnetName:vmsubnetName
   }
   dependsOn:[
     vn 

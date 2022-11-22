@@ -33,7 +33,7 @@ var vmDCPrivateIPAddress = '10.40.1.5'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
-var adPDCModulesURL ='https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Bicep/HybridDNSResolutionLab/DSC/CreateADPDC.ps1?raw=true'
+var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/CreateADPDC.zip?raw=true'
 var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
 
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {

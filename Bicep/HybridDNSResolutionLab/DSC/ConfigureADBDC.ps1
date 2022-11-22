@@ -84,7 +84,7 @@
 
         xWaitForADDomain DscForestWait
         {
-            DomainName = $DomainName
+            DomainName = $shortDomainName
             DomainUserCredential= $DomainCreds
             RetryCount = $RetryCount
             RetryIntervalSec = $RetryIntervalSec
@@ -92,7 +92,7 @@
         }
         xADDomainController BDC
         {
-            DomainName = $DomainName
+            DomainName = $shortDomainName
             DomainAdministratorCredential = $DomainCreds
             SafemodeAdministratorPassword = $DomainCreds
             DatabasePath = "F:\NTDS"

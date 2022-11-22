@@ -50,7 +50,7 @@ resource virtualNetworkName_resource 'Microsoft.Network/virtualNetworks@2020-08-
       {
         name: 'server-sn'
         properties: {
-          addressPrefix: '10.10.5.0/24'
+          addressPrefix: '10.50.1.0/24'
           networkSecurityGroup: {
             id: nsgServerSn.id
           }
@@ -59,10 +59,7 @@ resource virtualNetworkName_resource 'Microsoft.Network/virtualNetworks@2020-08-
       {
         name:'GatewaySubnet'
         properties:{
-          addressPrefix:'10.10.2.0/24'
-          networkSecurityGroup: {
-            id: nsgJumpboxSn.id
-          }
+          addressPrefix:'10.50.2.0/24'
         }
       }
     ]

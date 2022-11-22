@@ -63,8 +63,8 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
     domaincontroller
   ]
 }
-module vn './nestedtemplate/create-virtual-networks-onprem.bicep' ={
-  name: 'CreateVirtualNetwork'
+module vn './nestedtemplate/create-virtual-networks-onprem-east.bicep' ={
+  name: 'CreateVirtualNetworkEast'
   params: {
     location:location
     virtualNetworkName: HubEastvirtualNetworkName

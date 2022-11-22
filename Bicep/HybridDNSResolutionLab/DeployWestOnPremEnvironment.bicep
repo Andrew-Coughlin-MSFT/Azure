@@ -27,9 +27,9 @@ param vmSize string = 'Standard_B2s'
 param location string = resourceGroup().location
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
-var HubEastaddressPrefix = '10.10.0.0/16'
-var HubEastvirtualNetworkName = 'vNet-East-Hub1'
-var vmDCPrivateIPAddress = '10.41.0.5'
+var HubEastaddressPrefix = '10.50.0.0/16'
+var HubEastvirtualNetworkName = 'vNet-West-OnPrem'
+var vmDCPrivateIPAddress = '10.50.1.5'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
@@ -63,8 +63,8 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
     domaincontroller
   ]
 }
-module vn './nestedtemplate/create-virtual-networks.bicep' ={
-  name: 'CreateVirtualNetworkAzureEast'
+module vn './nestedtemplate/create-virtual-networks-onprem-west.bicep' ={
+  name: 'CreateVirtualNetworkWest'
   params: {
     location:location
     virtualNetworkName: HubEastvirtualNetworkName
@@ -72,16 +72,8 @@ module vn './nestedtemplate/create-virtual-networks.bicep' ={
     vmName:vmDCName
   }
 }
-module vnspoke './nestedtemplate/create-virtual-networks-east-spoke.bicep' ={
-  name: 'CreateVirtualSpokeNetworkAzureEast'
-  params: {
-    location:location
-    virtualNetworkName: HubEastvirtualNetworkName
-    virtualNetworkAddressRange: HubEastaddressPrefix
-  }
-}
 module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
-  name:'CreateJumpboxVMAzureEast'
+  name:'CreateJumpboxVM'
   params:{
     location:location
     adminPassword:adminPassword

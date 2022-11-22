@@ -28,8 +28,8 @@ param location string = resourceGroup().location
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var HubEastaddressPrefix = '10.10.0.0/16'
-var HubEastvirtualNetworkName = 'vNet-East-Hub1'
-var vmDCPrivateIPAddress = '10.41.0.5'
+var HubEastvirtualNetworkName = 'vNet-West-Hub1'
+var vmDCPrivateIPAddress = '10.20.2.5'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
@@ -72,7 +72,7 @@ module vn './nestedtemplate/create-virtual-networks.bicep' ={
     vmName:vmDCName
   }
 }
-module vnspoke './nestedtemplate/create-virtual-networks-east-spoke.bicep' ={
+module vnspoke './nestedtemplate/create-virtual-networks-west-spoke.bicep' ={
   name: 'CreateVirtualSpokeNetworkAzureEast'
   params: {
     location:location

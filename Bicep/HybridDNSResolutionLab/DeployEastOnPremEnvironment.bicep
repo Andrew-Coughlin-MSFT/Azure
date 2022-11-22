@@ -33,6 +33,9 @@ var vmDCPrivateIPAddress = '10.40.1.5'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
+var adPDCModulesURL ='https://raw.githubusercontent.com/Andrew-Coughlin-MSFT/Azure/master/Bicep/HybridDNSResolutionLab/DSC/CreateADPDC.ps1?raw=true'
+var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
+
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   name: storageAccountName
   location: location
@@ -105,6 +108,8 @@ module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
     serverDomainName:domainName
     virtualNetworkName:HubEastvirtualNetworkName
     vmsubnetName:vmsubnetName
+    adPDCConfigurationFunction: adPDCConfigurationFunction
+    adPDCModulesURL: adPDCModulesURL
   }
   dependsOn:[
     vn 

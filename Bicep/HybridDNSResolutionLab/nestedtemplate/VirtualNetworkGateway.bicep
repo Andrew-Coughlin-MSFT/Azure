@@ -58,3 +58,4 @@ resource virtualNetworkGateway 'Microsoft.Network/virtualNetworkGateways@2021-02
   ]
 }
 output vngid string = virtualNetworkGateway.id
+output publicip string = PublicIpAddressName_resource.properties.ipAddress

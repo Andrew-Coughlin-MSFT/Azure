@@ -43,14 +43,15 @@ param stg object
 
 param vmsubnetName string
 param virtualNetworkName string
+param adPDCModulesURL string
+param adPDCConfigurationFunction string
 
 var vmnicName = toLower('${vmName}-vmnic01')
 
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
 var availabilitySetName = toLower('as${vmName}')
 var domainName = serverDomainName
-var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/Hybriddnsresolutionlab/DSC/CreateADPDC.zip?raw=true'
-var adPDCConfigurationFunction = 'CreateADPDC.ps1\\CreateADPDC'
+
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
   name: vmName

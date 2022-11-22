@@ -46,10 +46,9 @@ param stg object
 
 @description('SKU for the Public IP used to access the Virtual Machine.')
 @allowed([
-  'Basic'
   'Standard'
 ])
-param publicIpSku string = 'Basic'
+param publicIpSku string = 'Standard'
 
 // @description('Organizational Unit path in which the nodes and cluster will be present.')
 param ouPath string

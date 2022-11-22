@@ -92,11 +92,5 @@
             SysvolPath = "F:\SYSVOL"
             DependsOn = @("[xDisk]ADDataDisk", "[WindowsFeature]ADDSInstall")
         }
-
-        xPendingReboot RebootAfterPromotion {
-            Name = "RebootAfterDCPromotion"
-            DependsOn = "[xADDomainController]BDC"
-        }
-
     }
 }

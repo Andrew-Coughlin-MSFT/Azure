@@ -169,7 +169,7 @@ resource asvm 'Microsoft.Compute/availabilitySets@2021-11-01' = {
 
 resource vmDCVMName_PrepareADBDC 'Microsoft.Compute/virtualMachines/extensions@2022-03-01' = {
   parent: vm
-  name: 'PrepareADBC'
+  name: 'PrepareADBDC'
   location: location
   properties: {
     publisher: 'Microsoft.Powershell'

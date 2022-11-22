@@ -33,9 +33,9 @@ var vmDCPrivateIPAddress = '10.40.1.4'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
-var adBDCModulesPrepareURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/PrepareADBDC.ps1?raw=true'
+var adBDCModulesPrepareURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/PrepareADBDC.zip?raw=true'
 var adBDCPrepareFunction = 'PrepareADBDC.ps1\\PrepareADBDC'
-var adBDCModulesConfigureURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/ConfigureADBDC.ps1?raw=true'
+var adBDCModulesConfigureURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/ConfigureADBDC.zip?raw=true'
 var adBDCConfigureFunction = 'ConfigureADBDC.ps1\\ConfigureADBDC'
 
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {

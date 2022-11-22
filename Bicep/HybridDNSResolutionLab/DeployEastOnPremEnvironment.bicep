@@ -52,7 +52,7 @@ resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
     }
   }
 }
-module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
+module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings-onprem-east.bicep' = {
   name: 'UpdateVNetDNS'
   params: {
     virtualNetworkName: HubEastvirtualNetworkName

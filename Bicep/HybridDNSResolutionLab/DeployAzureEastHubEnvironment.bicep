@@ -53,7 +53,7 @@ resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
     }
   }
 }
-module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
+module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings-azure-east.bicep' = {
   name: 'UpdateVNetDNS'
   params: {
     virtualNetworkName: HubEastvirtualNetworkName
@@ -67,7 +67,7 @@ module UpdateVNetDNS './nestedtemplate/update-vnet-dns-settings.bicep' = {
     domaincontroller
   ]
 }
-module vn './nestedtemplate/create-virtual-networks.bicep' ={
+module vn './nestedtemplate/create-virtual-networks-azure-east.bicep' ={
   name: 'CreateVirtualNetworkAzureEast'
   params: {
     location:location
@@ -84,27 +84,6 @@ module vnspoke './nestedtemplate/create-virtual-networks-east-spoke.bicep' ={
     virtualNetworkAddressRange: HubEastaddressPrefix
   }
 }
-module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
-  name:'CreateJumpboxVMAzureEast'
-  params:{
-    location:location
-    adminPassword:adminPassword
-    adminUsername:adminUsername
-    vmName:vmJumpboxName
-    vmSize:vmSize
-    stg:stg
-    ouPath:ouPath
-    serverDomainName:serverDomainName
-    virtualNetworkName:HubEastvirtualNetworkName
-    vmsubnetName:vmsubnetName
-  }
-  dependsOn:[
-   vn 
-   domaincontroller
-   UpdateVNetDNS
-  ]
-}
-
 module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
   name:'CreateDomainControllerForest'
   params:{

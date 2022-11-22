@@ -62,7 +62,7 @@ param virtualNetworkName string
 var vmnicName = toLower('${vmName}-vmnic01')
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
 var domainName = serverDomainName
-var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/LabEnvironment/DSC/InstallADDNSTools.zip?raw=true'
+var adPDCModulesURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/InstallADDNSTools.zip?raw=true'
 var adPDCConfigurationFunction = 'InstallADDNSTools.ps1\\InstallADDNSTools'
 
 resource vmpip 'Microsoft.Network/publicIPAddresses@2021-08-01' = {
@@ -72,7 +72,7 @@ resource vmpip 'Microsoft.Network/publicIPAddresses@2021-08-01' = {
     name:publicIpSku
   }
   properties:{
-    publicIPAllocationMethod:'Dynamic'
+    publicIPAllocationMethod:'Static'
     dnsSettings:{
       domainNameLabel:vmdnsLabelPrefix
     }

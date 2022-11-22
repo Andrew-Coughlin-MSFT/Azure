@@ -99,7 +99,7 @@ module jumpboxvm './nestedtemplate/DeployJumpboxServer.bicep'={
 }
 
 module domaincontroller './nestedtemplate/DeployDomainForest-Existing.bicep'={
-  name:'CreateDomainControllerForest'
+  name:'CreateDomainController'
   params:{
     location:location
     adminPassword:adminPassword

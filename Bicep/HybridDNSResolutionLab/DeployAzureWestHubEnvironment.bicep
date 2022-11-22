@@ -84,7 +84,7 @@ module vnspoke './nestedtemplate/create-virtual-networks-west-spoke.bicep' ={
   }
 }
 module domaincontroller './nestedtemplate/DeployDomainForest.bicep'={
-  name:'CreateDomainControllerForest'
+  name:'CreateDomainController'
   params:{
     location:location
     adminPassword:adminPassword

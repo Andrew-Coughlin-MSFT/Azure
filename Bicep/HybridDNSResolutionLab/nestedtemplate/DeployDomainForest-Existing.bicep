@@ -222,23 +222,3 @@ module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
     AzureIaasMalware
   ]
 }
-
-//Update nic to remove temporary dns setting.
-resource vmnicUpdate 'Microsoft.Network/networkInterfaces@2021-02-01' = {
-  name: vmnicName
-  location: location
-  properties: {
-    ipConfigurations: [
-      {
-        name: 'ipconfig1'
-        properties: {
-          privateIPAllocationMethod: 'Dynamic'
-          subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', virtualNetworkName, vmsubnetName)
-          }
-        }
-      }
-    ]
-  }
-}
-

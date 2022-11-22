@@ -81,15 +81,15 @@
             Name = "RSAT-AD-AdminCenter"
             DependsOn = "[WindowsFeature]ADDSTools"
         }
-        xWaitForADDomain 'WaitForestAvailability'
+        xWaitForADDomain DscForestWait
         {
             DomainName = $DomainName
-            DomainAdministratorCredential = $DomainCreds
-            RetryCount = 10
-            RetryIntervalSec = 120
-
-            DependsOn = '[WindowsFeature]ADAdminCenter'
+            DomainUserCredential= $DomainCreds
+            RetryCount = $RetryCount
+            RetryIntervalSec = $RetryIntervalSec
+            DependsOn = "[WindowsFeature]ADDSInstall"
         }
+        
         xADDomainController BDC
         {
             DomainName = $DomainName
@@ -98,7 +98,6 @@
             DatabasePath = "F:\NTDS"
             LogPath = "F:\NTDS"
             SysvolPath = "F:\SYSVOL"
-            IsGlobalCatalog = $true
             DependsOn = @("[xWaitForADDomain]")
 
         }

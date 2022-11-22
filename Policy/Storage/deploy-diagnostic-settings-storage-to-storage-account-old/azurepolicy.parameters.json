@@ -1,0 +1,100 @@
+{
+    "storageAccountID":{
+        "type":"String",
+        "metadata": {
+            "displayName":"Storage account id",
+            "description":"The resource Id for the storage account.",
+            "strongType": "Microsoft.Storage/storageAccounts"
+        },
+        "defaultValue":""
+    },
+    "servicesToDeploy": {
+        "type": "Array",
+        "metadata": {
+            "displayName": "Storage services to deploy",
+            "description": "List of Storage services to deploy"
+        },
+        "allowedValues": [
+            "storageAccounts",
+            "blobServices",
+            "fileServices",
+            "tableServices",
+            "queueServices"
+        ],
+        "defaultValue": [
+            "storageAccounts",
+            "blobServices",
+            "fileServices",
+            "tableServices",
+            "queueServices"
+        ]
+    },
+    "diagnosticsSettingNameToUse": {
+        "type": "String",
+        "metadata": {
+            "displayName": "Setting name",
+            "description": "Name of the diagnostic settings."
+        },
+        "defaultValue": "storageAccountsDiagnosticsLogsToStorageAccount"
+    },
+    "effect": {
+        "type": "String",
+        "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+        },
+        "allowedValues": [
+            "DeployIfNotExists",
+            "Disabled"
+        ],
+        "defaultValue": "DeployIfNotExists"
+    },
+    "StorageDelete": {
+        "type": "String",
+        "metadata": {
+            "displayName": "StorageDelete - Enabled",
+            "description": "Whether to stream StorageDelete logs to the Log Analytics workspace - True or False"
+        },
+        "allowedValues": [
+            "True",
+            "False"
+        ],
+        "defaultValue": "True"
+    },
+    "StorageWrite": {
+        "type": "String",
+        "metadata": {
+            "displayName": "StorageWrite - Enabled",
+            "description": "Whether to stream StorageWrite logs to the Log Analytics workspace - True or False"
+        },
+        "allowedValues": [
+            "True",
+            "False"
+        ],
+        "defaultValue": "True"
+    },
+    "StorageRead": {
+        "type": "String",
+        "metadata": {
+            "displayName": "StorageRead - Enabled",
+            "description": "Whether to stream StorageRead logs to the Log Analytics workspace - True or False"
+        },
+        "allowedValues": [
+            "True",
+            "False"
+        ],
+        "defaultValue": "True"
+    },
+    "Transaction": {
+        "type": "String",
+        "metadata": {
+            "displayName": "Transaction - Enabled",
+            "description": "Whether to stream Transaction logs to the Log Analytics workspace - True or False"
+        },
+        "allowedValues": [
+            "True",
+            "False"
+        ],
+        "defaultValue": "True"
+    }
+}

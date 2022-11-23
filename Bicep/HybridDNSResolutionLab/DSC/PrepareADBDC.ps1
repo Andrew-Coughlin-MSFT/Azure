@@ -2,9 +2,6 @@ configuration PrepareADBDC
 {
    param
     (
-        [Parameter(Mandatory)]
-        [String]$DNSServer,
-
         [Int]$RetryCount=20,
         [Int]$RetryIntervalSec=30
     )
@@ -52,14 +49,6 @@ configuration PrepareADBDC
             Ensure = "Present"
             Name = "RSAT-AD-AdminCenter"
             DependsOn = "[WindowsFeature]ADDSTools"
-        }
-
-        xDnsServerAddress DnsServerAddress
-        {
-            Address        = $DNSServer
-            InterfaceAlias = $InterfaceAlias
-            AddressFamily  = 'IPv4'
-            DependsOn="[WindowsFeature]ADDSInstall"
         }
    }
 }

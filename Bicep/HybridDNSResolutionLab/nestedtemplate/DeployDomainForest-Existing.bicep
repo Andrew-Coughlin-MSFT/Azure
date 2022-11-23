@@ -45,6 +45,9 @@ param vmsubnetName string
 param virtualNetworkName string
 param adBDCModulesConfigureURL string
 param adBDCConfigureFunction string
+param adBDCModulesPrepareURL string
+param adBDCPrepareFunction string
+param adBDCConfigurationScript string
 
 var vmnicName = toLower('${vmName}-vmnic01')
 
@@ -171,9 +174,9 @@ resource asvm 'Microsoft.Compute/availabilitySets@2021-11-01' = {
   }
 }
 
-resource vmDCVMName_ConfigureBDC 'Microsoft.Compute/virtualMachines/extensions@2022-03-01' = {
+resource vmDCVMName_PrepareBDC 'Microsoft.Compute/virtualMachines/extensions@2022-03-01' = {
   parent: vm
-  name: 'ConfigureBDC'
+  name: 'PrepareBDC'
   location: location
   properties: {
     publisher: 'Microsoft.Powershell'
@@ -181,8 +184,8 @@ resource vmDCVMName_ConfigureBDC 'Microsoft.Compute/virtualMachines/extensions@2
     typeHandlerVersion: '2.83'
     autoUpgradeMinorVersion: true
     settings: {
-      ModulesUrl: adBDCModulesConfigureURL
-      ConfigurationFunction: adBDCConfigureFunction
+      ModulesUrl: adBDCModulesPrepareURL
+      ConfigurationFunction: adBDCPrepareFunction
       Properties: {
         DomainName: domainName
         AdminCreds: {
@@ -200,6 +203,24 @@ resource vmDCVMName_ConfigureBDC 'Microsoft.Compute/virtualMachines/extensions@2
 
 }
 
+module ConfiguringBackupADDomainController '../nestedtemplate/configureADBDC.bicep'  = {
+  name: 'ConfiguringBackupADDomainController'
+  params: {
+    extName: '$vmName/PepareBDC'
+    location: location
+    adminUsername: adminUsername
+    adminPassword: adminPassword
+    domainName: domainName
+    adBDCConfigurationScript: adBDCConfigurationScript
+    adBDCConfigurationFunction: adBDCConfigureFunction
+    adBDCConfigurationModulesURL: adBDCModulesConfigureURL
+  }
+  dependsOn: [
+    //UpdateBDCNIC
+    vmDCVMName_PrepareBDC
+  ]
+}
+
 module AzureIaasMalware '../nestedtemplate/deploy-iaas-antimalware.bicep'={
   name:'DeployIaasMalware'
   params:{
@@ -208,7 +229,7 @@ module AzureIaasMalware '../nestedtemplate/deploy-iaas-antimalware.bicep'={
     vm:vm.name
   }
   dependsOn:[
-    vmDCVMName_ConfigureBDC
+    vmDCVMName_PrepareBDC
   ]
 }
 

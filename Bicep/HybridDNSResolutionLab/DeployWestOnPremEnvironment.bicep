@@ -33,8 +33,11 @@ var vmDCPrivateIPAddress = '10.40.1.4'
 var domainName = serverDomainName
 var vmsubnetName = 'server-sn'
 
+var adBDCModulesPrepareURL = 'https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/PrepareADBDC.zip?raw=true'
+var adBDCPrepareFunction ='PrepareADBDC.ps1\\PrepareADBDC'
 var adBDCModulesConfigureURL ='https://github.com/Andrew-Coughlin-MSFT/Azure/blob/master/Bicep/HybridDNSResolutionLab/DSC/ConfigureADBDC.zip?raw=true'
-var adBDCConfigureFunction = 'ConfigureADBDC.ps1\\ConfigureADBDC'
+var adBDCConfigureFunction = 'ConfigureADBDC'
+var adBDCConfigurationScript ='ConfigureADBDC.ps1'
 
 resource stg 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   name: storageAccountName
@@ -110,6 +113,9 @@ module domaincontroller './nestedtemplate/DeployDomainForest-Existing.bicep'={
     vmsubnetName:vmsubnetName
     adBDCModulesConfigureURL:adBDCModulesConfigureURL
     adBDCConfigureFunction:adBDCConfigureFunction
+    adBDCModulesPrepareURL: adBDCModulesPrepareURL
+    adBDCPrepareFunction: adBDCPrepareFunction
+    adBDCConfigurationScript:adBDCConfigurationScript
   }
   dependsOn:[
     vn 

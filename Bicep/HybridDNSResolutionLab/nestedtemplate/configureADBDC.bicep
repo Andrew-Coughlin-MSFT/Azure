@@ -9,8 +9,6 @@ param adBDCConfigurationScript string
 param adBDCConfigurationFunction string
 param adBDCConfigurationModulesURL string
 
-@secure()
-param artifactsLocationSasToken string
 
 resource extName_resource 'Microsoft.Compute/virtualMachines/extensions@2020-12-01' = {
   name: extName
@@ -31,7 +29,6 @@ resource extName_resource 'Microsoft.Compute/virtualMachines/extensions@2020-12-
       }
     }
     protectedSettings: {
-      configurationUrlSasToken: artifactsLocationSasToken
       configurationArguments: {
         adminCreds: {
           userName: adminUsername

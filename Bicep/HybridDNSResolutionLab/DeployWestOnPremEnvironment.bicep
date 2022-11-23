@@ -116,6 +116,7 @@ module domaincontroller './nestedtemplate/DeployDomainForest-Existing.bicep'={
     adBDCModulesPrepareURL: adBDCModulesPrepareURL
     adBDCPrepareFunction: adBDCPrepareFunction
     adBDCConfigurationScript:adBDCConfigurationScript
+    DNSServerIP:vmDCPrivateIPAddress
   }
   dependsOn:[
     vn 

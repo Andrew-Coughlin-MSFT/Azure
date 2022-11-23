@@ -36,5 +36,6 @@ resource extName_resource 'Microsoft.Compute/virtualMachines/extensions@2020-12-
         }
       }
     }
+    
   }
 }

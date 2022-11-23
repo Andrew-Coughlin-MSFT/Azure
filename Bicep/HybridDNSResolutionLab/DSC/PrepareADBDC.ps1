@@ -2,11 +2,16 @@ configuration PrepareADBDC
 {
    param
     (
+        [Parameter(Mandatory)]
+        [String]$DNSServer,
+
         [Int]$RetryCount=20,
         [Int]$RetryIntervalSec=30
     )
 
     Import-DscResource -ModuleName  xStorage, xNetworking
+    $Interface=Get-NetAdapter|Where Name -Like "Ethernet*"|Select-Object -First 1
+    $InterfaceAlias=$($Interface.Name)
 
     Node localhost
     {
@@ -72,6 +77,14 @@ configuration PrepareADBDC
             Ensure = "Present"
             Name = "RSAT-AD-AdminCenter"
             DependsOn = "[WindowsFeature]ADDSTools"
+        }
+
+        xDnsServerAddress DnsServerAddress
+        {
+            Address        = $DNSServer
+            InterfaceAlias = $InterfaceAlias
+            AddressFamily  = 'IPv4'
+            DependsOn="[WindowsFeature]ADAdminCenter"
         }
    }
 }

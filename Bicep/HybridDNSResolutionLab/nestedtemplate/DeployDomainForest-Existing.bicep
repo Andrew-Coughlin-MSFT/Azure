@@ -48,6 +48,7 @@ param adBDCConfigureFunction string
 param adBDCModulesPrepareURL string
 param adBDCPrepareFunction string
 param adBDCConfigurationScript string
+param DNSServerIP string
 
 var vmnicName = toLower('${vmName}-vmnic01')
 
@@ -154,12 +155,6 @@ resource vmnic 'Microsoft.Network/networkInterfaces@2021-02-01' = {
         }
       }
     ]
-    //add temporary dns settings
-    dnsSettings: {
-      dnsServers: [
-        '10.40.1.4'
-      ]
-    }
   }
 }
 
@@ -187,6 +182,9 @@ resource vmDCVMName_PrepareBDC 'Microsoft.Compute/virtualMachines/extensions@202
     settings: {
       ModulesUrl: adBDCModulesPrepareURL
       ConfigurationFunction: adBDCPrepareFunction
+      configurationArguments: {
+        DNSServer: DNSServerIP
+      }
     }
   }
 }
@@ -217,7 +215,7 @@ module AzureIaasMalware '../nestedtemplate/deploy-iaas-antimalware.bicep'={
     vm:vm.name
   }
   dependsOn:[
-    vmDCVMName_PrepareBDC
+    ConfiguringBackupADDomainController
   ]
 }
 
@@ -228,6 +226,6 @@ module AzureMonitorAgent '../nestedtemplate/deploy-azure-monitor-agent.bicep' ={
     vmName:vm.name
   }
   dependsOn:[
-    AzureIaasMalware
+    ConfiguringBackupADDomainController
   ]
 }

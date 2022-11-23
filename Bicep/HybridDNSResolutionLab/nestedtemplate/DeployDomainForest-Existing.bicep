@@ -177,14 +177,14 @@ resource vmDCVMName_PrepareBDC 'Microsoft.Compute/virtualMachines/extensions@202
   properties: {
     publisher: 'Microsoft.Powershell'
     type: 'DSC'
-    typeHandlerVersion: '2.83'
+    typeHandlerVersion: '2.24'
     autoUpgradeMinorVersion: true
     settings: {
       ModulesUrl: adBDCModulesPrepareURL
       ConfigurationFunction: adBDCPrepareFunction
-      configurationArguments: {
+      Properties: {
         DNSServer: DNSServerIP
-      }
+      }    
     }
   }
 }

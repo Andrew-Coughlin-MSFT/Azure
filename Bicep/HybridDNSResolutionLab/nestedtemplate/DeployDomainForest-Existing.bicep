@@ -54,6 +54,7 @@ var vmnicName = toLower('${vmName}-vmnic01')
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
 var availabilitySetName = toLower('as${vmName}')
 var domainName = serverDomainName
+var virtualMachineName = vmName
 
 
 resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
@@ -186,18 +187,6 @@ resource vmDCVMName_PrepareBDC 'Microsoft.Compute/virtualMachines/extensions@202
     settings: {
       ModulesUrl: adBDCModulesPrepareURL
       ConfigurationFunction: adBDCPrepareFunction
-      Properties: {
-        DomainName: domainName
-        AdminCreds: {
-          UserName: adminUsername
-          Password: 'PrivateSettingsRef:AdminPassword'
-        }
-      }
-    }
-    protectedSettings: {
-      Items: {
-        AdminPassword: adminPassword
-      }
     }
   }
 }
@@ -205,7 +194,7 @@ resource vmDCVMName_PrepareBDC 'Microsoft.Compute/virtualMachines/extensions@202
 module ConfiguringBackupADDomainController '../nestedtemplate/configureADBDC.bicep'  = {
   name: 'ConfiguringBackupADDomainController'
   params: {
-    extName: '$vmName/Configure'
+    extName: '${virtualMachineName}/ConfigureBDC'
     location: location
     adminUsername: adminUsername
     adminPassword: adminPassword

@@ -7,8 +7,6 @@ configuration PrepareADBDC
     )
 
     Import-DscResource -ModuleName  xStorage, xNetworking
-    $Interface=Get-NetAdapter|Where Name -Like "Ethernet*"|Select-Object -First 1
-    $InterfaceAlias=$($Interface.Name)
 
     Node localhost
     {

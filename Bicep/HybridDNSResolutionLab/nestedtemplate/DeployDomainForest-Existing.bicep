@@ -200,13 +200,12 @@ resource vmDCVMName_PrepareBDC 'Microsoft.Compute/virtualMachines/extensions@202
       }
     }
   }
-
 }
 
 module ConfiguringBackupADDomainController '../nestedtemplate/configureADBDC.bicep'  = {
   name: 'ConfiguringBackupADDomainController'
   params: {
-    extName: '$vmName/PepareBDC'
+    extName: '$vmName/Configure'
     location: location
     adminUsername: adminUsername
     adminPassword: adminPassword

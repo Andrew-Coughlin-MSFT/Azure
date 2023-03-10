@@ -7,6 +7,12 @@ param virtualNetworkAddressRange string
 @description('Location for all resources.')
 param location string
 
+@allowed([
+  'new'
+  'existing'
+])
+param newOrExisting string = 'new'
+
 resource nsgServerSn 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   name: 'nsg-server-sn'
   location: location
@@ -14,7 +20,7 @@ resource nsgServerSn 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   }
 }
 
-resource virtualNetworkName_resource 'Microsoft.Network/virtualNetworks@2020-08-01' = {
+resource virtualNetworkName_resource 'Microsoft.Network/virtualNetworks@2020-08-01' = if (newOrExisting =='new'){
   name: virtualNetworkName
   location: location
   properties: {

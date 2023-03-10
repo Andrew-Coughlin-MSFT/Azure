@@ -33,11 +33,13 @@ param enableHybridBenefitServerLicenses bool = true
  '2022-datacenter-g2'
  '2022-datacenter-azure-edition-core'
 ])
-param OSVersion string = '2022-datacenter-g2'
+param OSVersion string
+
+param vNetNewOrExisting string ='new'
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
-var addressPrefix = '10.4.0.0/16'
-var virtualNetworkName = 'vNet-LAB'
+var addressPrefix = '10.1.0.0/16'
+var virtualNetworkName = 'EastUS-vNET01'
 var vmnicName = toLower('${vmName}-vmnic01')
 var vmsubnetName = 'server-sn'
 var shutdownSchedule = 'shutdown-computevm-${vmName}'
@@ -65,6 +67,7 @@ module vn './nestedtemplate/create-virtual-networks.bicep' ={
     location:location
     virtualNetworkName: virtualNetworkName
     virtualNetworkAddressRange: addressPrefix
+    newOrExisting:vNetNewOrExisting
   }
 }
 

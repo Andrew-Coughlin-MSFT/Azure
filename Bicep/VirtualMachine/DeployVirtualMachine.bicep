@@ -33,7 +33,7 @@ param enableHybridBenefitServerLicenses bool = true
  '2022-datacenter-g2'
  '2022-datacenter-azure-edition-core'
 ])
-param OSVersion string
+param OSVersion string = '2019-datacenter-gensecond'
 
 param vNetNewOrExisting string ='new'
 

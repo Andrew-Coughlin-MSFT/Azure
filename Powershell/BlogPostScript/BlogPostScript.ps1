@@ -109,6 +109,8 @@ Remove-PastWeekOutput -Path .\blogs.htm
 $iCount = 0
 $now = Get-Date
 [string]$strOutput ="<html><body>"
+try {
+    
 foreach ($url in $Urls){
     Write-ProgressHelper -StepNumber $iCount -Message "Working on $($url)" -Steps $urls.Count
     $Responses = Invoke-RestMethod -Uri $url -UseBasicParsing -ContentType "application/xml"
@@ -146,4 +148,10 @@ foreach ($url in $Urls){
     } 
 }
 $strOutput = $strOutput + "</body></html>"
+
+$strOutput = $strOutput.Replace("xmlns:m=`"http://schemas.","")##Fixing issue with formating that happens from time to time.
 $strOutput | Out-File .\blogs.htm
+}
+catch {
+    Write-host -f foregroundcolor red "Encountered Error:"$_.Exception.Message
+}

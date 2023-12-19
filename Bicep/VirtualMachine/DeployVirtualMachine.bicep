@@ -125,7 +125,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
         storageUri: stg.properties.primaryEndpoints.blob
       }
     }
-    licenseType: (enableHybridBenefitServerLicenses ? 'Windows_Server' : json('null'))
+    licenseType: (enableHybridBenefitServerLicenses ? 'Windows_Server' : null)
   }
 }
 

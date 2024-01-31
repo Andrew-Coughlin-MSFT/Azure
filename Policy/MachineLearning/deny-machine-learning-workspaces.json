@@ -1,0 +1,35 @@
+{
+    "properties": {
+      "displayName": "Deny Azure Machine Learning Workspaces",
+      "policyType": "Custom",
+      "mode": "All",
+      "metadata": {
+        "category": "Custom Policy",
+        "description": "Deny Azure Machine Learning Workspaces, can be used to audit as well."
+      },
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Deny",
+            "Disabled"
+          ],
+          "defaultValue": "Deny"
+        }
+      },
+      "policyRule": {
+        "if":{
+              "field": "type",
+              "equals": "Microsoft.MachineLearningServices/workspaces"
+            },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    }
+  }

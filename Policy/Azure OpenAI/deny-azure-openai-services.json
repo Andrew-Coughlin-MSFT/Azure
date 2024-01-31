@@ -1,12 +1,5 @@
-{
-    "properties": {
-      "displayName": "Deny Azure OpenAI Services",
-      "policyType": "Custom",
+    {
       "mode": "All",
-      "metadata": {
-        "category": "Custom Policy",
-        "description": "Deny Azure OpenAI Services, could be used to audit as well."
-      },
       "parameters": {
         "effect": {
           "type": "String",
@@ -33,4 +26,3 @@
         }
       }
     }
-  }

@@ -1,12 +1,5 @@
-{
-    "properties": {
-      "displayName": "Deny Azure Machine Learning Workspaces",
-      "policyType": "Custom",
+    {
       "mode": "All",
-      "metadata": {
-        "category": "Custom Policy",
-        "description": "Deny Azure Machine Learning Workspaces, can be used to audit as well."
-      },
       "parameters": {
         "effect": {
           "type": "String",
@@ -32,4 +25,3 @@
         }
       }
     }
-  }

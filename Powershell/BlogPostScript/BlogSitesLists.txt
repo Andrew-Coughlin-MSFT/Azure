@@ -112,5 +112,3 @@ https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rs
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=8864831250609423092&board=SBS&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-1410478101920290391&board=Marketplace-Blog&size=15
 https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=410472440079285726&board=Identity&size=15
-https://azurecomcdn.azureedge.net/en-us/blog/feed/
-https://azurecomcdn.azureedge.net/en-gb/blog/topics/security/feed/

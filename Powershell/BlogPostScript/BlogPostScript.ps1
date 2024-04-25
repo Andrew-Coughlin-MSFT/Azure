@@ -120,7 +120,7 @@ foreach ($url in $Urls){
         [int]$icountposts=0
             ForEach ($post in $Responses) {
                 $postdate = $post.pubDate.Remove($post.pubDate.LastIndexOf(" "))
-                If (($now - [datetime]$postdate).TotalHours -le 144) {
+                If (($now - [datetime]$postdate).TotalHours -le 144 ) { #144
                     #Blog site has new content posted in the last week   
                     if ($icountposts -eq 0)
                     {
@@ -153,5 +153,5 @@ $strOutput = $strOutput.Replace("xmlns:m=`"http://schemas.","")##Fixing issue wi
 $strOutput | Out-File .\blogs.htm
 }
 catch {
-    Write-host -f foregroundcolor red "Encountered Error:"$_.Exception.Message
+    Write-host -ForegroundColor Red  "Encountered Error:"$_.Exception.Message
 }

@@ -25,6 +25,10 @@ spec:
               type: array
               items:
                 type: string
+            isEnabled:
+              type: array
+              items:
+                type: boolean
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |

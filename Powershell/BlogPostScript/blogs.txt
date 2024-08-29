@@ -1,299 +1,491 @@
-Exchange Blogs:
-Announcing OAuth 2.0 Client Credentials Flow support for POP and IMAP protocols in Exchange Online
-06/30/2022 11:04:32
-Today we’re excited to announce the availability of OAuth 2.
-
-https://techcommunity.microsoft.com/t5/exchange-team-blog/announcing-oauth-2-0-client-credentials-flow-support-for-pop-and/ba-p/3562963
-
-
-CoreInfrastructureandSecurityBlog Blogs:
-Accessing Key Vault from Another Subscription Over Public Endpoint
-07/04/2022 00:00:00
-Introduction Hello everyone it has been a while Andrew Coughlin here and I am a Customer Engineer at Microsoft focusing on Azure IaaS.
-
-https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/accessing-key-vault-from-another-subscription-over-public/ba-p/3562578
-
-
-ITOpsTalkBlog Blogs:
-Connect to your on-prem server from anywhere!
-07/05/2022 00:00:00
-Hello Folks       A few weeks ago I wrote about upgrading my local network edge device with one capable of connecting to my Azure virtual network using a site-to-site VPN.
-
-https://techcommunity.microsoft.com/t5/itops-talk-blog/connect-to-your-on-prem-server-from-anywhere/ba-p/3565194
-
-
-AzUpdate S04E17: Azure Key Vault, Azure WAF and Azure Backup
-07/01/2022 00:00:00
-Hello folks       This week is the last episode of season 4.
-
-https://techcommunity.microsoft.com/t5/itops-talk-blog/azupdate-s04e17-azure-key-vault-azure-waf-and-azure-backup/ba-p/3563256
-
-
-Identity Blogs:
-Microsoft Entra change announcements - June 2022 train
-06/30/2022 12:00:00
-Hello Everyone       In March 2022 we announced our simplified change management process which allows customers to predictably plan their deployments.
-
-https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/microsoft-entra-change-announcements-june-2022-train/ba-p/2967455
-
-
-AzureDBSupport Blogs:
-Lesson Learned #217:Hands-On-Labs:40197-The service has encountered an error processing your request
-07/05/2022 16:42:24
-We used to have cases where our customer faced the following error messages like following:     Msg 40197 Level 20 State 4 Line 6 -The service has encountered an error processing your request.
-
-https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-217-hands-on-labs-40197-the-service-has/ba-p/3566124
-
-
-Lesson Learned #216: Hands-On-Labs: How redirect connection policy type works
-07/04/2022 11:29:25
-We used to have cases where our customers asked questions about redirect connection type policy:        How works? What is the configuration needed and errors message related about an incorrect setup etc.
-
-https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-216-hands-on-labs-how-redirect-connection-policy/ba-p/3565043
-
-
-Lesson Learned #215: Hands-On-Labs: Communication link failed error message using ODBC.
-07/04/2022 09:42:50
-We used to have cases where our customer faced the following error messages like following:    ERROR [08S01] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: An existing connection was forcibly closed by the remote host.
-
-https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-215-hands-on-labs-communication-link-failed-error/ba-p/3565011
-
-
-Lesson Learned #214: Hands-On-Labs: How to manage an idle connection state issue
-07/03/2022 13:27:07
-We used to have cases where our customers leave the connection open without any activity as you could see in this URL we are going to explain why the connection is dropped due to an idle connection state issue.
-
-https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-214-hands-on-labs-how-to-manage-an-idle/ba-p/3564453
-
-
-Lesson Learned #213: Cannot set the AccessToken property if the Integrated Security has been set
-07/01/2022 01:43:26
-Today I worked on a service request where using SQLPackage and Azure Active Directory user our customer got the following error message "Error exporting database:Could not connect to database server.
-
-https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-213-cannot-set-the-accesstoken-property-if-the/ba-p/3563343
-
-
-microsoft_365blog Blogs:
-Announcing the availability of Quick Access filters in Office app for Android
-06/30/2022 09:00:53
-The Office Mobile team is excited to announce the availability of Quick Access filters in Office Mobile on Android phones and tablets! This feature can help you increase your productivity while customizing Office on your Android mobile device so it works best for you.
-
-https://techcommunity.microsoft.com/t5/microsoft-365-blog/announcing-the-availability-of-quick-access-filters-in-office/ba-p/3561864
-
-
-MicrosoftSecurityandCompliance Blogs:
-How Microsoft Defender for Identity protects against DFSCoerce
-07/01/2022 09:27:13
-Almost a year has passed since the “PetitPotam” attack vector was initially discovered.
-
-https://techcommunity.microsoft.com/t5/security-compliance-and-identity/how-microsoft-defender-for-identity-protects-against-dfscoerce/ba-p/3562912
-
-
-AppsonAzureBlog Blogs:
-Beginners Guide to secure cloud-native applications with Calico in Microsoft Azure
-06/30/2022 08:52:01
-Authors: Dhiraj Sehgal Steve Griffith and Tommy Falgout       This is a 4-module workshop that walks you through the following to become and remain secure quickly:     Implement simple and straightforward security controls in place  Monitor if the security policies are working as expected  Address a security gap with security policy  Troubleshoot a workload-to-workload communication issue        Since AKS users are busy running cloud-native applications and to get started this blog post should provide you a brief overview of what you can expect from each module in the workshop.
-
-https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beginners-guide-to-secure-cloud-native-applications-with-calico/ba-p/3562827
-
-
-AzureDevCommunityBlog Blogs:
-Blazor Test App for Azure AD B2C Custom Policies
-07/05/2022 09:00:00
-Azure AD B2C can be both fun and frustrating.
-
-https://techcommunity.microsoft.com/t5/azure-developer-community-blog/blazor-test-app-for-azure-ad-b2c-custom-policies/ba-p/3565415
-
-
-AzureSynapseAnalyticsBlog Blogs:
-How to provide statement id in the serverless SQL pool support ticket?
-07/05/2022 08:00:00
-Serverless SQL pool is a query service that enables you to analyze data in Azure Data Lake storage Cosmos DB or Data verse without a need to manage the resources tune your queries or do any other administration task to enable your data analyst to query data.
-
-https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-provide-statement-id-in-the-serverless-sql-pool-support/ba-p/3532926
-
-
-AzureSQLBlog Blogs:
-Azure SQL Security: Database Protection with Defender for Cloud (Ep. 5) | Data Exposed
-06/30/2022 09:00:00
-In this episode of Data Exposed with Anna Hoffman and Ido Keshet learn about how defender for SQL (and defender for cloud) can address the top security concerns.
-
-https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-security-database-protection-with-defender-for-cloud/ba-p/3555110
-
-
-AzurePaaSBlog Blogs:
-How to Migrate Schema Registry from Confluent to Azure Event Hub
-07/05/2022 16:08:48
-In many event streaming and messaging scenarios the event or message payload contains structured data.
-
-https://techcommunity.microsoft.com/t5/azure-paas-blog/how-to-migrate-schema-registry-from-confluent-to-azure-event-hub/ba-p/3565403
-
-
-FastTrackforAzureBlog Blogs:
-Everything you want to know about ephemeral OS disks and Azure Kubernetes Service (AKS)
-07/05/2022 04:28:05
-This article analyzes in-depth the available configuration settings for the ephemeral OS disk in Azure Kubernetes Service (AKS).
-
-https://techcommunity.microsoft.com/t5/fasttrack-for-azure/everything-you-want-to-know-about-ephemeral-os-disks-and-azure/ba-p/3565605
-
-
-Azure Container Apps: working with storage
-07/01/2022 12:28:52
-Overview     In this article you will learn how to work with storage in ACA (Azure Container Apps).
-
-https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-container-apps-working-with-storage/ba-p/3561853
-
-
-Can I call external executables from an Azure Function in an Azure App Service? Yes! (2/2)
-07/01/2022 12:13:22
-This is the second of two blog posts for this topic; this one takes the Node.
-
-https://techcommunity.microsoft.com/t5/fasttrack-for-azure/can-i-call-external-executables-from-an-azure-function-in-an/ba-p/3563810
-
-
-Can I call external executables from an Azure Function in an Azure App Service? Yes! (1/2)
-07/01/2022 09:02:41
-This is the first of two blog posts for this topic; this one will get you a local Node.
-
-https://techcommunity.microsoft.com/t5/fasttrack-for-azure/can-i-call-external-executables-from-an-azure-function-in-an/ba-p/3563676
-
-
-Oh oh! I'm running "out-of-properties"  a.k.a. How can I extend my IoT Messages Enrichment limits?
-07/01/2022 07:29:51
-"Message enrichments is the ability of an IoT hub to stamp messages with additional information before the messages are sent to the designated endpoint.
-
-https://techcommunity.microsoft.com/t5/fasttrack-for-azure/oh-oh-i-m-running-quot-out-of-properties-quot-a-k-a-how-can-i/ba-p/3562969
-
-
-Create a Private Link Service using Bicep
-07/01/2022 04:43:07
-Create a Private Link Service using Bicep This sample shows how to use Bicep to create an Azure Private Link Service that can be accessed by a third party via an Azure Private Endpoint.
-
-https://techcommunity.microsoft.com/t5/fasttrack-for-azure/create-a-private-link-service-using-bicep/ba-p/3563427
-
-
-AzureDataFactoryBlog Blogs:
-Introducing the Azure Data Factory Studio Preview Experience
-07/01/2022 14:33:35
-We are excited to introduce the Azure Data Factory studio preview experience where users can try new UI updates and provide feedback!       You may have seen a new banner in your data factory:              Or a new option in your data factory settings:              By enabling the studio preview experience you’ll be able to test UI changes in the ADF pipeline and mapping data flow experience.
-
-https://techcommunity.microsoft.com/t5/azure-data-factory-blog/introducing-the-azure-data-factory-studio-preview-experience/ba-p/3563880
-
-
-IntegrationsonAzureBlog Blogs:
-Workflow expression function xml() behavior when converting numbers with decimal
-07/04/2022 09:24:27
-The xml() expression function returns the XML version for a string that contains a JSON object.
-
-https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/workflow-expression-function-xml-behavior-when-converting/ba-p/3551635
-
-
-ADforPostgreSQL Blogs:
-PostgreSQL v14 is now available in Flexible Server PostgreSQL!
-06/30/2022 12:44:28
-We are glad to announce that support for PostgreSQL 14 (14.
-
-https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/postgresql-v14-is-now-available-in-flexible-server-postgresql/ba-p/3563025
-
-
-AzureDataExplorer Blogs:
-Aviation flight data analytics with Azure Synapse Analytics
-07/05/2022 22:59:53
-   In this blog we will cover flight data analytics use case specific to aviation industry.
-
-https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/aviation-flight-data-analytics-with-azure-synapse-analytics/ba-p/3566273
-
-
-Geospatial Analytics for Connected Vehicle with Synapse Data Explorer
-07/05/2022 21:30:08
-       Connected car technology is evolving at a fast pace and has become the new norm of digital transformation in the automobile industry.
-
-https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/geospatial-analytics-for-connected-vehicle-with-synapse-data/ba-p/3566185
-
-
-ADX Web Explorer updates – June 2022
-07/04/2022 22:40:36
-Welcome back to our monthly ADX web explorer updates! Continue reading to learn about improvements and new features in the Query area as well as new One Click capabilities:    Show only rows that fit the search Support Ysplit=panels Create tables graphically Generate sample app supports manual table creation    Results exploration - show only rows that fit the search We are focused on continuously improving the results exploration experience in ADX web UI to make it easy and intuitive.
-
-https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/adx-web-explorer-updates-june-2022/ba-p/3564911
-
-
-AzureMonitorStatusBlog Blogs:
-Experiencing Alerting failure for Log Search Alerts - 07/06 - Investigating
-07/06/2022 03:29:50
-Initial Update: Wednesday 06 July 2022 10:25 UTC    We are aware of issues within Log Search Alerts and are actively investigating.
-
-https://techcommunity.microsoft.com/t5/azure-monitor-status/experiencing-alerting-failure-for-log-search-alerts-07-06/ba-p/3566499
-
-
-AzureArcBlog Blogs:
-Directly Connected Mode Data Controller for Azure Arc-enabled Data Services
-06/30/2022 16:32:27
-Azure Arc-enabled Data Services offers two options for connectivity modes to customers: directly connected mode and indirectly connected mode.
-
-https://techcommunity.microsoft.com/t5/azure-arc-blog/directly-connected-mode-data-controller-for-azure-arc-enabled/ba-p/3562855
-
-
-ADforMySQL Blogs:
-Cross region replication using Data-in replication with Azure Database for MySQL - Flexible Server
-07/05/2022 09:20:34
-MySQL workloads are often read-heavy and support customers with operations in different geographical locations.
-
-https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/cross-region-replication-using-data-in-replication-with-azure/ba-p/3563231
-
-
-AzureVirtualDesktopBlog Blogs:
-Microsoft Teams media optimizations is now Generally Available on Azure Virtual Desktop for macOS
-06/30/2022 15:20:13
-We are happy to announce that Microsoft Teams media optimizations on Azure Virtual Desktop for macOS is now Generally Available.
-
-https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/microsoft-teams-media-optimizations-is-now-generally-available/ba-p/3563125
-
-
-MessagingonAzureBlog Blogs:
-Introducing Azure Event Hubs Dedicated Self-Serve Scaling experience –Public Preview
-06/30/2022 08:16:12
-Since GA of Azure Event Hubs dedicated clusters 3 years ago the service has been catering to high demand critical workloads of customers.
-
-https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/introducing-azure-event-hubs-dedicated-self-serve-scaling/ba-p/3562782
-
-
-AzureMarketplaceBlog Blogs:
-New transactable offers from Collabcloud, EDUardo, Senserva, and Youredi
-07/05/2022 05:12:35
-    Microsoft partners like Collabcloud EDUardo Senserva and Youredi deliver transact-capable offers which allow you to purchase directly from Azure Marketplace.
-
-https://techcommunity.microsoft.com/t5/azure-marketplace-blog/new-transactable-offers-from-collabcloud-eduardo-senserva-and/ba-p/3175828
-
-
-AzureCommunicationServicesBlog Blogs:
-Azure Communication Services UI Library Now Available for iOS and Android
-06/30/2022 13:27:02
-Our team at Azure Communication Services is excited to announce general availability (GA) of our UI Library for iOS & Android.
-
-https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-ui-library-now-available-for-ios/ba-p/3556319
-
-
-Azure Updates:
-How to choose the right Azure services for your applications—It’s not A or B
-07/05/2022 10:00:10
-Which Azure service is best to run my apps on? This is an important decision because the services you choose will dictate your resource planning budget timelines and ultimately the time to market for your business.
-
-https://azure.microsoft.com/blog/how-to-choose-the-right-azure-services-for-your-applications-it-s-not-a-or-b/
-
-
-Choose the right size for your workload with NVads A10 v5 virtual machines, now generally available
-07/05/2022 08:00:09
-Introducing the general availability of NVads A10 v5 GPU accelerated virtual machines now available in US South Central US West2 US West3 Europe West and Europe North regions.
-
-https://azure.microsoft.com/blog/choose-the-right-size-for-your-workload-with-nvads-a10-v5-virtual-machines-now-generally-available/
-
-
-MLOps Blog Series Part 3: Testing scalability of secure machine learning systems using MLOps
-06/30/2022 08:10:01
-The capacity of a system to adjust to changes by adding or removing resources to meet demand is known as scalability.
-
-https://azure.microsoft.com/blog/mlops-blog-series-part-3-testing-scalability-of-secure-machine-learning-systems-using-mlops/
-
-
-
+<html><body><h1><u>MachineLearningBlog Blogs:
+</u></h1><h2>Ignite 2023: What’s new in Azure AI Platforms – Charting the Future with Innovative AI and ML</h2>
+<p>11/15/2023 08:02:00</p>
+<p>AI is a powerful driver of innovation and customers around the globe and across industries are using Azure AI to transform how their businesses operate and grow.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/ignite-2023-what-s-new-in-azure-ai-platforms-charting-the-future/ba-p/3980465>Ignite 2023: What’s new in Azure AI Platforms – Charting the Future with Innovative AI and ML</a></p><p>&nbsp;&nbsp;</p><h2>Introducing NVIDIA Nemotron-3 8B LLMs on the Model Catalog</h2>
+<p>11/15/2023 08:00:08</p>
+<p>We are excited to announce that we are expanding our partnership with NVIDIA to bring the best of NVIDIA AI software to Azure.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/introducing-nvidia-nemotron-3-8b-llms-on-the-model-catalog/ba-p/3983569>Introducing NVIDIA Nemotron-3 8B LLMs on the Model Catalog</a></p><p>&nbsp;&nbsp;</p><h2>Welcoming Mistral, Phi, Jais, Code Llama, NVIDIA Nemotron, and more to the Azure AI Model Catalog</h2>
+<p>11/15/2023 08:00:03</p>
+<p>    We are excited to announce the addition of several new foundation and generative AI models to the Azure AI model catalog.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/welcoming-mistral-phi-jais-code-llama-nvidia-nemotron-and-more/ba-p/3982699>Welcoming Mistral, Phi, Jais, Code Llama, NVIDIA Nemotron, and more to the Azure AI Model Catalog</a></p><p>&nbsp;&nbsp;</p><h2>Model training with serverless compute</h2>
+<p>11/15/2023 08:00:03</p>
+<p>We are happy to announce the General Availability of Model Training with Serverless Compute.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/model-training-with-serverless-compute/ba-p/3982583>Model training with serverless compute</a></p><p>&nbsp;&nbsp;</p><h2>Model Benchmarks in Azure AI Studio</h2>
+<p>11/15/2023 08:00:03</p>
+<p>Overview   Azure AI Studio is a versatile and user-friendly platform designed to cater to the diverse needs of developers data scientists and machine learning experts.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/model-benchmarks-in-azure-ai-studio/ba-p/3982282>Model Benchmarks in Azure AI Studio</a></p><p>&nbsp;&nbsp;</p><h2>Avail the power of Microsoft Fabric from within Azure Machine Learning</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Unveiling the Public Preview of Azure Machine Learning OneLake datastore.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/avail-the-power-of-microsoft-fabric-from-within-azure-machine/ba-p/3980702>Avail the power of Microsoft Fabric from within Azure Machine Learning</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Llama 2 Inference APIs and Hosted Fine-Tuning through Models-as-a-Service in Azure AI</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are excited to announce the upcoming preview of Models as a Service (MaaS) that offers pay-as-you-go (PayGo) inference APIs and hosted fine-tuning for Llama 2 in Azure AI model catalog.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/announcing-llama-2-inference-apis-and-hosted-fine-tuning-through/ba-p/3979227>Announcing Llama 2 Inference APIs and Hosted Fine-Tuning through Models-as-a-Service in Azure AI</a></p><p>&nbsp;&nbsp;</p><h2>Elevate Your LLM Applications to Production via LLMOps</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Introduction Today we are announcing the General Availability (GA) of Azure Machine Learning prompt flow marking the next step in Azure AI empowering engineers and data scientists to build quality generative AI applications.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/elevate-your-llm-applications-to-production-via-llmops/ba-p/3979114>Elevate Your LLM Applications to Production via LLMOps</a></p><p>&nbsp;&nbsp;</p><h2>Achieving (real) MLOps for ML pipelines in Azure Machine Learning</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are happy to announce the general availability of pipeline component deployments for batch endpoints a capability in Azure Machine Learning that allows customers to move machine learning pipelines as single units across environments that can be versioned controlled and deployed under a durable API.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/achieving-real-mlops-for-ml-pipelines-in-azure-machine-learning/ba-p/3978927>Achieving (real) MLOps for ML pipelines in Azure Machine Learning</a></p><p>&nbsp;&nbsp;</p><h1><u>AnalyticsonAzure Blogs:
+</u></h1><h2>Public Preview: Protocol Buffers (Protobuf) with Azure Stream Analytics</h2>
+<p>11/16/2023 15:15:39</p>
+<p>Azure Stream Analytics now allows you to seamlessly process events in the Protobuf data format using a built-in Protocol Buffer deserializer.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/public-preview-protocol-buffers-protobuf-with-azure-stream/ba-p/3985518>Public Preview: Protocol Buffers (Protobuf) with Azure Stream Analytics</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the Public Preview of Kafka Input and Output with Azure Stream Analytics</h2>
+<p>11/16/2023 09:24:09</p>
+<p>We are excited to announce the public preview of Kafka Input and Output with Azure Stream Analytics! A couple of months ago we shared with the data community our initiative to build a low-code feature that allows customers to connect directly to their Kafka clusters.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/announcing-the-public-preview-of-kafka-input-and-output-with/ba-p/3985131>Announcing the Public Preview of Kafka Input and Output with Azure Stream Analytics</a></p><p>&nbsp;&nbsp;</p><h2>Maximizing Efficiency with Managed Apache Flink on Azure HDInsight on AKS</h2>
+<p>11/15/2023 20:04:16</p>
+<p>Author: Alexandre Gattiker Principal Engineer Industry Solutions Microsoft.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/maximizing-efficiency-with-managed-apache-flink-on-azure/ba-p/3983051>Maximizing Efficiency with Managed Apache Flink on Azure HDInsight on AKS</a></p><p>&nbsp;&nbsp;</p><h2>Enhanced Performance in Additional Regions: Azure Synapse Analytics Spark Boosted by up to 77%</h2>
+<p>11/14/2023 11:14:32</p>
+<p>We are committed to continually advancing the capabilities of Azure Synapse Analytics Spark and are pleased to announce substantial improvements that could increase Spark performance by as much as 77%.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/enhanced-performance-in-additional-regions-azure-synapse/ba-p/3947669>Enhanced Performance in Additional Regions: Azure Synapse Analytics Spark Boosted by up to 77%</a></p><p>&nbsp;&nbsp;</p><h1><u>AppsonAzureBlog Blogs:
+</u></h1><h2>Use Image Integrity to secure your AKS deployment</h2>
+<p>11/15/2023 23:47:36</p>
+<p>Azure Kubernetes Service (AKS) now supports Image Integrity in public preview.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/use-image-integrity-to-secure-your-aks-deployment/ba-p/3962645>Use Image Integrity to secure your AKS deployment</a></p><p>&nbsp;&nbsp;</p><h2>Azure App Service at Ignite 2023</h2>
+<p>11/15/2023 10:20:00</p>
+<p>Welcome to Ignite 2023! App Service team members will be presenting at the session "Unlock Innovation with AI by Migrating Enterprise Apps to App Service" on Wednesday November 15th (11:45AM to 12:30PM Pacific time - Level 4 Room 425 - In-Person and Live-streamed).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-at-ignite-2023/ba-p/3977578>Azure App Service at Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>AKS Welcomes you to Ignite 2023</h2>
+<p>11/15/2023 09:00:00</p>
+<p>Hi everyone and welcome to Microsoft Ignite 2023! The AKS team is looking forward to connecting in person and virtually with all the AKS community throughout the Ignite Keynotes Breakouts QA sessions expert meetups or over a beverage in the hallways!       The team has been hard at work making Azure the best platform to run Kubernetes and a truly Kubernetes-powered cloud.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/aks-welcomes-you-to-ignite-2023/ba-p/3983317>AKS Welcomes you to Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Azure Functions Flex Consumption: sign up for the early access preview</h2>
+<p>11/15/2023 08:30:00</p>
+<p>Azure Functions offers a wide range of hosting options to run your Azure Function applications.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-functions-flex-consumption-sign-up-for-the/ba-p/3983621>Announcing Azure Functions Flex Consumption: sign up for the early access preview</a></p><p>&nbsp;&nbsp;</p><h2>Build Intelligent Apps and Microservices with Azure Container Apps</h2>
+<p>11/15/2023 08:00:03</p>
+<p>Azure Container Apps is a modern PaaS platform designed for container-first Cloud Native apps and microservices.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-intelligent-apps-and-microservices-with-azure-container/ba-p/3982588>Build Intelligent Apps and Microservices with Azure Container Apps</a></p><p>&nbsp;&nbsp;</p><h2>Build Resilient Applications by Simulating Outages with Azure Chaos Studio</h2>
+<p>11/15/2023 08:00:02</p>
+<p>   <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-resilient-applications-by-simulating-outages-with-azure/ba-p/3982260>Build Resilient Applications by Simulating Outages with Azure Chaos Studio</a></p><p>&nbsp;&nbsp;</p><h2>Public preview: Confidential containers on AKS</h2>
+<p>11/15/2023 08:00:01</p>
+<p>The cloud-native movement has driven container adoption with emphasis on designing applications specifically for cloud environments.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/public-preview-confidential-containers-on-aks/ba-p/3980871>Public preview: Confidential containers on AKS</a></p><p>&nbsp;&nbsp;</p><h2>Azure Functions - Ignite 2023 update</h2>
+<p>11/15/2023 08:00:00</p>
+<p>It is exciting to have Microsoft Ignite happening this week and the team wanted to give an update on the latest releases of Azure Functions since the previous update in May Azure Functions – May update for Microsoft build.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2023-update/ba-p/3978641>Azure Functions - Ignite 2023 update</a></p><p>&nbsp;&nbsp;</p><h2>Azure Migrate application and code assessment is now available for .NET and Java</h2>
+<p>11/15/2023 08:00:00</p>
+<p>       Enterprise application migrations often require deep insights and stakeholder alignment across a variety of use cases whether at the portfolio or application level.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-migrate-application-and-code-assessment-is-now-available/ba-p/3978003>Azure Migrate application and code assessment is now available for .NET and Java</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Conversational Diagnostics (Preview) on Windows App Services</h2>
+<p>11/13/2023 09:00:00</p>
+<p>We are pleased to announce Conversational Diagnostics (Preview) a new feature in Windows App Services that leverages the powerful capabilities of OpenAI to take your problem-solving to the next level.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-conversational-diagnostics-preview-on-windows-app/ba-p/3978916>Announcing Conversational Diagnostics (Preview) on Windows App Services</a></p><p>&nbsp;&nbsp;</p><h2>Harness the power of scaling using KEDA add-on for AKS which is now generally available.</h2>
+<p>11/13/2023 08:44:43</p>
+<p>We are thrilled to announce the General Availability of KEDA add-on for AKS.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/harness-the-power-of-scaling-using-keda-add-on-for-aks-which-is/ba-p/3976396>Harness the power of scaling using KEDA add-on for AKS which is now generally available.</a></p><p>&nbsp;&nbsp;</p><h2>Azure Spring Apps product updates in Q3 2023</h2>
+<p>11/12/2023 22:40:44</p>
+<p>   The following updates are now available in the Enterprise plan:     Spring Cloud Gateway enables you to set log level per logger name: Spring Cloud Gateway now supports precise control over the generation of log messages and their respective verbosity levels.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-spring-apps-product-updates-in-q3-2023/ba-p/3976871>Azure Spring Apps product updates in Q3 2023</a></p><p>&nbsp;&nbsp;</p><h2>Spring Cloud Gateway Oauth 2.0 setup on Azure Spring Apps</h2>
+<p>11/12/2023 21:53:41</p>
+<p> As microservices architecture becomes increasingly prevalent each microservices cluster is tasked with independently handling identity authentication and authorization.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/apps-on-azure-blog/spring-cloud-gateway-oauth-2-0-setup-on-azure-spring-apps/ba-p/3964511>Spring Cloud Gateway Oauth 2.0 setup on Azure Spring Apps</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureArcBlog Blogs:
+</u></h1><h2>Bring Azure to your System Center environment: Announcing GA of SCVMM enabled by Azure Arc</h2>
+<p>11/15/2023 11:53:28</p>
+<p>At Microsoft we're committed to providing our customers with the tools they need to succeed wherever they are.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-arc-blog/bring-azure-to-your-system-center-environment-announcing-ga-of/ba-p/3984063>Bring Azure to your System Center environment: Announcing GA of SCVMM enabled by Azure Arc</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Preview of Azure AI Video Indexer Cloud-to-Edge Version</h2>
+<p>11/15/2023 11:16:33</p>
+<p>Azure AI Video Indexer an Azure AI solution with artificial intelligence and cognitive capabilities that are specifically designed for video content.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-preview-of-azure-ai-video-indexer-cloud-to-edge/ba-p/3983701>Announcing Preview of Azure AI Video Indexer Cloud-to-Edge Version</a></p><p>&nbsp;&nbsp;</p><h2>Bringing Cloud Operations & Management innovations anywhere! #MSIgnite2023</h2>
+<p>11/15/2023 09:00:00</p>
+<p>With Azure Arc our mission is to bring our adaptive cloud principles to customers wherever they run workloads.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-cloud-operations-amp-management-innovations-anywhere/ba-p/3983780>Bringing Cloud Operations & Management innovations anywhere! #MSIgnite2023</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Arc Jumpstart vNext</h2>
+<p>11/15/2023 07:36:43</p>
+<p>Dear Arc Jumpstart community       Today I am thrilled to announce the launch of the next version of Arc Jumpstart a project that has been close to my heart for the past four years.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-arc-jumpstart-vnext/ba-p/3979405>Announcing Arc Jumpstart vNext</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureArchitectureBlog Blogs:
+</u></h1><h2>Provisioning Multiple Egress IP Addresses in AKS</h2>
+<p>11/16/2023 09:00:23</p>
+<p>Introduction     When you create a Kubernetes cluster using the Azure Kubernetes Service (AKS) you can choose between three “outbound” types to suit your application’s specific needs.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-architecture-blog/provisioning-multiple-egress-ip-addresses-in-aks/ba-p/3982130>Provisioning Multiple Egress IP Addresses in AKS</a></p><p>&nbsp;&nbsp;</p><h2>Azure Well-Architected Review Assessment Updates</h2>
+<p>11/14/2023 09:51:29</p>
+<p>Azure Well-Architected Review Assessment Updates Microsoft is excited to announce a significant update to the Azure Well-Architected Review assessment helps you build and optimize workloads.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-well-architected-review-assessment-updates/ba-p/3981023>Azure Well-Architected Review Assessment Updates</a></p><p>&nbsp;&nbsp;</p><h2>Deepening Well-Architected guidance for workloads hosted on Azure</h2>
+<p>11/14/2023 08:25:09</p>
+<p>I am excited to announce a comprehensive refresh of the Well-Architected Framework for designing and running optimized workloads on Azure.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-architecture-blog/deepening-well-architected-guidance-for-workloads-hosted-on/ba-p/3979168>Deepening Well-Architected guidance for workloads hosted on Azure</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureCommunicationServicesBlog Blogs:
+</u></h1><h2>Ignite 2023: Creating value with intelligent application solutions for B2C communications</h2>
+<p>11/15/2023 07:50:00</p>
+<p>Today at Microsoft Ignite we shared that Azure Communication Services will soon release new capabilities for developers to shape the workflows they need to deliver faster personalized communication experiences to their customers.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-communication-services/ignite-2023-creating-value-with-intelligent-application/ba-p/3907629>Ignite 2023: Creating value with intelligent application solutions for B2C communications</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureCompute Blogs:
+</u></h1><h2>Public Preview of Attach and Detach of Virtual Machines on Virtual Machine Scale Sets</h2>
+<p>11/15/2023 14:43:06</p>
+<p>Today we’re making it possible to attach a running Virtual Machine (VM) to an existing Virtual Machine Scale Set (VMSS) with no downtime.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-of-attach-and-detach-of-virtual-machines-on/ba-p/3982815>Public Preview of Attach and Detach of Virtual Machines on Virtual Machine Scale Sets</a></p><p>&nbsp;&nbsp;</p><h2>Public Preview: New AMD-based VMs with Increased Performance, Azure Boost, and NVMe Support</h2>
+<p>11/15/2023 08:00:02</p>
+<p>Written by Lauren Britton PhD Sr.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-new-amd-based-vms-with-increased-performance/ba-p/3981351>Public Preview: New AMD-based VMs with Increased Performance, Azure Boost, and NVMe Support</a></p><p>&nbsp;&nbsp;</p><h2>Reduce Compute Costs by Pausing VMs (now in public preview)</h2>
+<p>11/15/2023 08:00:02</p>
+<p>We are excited to announce that Azure is making it easier for customers to reduce Compute costs by providing them the ability to hibernate Virtual Machines (VMs).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-compute-blog/reduce-compute-costs-by-pausing-vms-now-in-public-preview/ba-p/3981127>Reduce Compute Costs by Pausing VMs (now in public preview)</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the support of Arm-based VM solutions on Azure Marketplace</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Azure now has broader support for Arm customers and partners.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-the-support-of-arm-based-vm-solutions-on-azure/ba-p/3968235>Announcing the support of Arm-based VM solutions on Azure Marketplace</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureConfidentialComputingBlog Blogs:
+</u></h1><h2>New innovations in confidential computing from Azure at Ignite 2023</h2>
+<p>11/15/2023 08:00:02</p>
+<p>Azure has been a pioneer and leader in the field of confidential computing offering the most comprehensive portfolio of products and services that leverage hardware-based trusted execution environments (TEEs) as shown in a report that we published with O’Reilly Media.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/new-innovations-in-confidential-computing-from-azure-at-ignite/ba-p/3982146>New innovations in confidential computing from Azure at Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Azure confidential VMs with NVIDIA H100 Tensor Core GPUs in Preview</h2>
+<p>11/15/2023 07:59:00</p>
+<p>Today we are excited to announce the preview of Azure confidential VMs with NVIDIA H100 Tensor core GPUs.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-azure-confidential-vms-with-nvidia-h100-tensor-core/ba-p/3975389>Announcing Azure confidential VMs with NVIDIA H100 Tensor Core GPUs in Preview</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the public preview of Azure confidential VMs with Intel TDX</h2>
+<p>11/15/2023 07:58:00</p>
+<p>Microsoft is excited to announce the public preview of DCesv5 and ECesv5-series confidential VMs coming December 2023.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-the-public-preview-of-azure-confidential-vms-with/ba-p/3968256>Announcing the public preview of Azure confidential VMs with Intel TDX</a></p><p>&nbsp;&nbsp;</p><h2>Announcing: Microsoft moves $25 Billion in credit card transactions to Azure confidential computing</h2>
+<p>11/15/2023 07:57:00</p>
+<p>Microsoft is proud to showcase that customers in the financial sector can rely on public Azure to add confidentiality to provide secure and compliant payment solutions that meet or exceed industry standards.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-microsoft-moves-25-billion-in-credit-card/ba-p/3981180>Announcing: Microsoft moves $25 Billion in credit card transactions to Azure confidential computing</a></p><p>&nbsp;&nbsp;</p><h2>O'Reilly Media report: Azure Confidential Computing and Zero Trust</h2>
+<p>11/15/2023 07:56:00</p>
+<p>We are excited to announce the publication of our first O'Reilly Media report: Azure Confidential Computing and Zero Trust.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/o-reilly-media-report-azure-confidential-computing-and-zero/ba-p/3973269>O'Reilly Media report: Azure Confidential Computing and Zero Trust</a></p><p>&nbsp;&nbsp;</p><h2>What’s new: RHEL 9.3 support for AMD confidential VMs, temp disk encryption, new regions</h2>
+<p>11/15/2023 07:56:00</p>
+<p>       Microsoft Azure is pleased to announce the availability of the RHEL 9.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/what-s-new-rhel-9-3-support-for-amd-confidential-vms-temp-disk/ba-p/3971161>What’s new: RHEL 9.3 support for AMD confidential VMs, temp disk encryption, new regions</a></p><p>&nbsp;&nbsp;</p><h2>Protecting Azure customers with the power of Azure confidential ledger</h2>
+<p>11/15/2023 07:55:00</p>
+<p>The Azure confidential ledger Basic SKU preview will allow select customers using other Azure products to uplevel integrity protection by storing periodic data blobs and application signatures in Azure confidential ledger as a point-in-time source of truth.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/protecting-azure-customers-with-the-power-of-azure-confidential/ba-p/3982557>Protecting Azure customers with the power of Azure confidential ledger</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the Public Preview of Azure Managed Confidential Consortium Framework</h2>
+<p>11/15/2023 07:55:00</p>
+<p>Customers and partners have expressed the following requirements:    customizable governance across multiple parties that works even when some members depart transparency and auditability to see what data is being read and acted on confidentiality to have end-to-end technical protection when dealing with sensitive data resiliency in scalable performant infrastructure for enterprise capabilities developer friendly experience that has ease-of-use and does not require specialized development teams      To provide a solution that addresses these needs we are announcing the public preview of Azure Managed Confidential Consortium Framework – a collaboration platform for decentralized trust and governance application development.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-the-public-preview-of-azure-managed-confidential/ba-p/3980502>Announcing the Public Preview of Azure Managed Confidential Consortium Framework</a></p><p>&nbsp;&nbsp;</p><h2>Try new Azure confidential ledger features, including an Azure Blob Storage Marketplace application</h2>
+<p>11/15/2023 07:55:00</p>
+<p>To support customers in regulated industries and compliance scenarios who asked about higher integrity protection of storage blobs the Azure confidential ledger team has launched a preview of a managed Marketplace application that will further protect data: Blob Storage Digests Backed by Confidential Ledger (Preview).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/try-new-azure-confidential-ledger-features-including-an-azure/ba-p/3982497>Try new Azure confidential ledger features, including an Azure Blob Storage Marketplace application</a></p><p>&nbsp;&nbsp;</p><h2>Confidential Temp Disk Encryption for Confidential VMs in Public Preview</h2>
+<p>11/15/2023 07:55:00</p>
+<p>   We are announcing the public preview of confidential temp disk encryption for confidential VMs.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-confidential-computing/confidential-temp-disk-encryption-for-confidential-vms-in-public/ba-p/3971393>Confidential Temp Disk Encryption for Confidential VMs in Public Preview</a></p><p>&nbsp;&nbsp;</p><h1><u>ADforMySQL Blogs:
+</u></h1><h2>Microsoft Azure innovation powers leading price-performance for MySQL database in the cloud</h2>
+<p>11/15/2023 08:00:09</p>
+<p>As part of our commitment to ensuring that Microsoft Azure is the best place to run MySQL workloads Microsoft is excited to announce that Azure Database for MySQL - Flexible Server just achieved a new faster performance benchmark.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/microsoft-azure-innovation-powers-leading-price-performance-for/ba-p/3979421>Microsoft Azure innovation powers leading price-performance for MySQL database in the cloud</a></p><p>&nbsp;&nbsp;</p><h2>Azure Database for MySQL - Flexible Server accelerated logs (Preview)</h2>
+<p>11/15/2023 07:56:30</p>
+<p>We're excited to announce public preview of the accelerated logs feature for Azure Database for MySQL – Flexible Server! This functionality available with the Business Critical service tier significantly enhances the performance of MySQL flexible servers offering a dynamic solution that is designed for high throughput needs that also reduces latency and optimizes cost efficiency.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/azure-database-for-mysql-flexible-server-accelerated-logs/ba-p/3983032>Azure Database for MySQL - Flexible Server accelerated logs (Preview)</a></p><p>&nbsp;&nbsp;</p><h1><u>ADforPostgreSQL Blogs:
+</u></h1><h2>Azure Database for PostgreSQL: AI-Ready for Enterprise Applications in Flexible Server</h2>
+<p>11/15/2023 08:00:01</p>
+<p>Today at Microsoft Ignite we’re pleased to announce a broad set of new features for Azure Database for PostgreSQL - Flexible Server Microsoft’s fully-managed Postgres service built on open-source Postgres and engineered for enterprises and developers alike.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/azure-database-for-postgresql-ai-ready-for-enterprise/ba-p/3980951>Azure Database for PostgreSQL: AI-Ready for Enterprise Applications in Flexible Server</a></p><p>&nbsp;&nbsp;</p><h2>Multi-Region Disaster Recovery: Streamlined with New Features</h2>
+<p>11/15/2023 08:00:00</p>
+<p>In our ongoing efforts to enhance data resilience and recovery capabilities we are excited to announce the public preview of substantial enhancements to our multi-region disaster recovery (DR) strategy for Azure Database for PostgreSQL - Flexible Server.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/multi-region-disaster-recovery-streamlined-with-new-features/ba-p/3980707>Multi-Region Disaster Recovery: Streamlined with New Features</a></p><p>&nbsp;&nbsp;</p><h2>General Availability of PostgreSQL 16 on Azure Database for PostgreSQL - Flexible Server</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We're excited to share that PostgreSQL 16 is now generally available on Azure Database for PostgreSQL - Flexible Server.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/general-availability-of-postgresql-16-on-azure-database-for/ba-p/3980354>General Availability of PostgreSQL 16 on Azure Database for PostgreSQL - Flexible Server</a></p><p>&nbsp;&nbsp;</p><h2>Introducing the azure_ai extension to Azure Database for PostgreSQL</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are excited to announce the preview of the new azure_ai extension which enables you to integrate Azure AI services with your operational data.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/introducing-the-azure-ai-extension-to-azure-database-for/ba-p/3980291>Introducing the azure_ai extension to Azure Database for PostgreSQL</a></p><p>&nbsp;&nbsp;</p><h2>Introducing Premium SSD v2 for Azure Database for PostgreSQL Flexible Server</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are excited to announce the public preview of Premium SSD v2 for Azure Database for PostgreSQL - Flexible Server.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/introducing-premium-ssd-v2-for-azure-database-for-postgresql/ba-p/3980235>Introducing Premium SSD v2 for Azure Database for PostgreSQL Flexible Server</a></p><p>&nbsp;&nbsp;</p><h2>Introducing Private Link based networking with Azure Database for PostgreSQL – Flexible Server</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Today we are proud to announce support for Azure Private Link  for private networking with Azure Database for PostgreSQL - Flexible server in Public Preview in addition to already existing networking capabilities provided by VNET injection.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/introducing-private-link-based-networking-with-azure-database/ba-p/3975392>Introducing Private Link based networking with Azure Database for PostgreSQL – Flexible Server</a></p><p>&nbsp;&nbsp;</p><h2>Near Zero Downtime Scaling in Azure Database for PostgreSQL Flexible Server - Generally Available!!</h2>
+<p>11/15/2023 08:00:00</p>
+<p>In the fast-paced world of technology businesses rely heavily on scalable server solutions to meet their ever-changing demands.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/near-zero-downtime-scaling-in-azure-database-for-postgresql/ba-p/3974282>Near Zero Downtime Scaling in Azure Database for PostgreSQL Flexible Server - Generally Available!!</a></p><p>&nbsp;&nbsp;</p><h2>Highlights of Path To Citus Con podcast ep09 with Postgres experts Dimitri Fontaine and Vik Fearing</h2>
+<p>11/11/2023 12:40:41</p>
+<p>Did you know you can solve most of the puzzles in Advent of Code with SQL? In this episode of the Path To Citus Con podcast for developers who love Postgres guests Dimitri Fontaine and Vik Fearing join co-hosts Claire Giordano and Pino de Candia to explore whether you can (or should) solve every data problem in SQL.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/highlights-of-path-to-citus-con-podcast-ep09-with-postgres/ba-p/3978821>Highlights of Path To Citus Con podcast ep09 with Postgres experts Dimitri Fontaine and Vik Fearing</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureDataBlog Blogs:
+</u></h1><h2>Announcing the General Availability of AMD-based Confidential VMs on Azure Databricks</h2>
+<p>11/15/2023 08:00:01</p>
+<p>We are excited to announce the general availability of AMD-based confidential virtual machines (VMs) for cluster nodes on Azure Databricks.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-data-blog/announcing-the-general-availability-of-amd-based-confidential/ba-p/3980969>Announcing the General Availability of AMD-based Confidential VMs on Azure Databricks</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureDataExplorer Blogs:
+</u></h1><h2>How many to many relationships affect the number of queries required to refresh matrices and tables</h2>
+<p>11/16/2023 12:29:37</p>
+<p>    Apology: I must admit that in the last two years I’ve told many Power BI/Kusto customers not to worry about relationships that are created as M:M.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/how-many-to-many-relationships-affect-the-number-of-queries/ba-p/3985314>How many to many relationships affect the number of queries required to refresh matrices and tables</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureDevCommunityBlog Blogs:
+</u></h1><h2>Azure Deployment Environments optimizes developer experience and adds new enterprise capabilities</h2>
+<p>11/15/2023 08:00:03</p>
+<p>Over the last 15 years DevOps practices and new cloud technologies have streamlined and standardized operational processes to help developers focus on what really matters - their code.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-developer-community-blog/azure-deployment-environments-optimizes-developer-experience-and/ba-p/3982306>Azure Deployment Environments optimizes developer experience and adds new enterprise capabilities</a></p><p>&nbsp;&nbsp;</p><h2>New capabilities help simplify and streamline the experience with Microsoft Dev Box</h2>
+<p>11/15/2023 08:00:02</p>
+<p>It’s hard to believe that Microsoft Dev Box has already been generally available for almost four months.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-developer-community-blog/new-capabilities-help-simplify-and-streamline-the-experience/ba-p/3981481>New capabilities help simplify and streamline the experience with Microsoft Dev Box</a></p><p>&nbsp;&nbsp;</p><h2>Resiliency policies now available in Azure Container Apps</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are thrilled to announce the public preview of Azure Container Apps resiliency policies.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-developer-community-blog/resiliency-policies-now-available-in-azure-container-apps/ba-p/3978864>Resiliency policies now available in Azure Container Apps</a></p><p>&nbsp;&nbsp;</p><h2>⭐Azure Cache for Redis at Microsoft Ignite 2023: What's New for Developers⭐</h2>
+<p>11/15/2023 08:00:00</p>
+<p>       By: Ricky Diep Shruti Pathak Kyle Teegarden and Catherine Wang        Microsoft Ignite 2023 is here and we're excited to share the latest updates on Azure Cache for Redis with our developer community.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-developer-community-blog/azure-cache-for-redis-at-microsoft-ignite-2023-what-s-new-for/ba-p/3975467>⭐Azure Cache for Redis at Microsoft Ignite 2023: What's New for Developers⭐</a></p><p>&nbsp;&nbsp;</p><h2>Ignite your AI apps: A guide to Microsoft Ignite for startups and at-scale cloud companies</h2>
+<p>11/13/2023 10:48:21</p>
+<p>       Microsoft Ignite starts November 15th.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-developer-community-blog/ignite-your-ai-apps-a-guide-to-microsoft-ignite-for-startups-and/ba-p/3978895>Ignite your AI apps: A guide to Microsoft Ignite for startups and at-scale cloud companies</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureforOperatorsBlog Blogs:
+</u></h1><h2>With its Dynamic Service Model, Microsoft’s programmable RAN platform augments O-RAN analytics.</h2>
+<p>11/14/2023 12:54:30</p>
+<p>This is a contributed article by Stéphane Téral Chief Analyst at LightCounting and founder of TÉRAL RESEARCH     Although the programmability of the novel Open RAN (O-RAN) architecture provides great flexibility and agility its predefined telemetry and control features remain the last of the bottlenecks to tackle.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-for-operators-blog/with-its-dynamic-service-model-microsoft-s-programmable-ran/ba-p/3972249>With its Dynamic Service Model, Microsoft’s programmable RAN platform augments O-RAN analytics.</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureGovernanceandManagementBlog Blogs:
+</u></h1><h2>Everything New in Azure Governance @ Ignite 2023</h2>
+<p>11/14/2023 14:05:54</p>
+<p>You've come to the right place if you're looking for everything happening with Azure Governance at Microsoft Ignite November 15-17 2023.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-governance-and-management/everything-new-in-azure-governance-ignite-2023/ba-p/3977750>Everything New in Azure Governance @ Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Public Preview of Resource Management and Health Resources Event Grid System Topics</h2>
+<p>11/14/2023 10:57:47</p>
+<p>    A System Topic in Event Grid represents one or more events published by Azure services.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-of-resource-management-and-health/ba-p/3981376>Announcing Public Preview of Resource Management and Health Resources Event Grid System Topics</a></p><p>&nbsp;&nbsp;</p><h2>Remediate your Azure Kubernetes Service clusters at scale using Azure Policy’s mutation support!</h2>
+<p>11/14/2023 09:33:13</p>
+<p>We are thrilled to announce Azure Policy for Kubernetes Public Preview support for Mutation available for Azure Kubernetes Service clusters! This release is brought to you in collaboration with Azure Kubernetes Service and Azure Container Compute Upstream.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-governance-and-management/remediate-your-azure-kubernetes-service-clusters-at-scale-using/ba-p/3974506>Remediate your Azure Kubernetes Service clusters at scale using Azure Policy’s mutation support!</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the Public Preview of Alerting on Azure Resource Graph</h2>
+<p>11/13/2023 15:25:06</p>
+<p>Azure Resource Graph is an Azure service designed to provide efficient and performant resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-the-public-preview-of-alerting-on-azure-resource/ba-p/3980771>Announcing the Public Preview of Alerting on Azure Resource Graph</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureInfrastructureBlog Blogs:
+</u></h1><h2>Announcing the general availability of Azure Boost</h2>
+<p>11/15/2023 08:00:02</p>
+<p>We’re excited today to announce the general availability of Azure Boost a system designed by Microsoft that offloads server virtualization processes traditionally performed by the hypervisor and host OS onto purpose-built software and hardware enabling faster storage and networking performance for Azure VM customers.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-the-general-availability-of-azure-boost/ba-p/3981384>Announcing the general availability of Azure Boost</a></p><p>&nbsp;&nbsp;</p><h2>Simplify IT management with Microsoft Copilot for Azure – save time and get answers fast</h2>
+<p>11/15/2023 08:00:02</p>
+<p>Today we’re announcing Microsoft Copilot for Azure an AI companion that helps you design operate optimize and troubleshoot your cloud infrastructure and services.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/simplify-it-management-with-microsoft-copilot-for-azure-save/ba-p/3981106>Simplify IT management with Microsoft Copilot for Azure – save time and get answers fast</a></p><p>&nbsp;&nbsp;</p><h2>IT professional's guide to Azure Infrastructure at Microsoft Ignite 2023</h2>
+<p>11/13/2023 11:58:35</p>
+<p>       Microsoft Ignite 2023 is bringing together the best of what’s next and we are sure to see showcases of the practical implementation of AI transformation.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/it-professional-s-guide-to-azure-infrastructure-at-microsoft/ba-p/3980778>IT professional's guide to Azure Infrastructure at Microsoft Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureMapsBlog Blogs:
+</u></h1><h2>Navigate Microsoft Ignite with Azure Maps Creator</h2>
+<p>11/13/2023 12:35:45</p>
+<p>If you are attending the Microsoft Ignite event this year you are in for a treat! Not only will you get to experience the latest innovations and insights from Microsoft and its partners but you will also get to explore the beautiful newly built Seattle Convention Center Summit building which nearly doubles the capacity of the Convention Center by adding 573770 square feet of event space covering 1.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-maps-blog/navigate-microsoft-ignite-with-azure-maps-creator/ba-p/3978275>Navigate Microsoft Ignite with Azure Maps Creator</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureMigrationBlog Blogs:
+</u></h1><h2>Azure Migrate - Ignite 2023 updates.</h2>
+<p>11/15/2023 08:00:00</p>
+<p>       Ignite 2023 updates.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-ignite-2023-updates/ba-p/3956038>Azure Migrate - Ignite 2023 updates.</a></p><p>&nbsp;&nbsp;</p><h2>Accelerate Innovation with Azure Migrate and Modernize and Azure Innovate</h2>
+<p>11/15/2023 08:00:00</p>
+<p>In July this year we announced the launch of Azure Migrate and Modernize and Azure Innovate our flagship offerings to help accelerate your move to the cloud.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-innovation-with-azure-migrate-and-modernize-and-azure/ba-p/3968185>Accelerate Innovation with Azure Migrate and Modernize and Azure Innovate</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureNetworkingBlog Blogs:
+</u></h1><h2>Secure your subnet via private subnet and explicit outbound methods</h2>
+<p>11/16/2023 08:20:40</p>
+<p>This article was co-authored by @aimeelittleton and @brianlehr     While there are multiple methods for obtaining explicit outbound connectivity to the internet from your virtual machines on Azure there is also one method for implicit outbound connectivity – default outbound access.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-networking-blog/secure-your-subnet-via-private-subnet-and-explicit-outbound/ba-p/3984177>Secure your subnet via private subnet and explicit outbound methods</a></p><p>&nbsp;&nbsp;</p><h2>Connecting to Azure IoT Hub using IPv6 devices</h2>
+<p>11/14/2023 19:30:00</p>
+<p>Introduction     This article introduces an approach to connect IPv6 devices to Azure IoT Hub.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-networking-blog/connecting-to-azure-iot-hub-using-ipv6-devices/ba-p/3982291>Connecting to Azure IoT Hub using IPv6 devices</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureNetworkSecurityBlog Blogs:
+</u></h1><h2>Understanding Azure DDoS Protection: A Closer Look</h2>
+<p>11/15/2023 08:33:05</p>
+<p>Introduction Azure DDoS Protection is a service that constantly innovates itself to protect customers from ever-changing distributed denial-of-service (DDoS) attacks.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-network-security-blog/understanding-azure-ddos-protection-a-closer-look/ba-p/3983767>Understanding Azure DDoS Protection: A Closer Look</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureObservabilityBlog Blogs:
+</u></h1><h2>Announcing GA: Multi-Line Logging in Azure Monitor - Container Insights</h2>
+<p>11/15/2023 15:25:42</p>
+<p>Today at Ignite we are thrilled to announce the General Availability of Multi-Line Logging in Azure Monitor – Container Insights.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-ga-multi-line-logging-in-azure-monitor-container/ba-p/3984289>Announcing GA: Multi-Line Logging in Azure Monitor - Container Insights</a></p><p>&nbsp;&nbsp;</p><h2>What’s new in Azure Monitor @ Ignite 2023</h2>
+<p>11/15/2023 09:00:00</p>
+<p>Azure Monitor offers a rich set of enterprise ready capabilities to ensure complete observability of your hybrid environment enabling high availability reliability and performance.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-observability-blog/what-s-new-in-azure-monitor-ignite-2023/ba-p/3983596>What’s new in Azure Monitor @ Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Azure Managed Grafana Adds New SKU and Features</h2>
+<p>11/15/2023 08:00:00</p>
+<p>At the first anniversary of Azure Managed Grafana general availability we’re excited to announce the preview of the Essential SKU as well as numerous new functionalities and enhancements.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-managed-grafana-adds-new-sku-and-features/ba-p/3980412>Azure Managed Grafana Adds New SKU and Features</a></p><p>&nbsp;&nbsp;</p><h2>Announcing GA: Collect Syslog from your AKS nodes using Container Insights</h2>
+<p>11/14/2023 09:00:00</p>
+<p>Today at Ignite we are happy to announce the General availability of Syslog collection from AKS nodes using Container Insights.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-ga-collect-syslog-from-your-aks-nodes-using-container/ba-p/3980648>Announcing GA: Collect Syslog from your AKS nodes using Container Insights</a></p><p>&nbsp;&nbsp;</p><h2>Announcement: Azure Monitor SCOM Managed Instance is now Generally Available!</h2>
+<p>11/14/2023 09:00:00</p>
+<p>We are excited to announce the General Availability of Azure Monitor SCOM managed instance (SCOM MI).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-observability-blog/announcement-azure-monitor-scom-managed-instance-is-now/ba-p/3981338>Announcement: Azure Monitor SCOM Managed Instance is now Generally Available!</a></p><p>&nbsp;&nbsp;</p><h1><u>AzurePaaSBlog Blogs:
+</u></h1><h2>Capturing Azure Storage Explorer REST API calls</h2>
+<p>11/15/2023 16:05:07</p>
+<p>Azure Storage Explorer is a powerful tool that simplifies working with Azure Storage services such as Blob Queue Table and File storage.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-paas-blog/capturing-azure-storage-explorer-rest-api-calls/ba-p/3947791>Capturing Azure Storage Explorer REST API calls</a></p><p>&nbsp;&nbsp;</p><h2>Blobs with Index Tags - How to identify the blobs with blob index tags and how to remove those tags</h2>
+<p>11/15/2023 08:49:37</p>
+<p>Background     This article describes how to identify the blobs with index tags and how to remove those tags using the Blob Inventory Service and Python SDK.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-paas-blog/blobs-with-index-tags-how-to-identify-the-blobs-with-blob-index/ba-p/3939194>Blobs with Index Tags - How to identify the blobs with blob index tags and how to remove those tags</a></p><p>&nbsp;&nbsp;</p><h2>Installing and running Stackexchange.Redis client library on Linux environments</h2>
+<p>11/13/2023 07:49:56</p>
+<p>    Overview   StackExchange.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-paas-blog/installing-and-running-stackexchange-redis-client-library-on/ba-p/3972352>Installing and running Stackexchange.Redis client library on Linux environments</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureSQLBlog Blogs:
+</u></h1><h2>Introducing Azure Database Fleet Manager</h2>
+<p>11/16/2023 02:43:25</p>
+<p>The SaaS Opportunity     SaaS model is taking cloud application business by the storm and as of 2023 the SaaS industry is worth approximately $195 billions and growing (Gartner).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/introducing-azure-database-fleet-manager/ba-p/3979576>Introducing Azure Database Fleet Manager</a></p><p>&nbsp;&nbsp;</p><h2>License-free standby replica for Azure SQL database</h2>
+<p>11/15/2023 10:38:06</p>
+<p>To protect database powering the application from region failures and achieving higher business continuity it is crucial to enable disaster recovery for database.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/license-free-standby-replica-for-azure-sql-database/ba-p/3973406>License-free standby replica for Azure SQL database</a></p><p>&nbsp;&nbsp;</p><h2>GA announcement - Microsoft Purview DevOps policies for Azure SQL Managed Instance</h2>
+<p>11/15/2023 10:35:00</p>
+<p>DevOps policies a special type of Microsoft Purview access policies allow customers to manage access to system metadata on data sources that have been registered for Data use management in Microsoft Purview.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/ga-announcement-microsoft-purview-devops-policies-for-azure-sql/ba-p/3983399>GA announcement - Microsoft Purview DevOps policies for Azure SQL Managed Instance</a></p><p>&nbsp;&nbsp;</p><h2>What’s new in SQL Server and Azure SQL: 2023 Year in Review</h2>
+<p>11/15/2023 09:00:00</p>
+<p>Read the 2023 recap of all the Azure SQL and SQL Server news or catch the live episode! If you missed the episode you can find them all at https://aka.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/what-s-new-in-sql-server-and-azure-sql-2023-year-in-review/ba-p/3981926>What’s new in SQL Server and Azure SQL: 2023 Year in Review</a></p><p>&nbsp;&nbsp;</p><h2>Ledger in Azure SQL Managed Instance now generally available</h2>
+<p>11/15/2023 08:09:12</p>
+<p>We are thrilled to announce that ledger in Azure SQL Managed Instance is now generally available! This feature enables you to store and protect sensitive data in a tamper-evident and cryptographically verifiable way using the same familiar SQL interface.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/ledger-in-azure-sql-managed-instance-now-generally-available/ba-p/3959358>Ledger in Azure SQL Managed Instance now generally available</a></p><p>&nbsp;&nbsp;</p><h2>Always Encrypted with secure enclaves – DC-series with up to 40 vCores now generally available</h2>
+<p>11/15/2023 08:08:22</p>
+<p>We are excited to announce the general availability of the new DC-series databases with up to 40 vCores!       Always Encrypted with secure enclaves leverages the Intel Software Guard Extensions (Intel SGX) technology available in the DC-series hardware configuration.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/always-encrypted-with-secure-enclaves-dc-series-with-up-to-40/ba-p/3959342>Always Encrypted with secure enclaves – DC-series with up to 40 vCores now generally available</a></p><p>&nbsp;&nbsp;</p><h2>VBS enclaves for Always Encrypted in Azure SQL Database now generally available</h2>
+<p>11/15/2023 08:07:32</p>
+<p>We are thrilled to announce that Virtualization-based security (VBS) enclaves for Always Encrypted in Azure SQL Database are now generally available! This is a major milestone for enhancing the security and privacy of sensitive data in the cloud.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/vbs-enclaves-for-always-encrypted-in-azure-sql-database-now/ba-p/3959242>VBS enclaves for Always Encrypted in Azure SQL Database now generally available</a></p><p>&nbsp;&nbsp;</p><h2>Vector Search with Azure SQL Database and Azure AI Search</h2>
+<p>11/15/2023 08:00:04</p>
+<p>With public preview of integrated vectorization a ground-breaking capability of vector search in Azure AI Search (previously Azure Cognitive Search) you can do vector search with data stored in Azure SQL Database easily.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/vector-search-with-azure-sql-database-and-azure-ai-search/ba-p/3982907>Vector Search with Azure SQL Database and Azure AI Search</a></p><p>&nbsp;&nbsp;</p><h2>Azure SQL Database Hyperscale – lower, simplified pricing!</h2>
+<p>11/15/2023 08:00:02</p>
+<p>Azure is a cloud platform designed to simplify building powerful and economical modern applications.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209>Azure SQL Database Hyperscale – lower, simplified pricing!</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Public Preview of premium-series hardware for Azure SQL Database Hyperscale elastic pools</h2>
+<p>11/15/2023 08:00:02</p>
+<p>We are excited to announce the public preview (in selected regions) of premium-series hardware for Azure SQL Database Hyperscale elastic pools.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-public-preview-of-premium-series-hardware-for-azure/ba-p/3981250>Announcing Public Preview of premium-series hardware for Azure SQL Database Hyperscale elastic pools</a></p><p>&nbsp;&nbsp;</p><h2>A summary of Azure SQL Managed Instance product updates in 2023</h2>
+<p>11/15/2023 07:50:00</p>
+<p>It became tradition for the Azure SQL Managed Instance (SQL MI) team to use period of Ignite and PASS Data Community Summit conferences to reflect on the product innovations that marked current year and 2023 is no exception to that.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/a-summary-of-azure-sql-managed-instance-product-updates-in-2023/ba-p/3983014>A summary of Azure SQL Managed Instance product updates in 2023</a></p><p>&nbsp;&nbsp;</p><h2>GA of DTC for Azure SQL Managed Instance</h2>
+<p>11/15/2023 07:40:31</p>
+<p>I’m happy to announce General Availability of DTC for Azure SQL Managed Instance.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/ga-of-dtc-for-azure-sql-managed-instance/ba-p/3983472>GA of DTC for Azure SQL Managed Instance</a></p><p>&nbsp;&nbsp;</p><h2>Online disaster recovery between SQL Server 2022 and SQL Managed Instance - Preview</h2>
+<p>11/15/2023 07:40:06</p>
+<p>We’re excited to announce a major new capability of the Managed Instance link feature that now supports two-way failover between SQL Server 2022 and Azure SQL Managed Instance.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/online-disaster-recovery-between-sql-server-2022-and-sql-managed/ba-p/3982330>Online disaster recovery between SQL Server 2022 and SQL Managed Instance - Preview</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the General Availability of November 2022 Feature Wave for Azure SQL Managed Instance</h2>
+<p>11/15/2023 07:40:00</p>
+<p>The benefits and features introduced by the November 2022 feature wave are now generally available for all instances in eligible subnets (see below for details).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-the-general-availability-of-november-2022-feature/ba-p/3982972>Announcing the General Availability of November 2022 Feature Wave for Azure SQL Managed Instance</a></p><p>&nbsp;&nbsp;</p><h2>GA of database copy and move for Azure SQL Managed Instance</h2>
+<p>11/15/2023 07:36:40</p>
+<p>I’m happy to announce General Availability of database copy and database move operations for Azure SQL Managed Instance.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-sql-blog/ga-of-database-copy-and-move-for-azure-sql-managed-instance/ba-p/3983527>GA of database copy and move for Azure SQL Managed Instance</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureStackBlog Blogs:
+</u></h1><h2>Accelerate edge deployments with cloud-managed infrastructure and Azure Stack HCI version 23H2</h2>
+<p>11/15/2023 08:00:05</p>
+<p>Authored by Cosmos Darwin Principal Group Manager Azure Stack HCI              Today at Microsoft Ignite 2023 we’re announcing the public preview of Azure Stack HCI version 23H2.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-stack-blog/accelerate-edge-deployments-with-cloud-managed-infrastructure/ba-p/3982951>Accelerate edge deployments with cloud-managed infrastructure and Azure Stack HCI version 23H2</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureStorageBlog Blogs:
+</u></h1><h2>Azure Backup for AKS: Cloud native, Enterprise ready, Kubernetes aware backup</h2>
+<p>11/16/2023 09:00:00</p>
+<p>Kubernetes has emerged as the leading platform for deploying containerized applications and many organizations are turning to Azure Kubernetes Service (AKS) to enjoy a managed and efficient container orchestration experience.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-backup-for-aks-cloud-native-enterprise-ready-kubernetes/ba-p/3976425>Azure Backup for AKS: Cloud native, Enterprise ready, Kubernetes aware backup</a></p><p>&nbsp;&nbsp;</p><h2>Revolutionize Business Continuity and Disaster Recovery with Azure Business Continuity Center</h2>
+<p>11/15/2023 08:40:11</p>
+<p>In the ever-evolving landscape of business where innovation and resilience stand as pillars of success business continuity is not merely a concern; it's the bedrock upon which organizations build their future.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-storage-blog/revolutionize-business-continuity-and-disaster-recovery-with/ba-p/3980387>Revolutionize Business Continuity and Disaster Recovery with Azure Business Continuity Center</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Ignite 2023: What is new in file shares for enterprise workloads?</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are announcing various new capabilities for Azure Files and Azure NetApp Files to continue to improve file share experiences for enterprise workloads.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-storage-blog/microsoft-ignite-2023-what-is-new-in-file-shares-for-enterprise/ba-p/3978854>Microsoft Ignite 2023: What is new in file shares for enterprise workloads?</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureSynapseAnalyticsBlog Blogs:
+</u></h1><h2>Synapse Connectivity Series Part #4 - Advanced network troubleshooting and network trace analysis</h2>
+<p>11/14/2023 08:00:00</p>
+<p>Continuing the series of this blog posts I would like to go more advanced on troubleshooting connectivity issues.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/synapse-connectivity-series-part-4-advanced-network/ba-p/3945481>Synapse Connectivity Series Part #4 - Advanced network troubleshooting and network trace analysis</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureToolsBlog Blogs:
+</u></h1><h2>Azure Command-line Tools Ignite 2023 Announcement</h2>
+<p>11/16/2023 08:50:00</p>
+<p>The priority for Azure CLI and Azure PowerShell remains to provide our customers with the most complete secure and easy-to-use tools to manage Azure resources.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-command-line-tools-ignite-2023-announcement/ba-p/3984502>Azure Command-line Tools Ignite 2023 Announcement</a></p><p>&nbsp;&nbsp;</p><h1><u>AzureVirtualDesktopBlog Blogs:
+</u></h1><h2>Host pool provisioning now supported in Azure Virtual Desktop for Azure Stack HCI preview</h2>
+<p>11/15/2023 08:00:07</p>
+<p>Azure Virtual Desktop is a cloud-managed virtual desktop infrastructure (VDI) solution offered by Microsoft to customers with desktop virtualization requirements.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/host-pool-provisioning-now-supported-in-azure-virtual-desktop/ba-p/3983124>Host pool provisioning now supported in Azure Virtual Desktop for Azure Stack HCI preview</a></p><p>&nbsp;&nbsp;</p><h1><u>CoreInfrastructureandSecurityBlog Blogs:
+</u></h1><h2>Azure MMA Agent Bulk Removal</h2>
+<p>11/13/2023 13:08:33</p>
+<p>    Hello it has been a while since I have posted any articles but my little buddy Raven (my miniature schnauzer) and I are here to talk about the Microsoft Monitoring Agent (MMA).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/azure-mma-agent-bulk-removal/ba-p/3980631>Azure MMA Agent Bulk Removal</a></p><p>&nbsp;&nbsp;</p><h2>Check This Out! (CTO!) Guide (October 2023)</h2>
+<p>11/11/2023 16:51:55</p>
+<p>    Hi everyone! Brandon Wilson here once again with this month’s “Check This Out!” (CTO!) guide.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/check-this-out-cto-guide-october-2023/ba-p/3979388>Check This Out! (CTO!) Guide (October 2023)</a></p><p>&nbsp;&nbsp;</p><h1><u>EducationBlog Blogs:
+</u></h1><h2>New School Data Sync Experience is Now Generally Available</h2>
+<p>11/15/2023 11:01:02</p>
+<p>We are excited to announce the new School Data Sync (SDS) experience is now generally available.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/education-blog/new-school-data-sync-experience-is-now-generally-available/ba-p/3983825>New School Data Sync Experience is Now Generally Available</a></p><p>&nbsp;&nbsp;</p><h1><u>EducatorDeveloperBlog Blogs:
+</u></h1><h2>Empowering Your Business: A Step-by-Step Guide to Creating Customized Applications with PVA</h2>
+<p>11/17/2023 00:00:00</p>
+<p>    Introduction             Today's world is driven by data which demands comprehensive solutions that can access and integrate data across multiple platforms.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/empowering-your-business-a-step-by-step-guide-to-creating/ba-p/3980820>Empowering Your Business: A Step-by-Step Guide to Creating Customized Applications with PVA</a></p><p>&nbsp;&nbsp;</p><h2>TalkwithMe leverages the Azure API to provide customized, immersive AI language learning experiences</h2>
+<p>11/16/2023 12:00:00</p>
+<p>Azure API Meets Language Learning: The Story of “TalkwithMe”      Inspiration The genesis of our AI language learning product is quite a story — It all started during a discussion about the lack of customizable learning tools for reading practice.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/talkwithme-leverages-the-azure-api-to-provide-customized/ba-p/3982007>TalkwithMe leverages the Azure API to provide customized, immersive AI language learning experiences</a></p><p>&nbsp;&nbsp;</p><h2>Learn Live - Build your AI portfolio with AI Kick-off Challenge Projects</h2>
+<p>11/16/2023 04:00:00</p>
+<p>Are you interested in learning how to apply AI to solve real-world problems? In this Learn Live series you’ll get to see e-2-e projects that address different domains and scenarios with Azure AI GitHub and other Microsoft tools.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/learn-live-build-your-ai-portfolio-with-ai-kick-off-challenge/ba-p/3983813>Learn Live - Build your AI portfolio with AI Kick-off Challenge Projects</a></p><p>&nbsp;&nbsp;</p><h2>Copilot in Action: Building Next-Gen Bots with Microsoft Copilot Studio</h2>
+<p>11/15/2023 22:26:00</p>
+<p>At Microsoft Ignite we announced Microsoft Copilot Studio a low-code comprehensive conversational AI solution that unlocks new Copilot capabilities.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/copilot-in-action-building-next-gen-bots-with-microsoft-copilot/ba-p/3983885>Copilot in Action: Building Next-Gen Bots with Microsoft Copilot Studio</a></p><p>&nbsp;&nbsp;</p><h2>.NET MAUI on Linux with Visual Studio Code</h2>
+<p>11/15/2023 12:00:00</p>
+<p>Introduction .</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/net-maui-on-linux-with-visual-studio-code/ba-p/3982195>.NET MAUI on Linux with Visual Studio Code</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Ignite Learn Live – Use GitHub Copilot to code a mini-game!</h2>
+<p>11/15/2023 04:58:20</p>
+<p>  Renee Noble and Cynthia Zanoni are going LIVE as part of Microsoft Ignite 2023 at 4pm PT on Thursday November 16th.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/microsoft-ignite-learn-live-use-github-copilot-to-code-a-mini/ba-p/3981576>Microsoft Ignite Learn Live – Use GitHub Copilot to code a mini-game!</a></p><p>&nbsp;&nbsp;</p><h2>Copilot Explains - Error troubleshooting in Jupyter Notebooks</h2>
+<p>11/15/2023 00:00:00</p>
+<p>Data scientists and AI engineers love to work with Jupyter Notebooks because they make so much easier to look at the result of each and every data exploration step or data modeling experiment and make decisions accordingly.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/copilot-explains-error-troubleshooting-in-jupyter-notebooks/ba-p/3980070>Copilot Explains - Error troubleshooting in Jupyter Notebooks</a></p><p>&nbsp;&nbsp;</p><h2>Optimizing Azure Performance: A Guide for Student Developers and Entrepreneurs</h2>
+<p>11/14/2023 12:00:00</p>
+<p>If you are a student developer or an entrepreneur who wants to build applications using Azure you might be wondering how to choose the best Azure region for your needs.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/optimizing-azure-performance-a-guide-for-student-developers-and/ba-p/3981878>Optimizing Azure Performance: A Guide for Student Developers and Entrepreneurs</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Learn AI Skills Challenge Pitch Winner: WriteSight</h2>
+<p>11/14/2023 00:00:00</p>
+<p>The Microsoft Learn AI Cloud Skills Challenge wrapped up an incredible learning journey with the AI pitch Challenge; a showcase of innovation where passionate learners brought their visions to life through the power of AI.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/microsoft-learn-ai-skills-challenge-pitch-winner-writesight/ba-p/3977540>Microsoft Learn AI Skills Challenge Pitch Winner: WriteSight</a></p><p>&nbsp;&nbsp;</p><h2>¡Regístrate a Imagine Cup 2024!</h2>
+<p>11/13/2023 12:00:00</p>
+<p>Imagine Cup 2024 es una competición global anual de tecnología e innovación creada por Microsoft dirigida a estudiantes de todo el mundo.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/reg%C3%ADstrate-a-imagine-cup-2024/ba-p/3964193>¡Regístrate a Imagine Cup 2024!</a></p><p>&nbsp;&nbsp;</p><h2>Dev Database to go! The perfect database for developer</h2>
+<p>11/13/2023 00:00:00</p>
+<p>The simple database for developers ready to go every time     When building a new project we don't need a big database that scales and has lots of data but we do still need some kind of data source.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/educator-developer-blog/dev-database-to-go-the-perfect-database-for-developer/ba-p/3976192>Dev Database to go! The perfect database for developer</a></p><p>&nbsp;&nbsp;</p><h1><u>ExcelBlog Blogs:
+</u></h1><h2>New aggregation functions: GROUPBY and PIVOTBY</h2>
+<p>11/14/2023 13:11:14</p>
+<p>November 14th 2023 Status  These functions are currently rolling out to users enrolled in the beta channel for Windows Excel and Mac Excel        I’m excited to announce Excel's new GROUPBY and PIVOTBY functions.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/excel-blog/new-aggregation-functions-groupby-and-pivotby/ba-p/3965765>New aggregation functions: GROUPBY and PIVOTBY</a></p><p>&nbsp;&nbsp;</p><h1><u>FastTrackforAzureBlog Blogs:
+</u></h1><h2>Fabric Enhancement: Simplifying Workflow Management with Streamlined Activity Skipping in Pipelines</h2>
+<p>11/14/2023 04:16:07</p>
+<p>    Introduction:   This article discusses the process of deactivating or skipping an activity in Fabric Data Factory pipelines by marking it as inactive.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/fasttrack-for-azure/fabric-enhancement-simplifying-workflow-management-with/ba-p/3973467>Fabric Enhancement: Simplifying Workflow Management with Streamlined Activity Skipping in Pipelines</a></p><p>&nbsp;&nbsp;</p><h2>Azure OpenAI Service Multitenant Load Balancing and Token Per Minute Tracking via Prometheus Metrics</h2>
+<p>11/13/2023 07:48:30</p>
+<p>Azure OpenAI Service provides various isolation and tenancy models for different scenarios.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-openai-service-multitenant-load-balancing-and-token-per/ba-p/3980163>Azure OpenAI Service Multitenant Load Balancing and Token Per Minute Tracking via Prometheus Metrics</a></p><p>&nbsp;&nbsp;</p><h1><u>HealthcareAndLifeSciencesBlog Blogs:
+</u></h1><h2>Don’t Gamble With Your Cyber Health! The MGM Breach and Healthcare? by Ben Henderson, CISSP</h2>
+<p>11/15/2023 10:45:46</p>
+<p>The recent cyberattack against MGM Resorts grabbed headlines and sent shockwaves across the industry.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/don-t-gamble-with-your-cyber-health-the-mgm-breach-and/ba-p/3983964>Don’t Gamble With Your Cyber Health! The MGM Breach and Healthcare? by Ben Henderson, CISSP</a></p><p>&nbsp;&nbsp;</p><h2>Powering Azure Docs with CoPilot</h2>
+<p>11/14/2023 17:48:39</p>
+<p>       Background With the recent announcement at GitHub Universe of the ability to interact with Copilot on public repositories this got me thinking how this capability could be used with how we interact with Azure documentation.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/powering-azure-docs-with-copilot/ba-p/3978896>Powering Azure Docs with CoPilot</a></p><p>&nbsp;&nbsp;</p><h1><u>IntegrationsonAzureBlog Blogs:
+</u></h1><h2>Discover your next integration inspiration at this year’s Ignite!</h2>
+<p>11/15/2023 10:00:00</p>
+<p>Get ready for an exhilarating digital experience at Microsoft Ignite 2023.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/discover-your-next-integration-inspiration-at-this-year-s-ignite/ba-p/3982621>Discover your next integration inspiration at this year’s Ignite!</a></p><p>&nbsp;&nbsp;</p><h2>Data Mapper for Azure Logic Apps (Standard) reaches General Availability</h2>
+<p>11/15/2023 10:00:00</p>
+<p>We are pleased to announce the General Availability of Data Mapper for Azure Logic Apps in Visual Studio Code.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-for-azure-logic-apps-standard-reaches-general/ba-p/3982731>Data Mapper for Azure Logic Apps (Standard) reaches General Availability</a></p><p>&nbsp;&nbsp;</p><h2>Making it easy to get started with the Azure Logic Apps Standard VS Code Extension</h2>
+<p>11/15/2023 10:00:00</p>
+<p> The Logic Apps standard VS Code extension seamlessly extends the Logic App designer empowering users to transition from developing workflows in the cloud to a local environment.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/making-it-easy-to-get-started-with-the-azure-logic-apps-standard/ba-p/3979643>Making it easy to get started with the Azure Logic Apps Standard VS Code Extension</a></p><p>&nbsp;&nbsp;</p><h2>How Credential Manager in API Management can help you manage, store, and control access to your API</h2>
+<p>11/15/2023 08:30:00</p>
+<p>We're excited to introduce the rebranding and feature enhancements of Azure API Management's Credential Manager previously known as Authorizations.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-credential-manager-in-api-management-can-help-you-manage/ba-p/3980634>How Credential Manager in API Management can help you manage, store, and control access to your API</a></p><p>&nbsp;&nbsp;</p><h2>📢 Azure Logic Apps (Standard) workflow assistant - Public Preview 🎊</h2>
+<p>11/15/2023 08:05:01</p>
+<p>We are very excited to announce the Public Preview for the workflow assistant in Azure Logic Apps!!       The workflow assistant is a chat interface to answer any questions about Azure Logic Apps from directly within designer.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-standard-workflow-assistant-public-preview/ba-p/3978705>📢 Azure Logic Apps (Standard) workflow assistant - Public Preview 🎊</a></p><p>&nbsp;&nbsp;</p><h2>📢Introducing Azure Integration Environment & Business Process Tracking (Public Preview)📢</h2>
+<p>11/15/2023 06:20:39</p>
+<p>We are excited to introduce Azure Integration Environment a new unified experience that helps customers manage and monitor their integration resources effectively.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-azure-integration-environment-amp-business-process/ba-p/3976237>📢Introducing Azure Integration Environment & Business Process Tracking (Public Preview)📢</a></p><p>&nbsp;&nbsp;</p><h2>Automate Azure Open AI custom model training data collection and deployment via Logic App</h2>
+<p>11/12/2023 23:42:33</p>
+<p>Background Recently I'm planning to train a custom Open AI model which based Logic App cases in real-life.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/azure-integration-services-blog/automate-azure-open-ai-custom-model-training-data-collection-and/ba-p/3979816>Automate Azure Open AI custom model training data collection and deployment via Logic App</a></p><p>&nbsp;&nbsp;</p><h1><u>IoTBlog Blogs:
+</u></h1><h2>Accelerating Industrial Transformation with Azure IoT Operations</h2>
+<p>11/15/2023 08:01:10</p>
+<p>Today we are announcing the public preview of Azure IoT Operations enabled by Azure Arc.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/internet-of-things-blog/accelerating-industrial-transformation-with-azure-iot-operations/ba-p/3976702>Accelerating Industrial Transformation with Azure IoT Operations</a></p><p>&nbsp;&nbsp;</p><h1><u>IntuneCustomerSuccess Blogs:
+</u></h1><h2>Support tip: On-premises Intune Exchange connector will be turned off in January 2024</h2>
+<p>11/16/2023 11:30:00</p>
+<p>Microsoft Intune ended support for the on-premises Intune Exchange connector in July 2020 except for customers that were actively using it at the time.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-on-premises-intune-exchange-connector-will-be-turned/ba-p/3985217>Support tip: On-premises Intune Exchange connector will be turned off in January 2024</a></p><p>&nbsp;&nbsp;</p><h2>Support tip: BitLocker and Compliance policies</h2>
+<p>11/13/2023 10:01:42</p>
+<p>When working with compliance policies it’s important to understand the complex series of actions that must take place on the device for them to apply properly.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-bitlocker-and-compliance-policies/ba-p/3978805>Support tip: BitLocker and Compliance policies</a></p><p>&nbsp;&nbsp;</p><h1><u>MessagingonAzureBlog Blogs:
+</u></h1><h2>Kafka Compression on Azure Event Hubs Public Preview</h2>
+<p>11/15/2023 12:00:00</p>
+<p>Kafka compression   Microsoft is happy to announce the public preview of Kafka Compression for Apache Kafka on Azure Event Hubs.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/kafka-compression-on-azure-event-hubs-public-preview/ba-p/3982055>Kafka Compression on Azure Event Hubs Public Preview</a></p><p>&nbsp;&nbsp;</p><h2>Azure Messaging and Streaming update – November 2023</h2>
+<p>11/15/2023 12:00:00</p>
+<p>This update covers features we are releasing this year near the Ignite 2023 conference for the Azure Service Bus Azure Event Hubs Azure Event Grid and Azure Stream Analytics services.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/azure-messaging-and-streaming-update-november-2023/ba-p/3980968>Azure Messaging and Streaming update – November 2023</a></p><p>&nbsp;&nbsp;</p><h2>Announcing general availability of partitioned namespaces for Azure Service Bus Premium</h2>
+<p>11/15/2023 10:00:00</p>
+<p>Today we are excited to announce General Availability of our partitioned namespaces feature which allows the use of partitioning for the premium messaging tier.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-partitioned-namespaces-for/ba-p/3961912>Announcing general availability of partitioned namespaces for Azure Service Bus Premium</a></p><p>&nbsp;&nbsp;</p><h2>Fully managed MQTT broker, flexible consumption patterns and more new features in Azure Event Grid</h2>
+<p>11/15/2023 08:09:39</p>
+<p>Customers from various industries such as manufacturing automotive retail and more are heavily investing in cloud solutions to harness their data and deliver new experiences for their customers.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/fully-managed-mqtt-broker-flexible-consumption-patterns-and-more/ba-p/3978957>Fully managed MQTT broker, flexible consumption patterns and more new features in Azure Event Grid</a></p><p>&nbsp;&nbsp;</p><h1><u>microsoft_365blog Blogs:
+</u></h1><h2>Ignite 2023 - What’s New for Copilot and Microsoft 365 admins</h2>
+<p>11/15/2023 11:00:00</p>
+<p>a banner image of Microsoft Ignite 2023       As the backbone of any modern organization your role is to ensure your users are most productive while maximizing value from your current investments.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/ignite-2023-what-s-new-for-copilot-and-microsoft-365-admins/ba-p/3976661>Ignite 2023 - What’s New for Copilot and Microsoft 365 admins</a></p><p>&nbsp;&nbsp;</p><h2>Unlock organizational knowledge with Topics in Copilot</h2>
+<p>11/15/2023 09:00:00</p>
+<p>Microsoft Viva Topics enables your organization to discover explore and easily contribute knowledge proactively inside of Microsoft 365 apps such as Outlook SharePoint and Microsoft Teams.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/unlock-organizational-knowledge-with-topics-in-copilot/ba-p/3983801>Unlock organizational knowledge with Topics in Copilot</a></p><p>&nbsp;&nbsp;</p><h2>New Copilot & Microsoft Teams innovations for a secure, simple, and smart frontline workplace</h2>
+<p>11/15/2023 09:00:00</p>
+<p>Frontline workers are vital for every business interacting directly with customers and managing on-the-ground operations daily.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-copilot-amp-microsoft-teams-innovations-for-a-secure-simple/ba-p/3982425>New Copilot & Microsoft Teams innovations for a secure, simple, and smart frontline workplace</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Loop: built for the new way of work, generally available to Microsoft 365 work accounts</h2>
+<p>11/15/2023 08:00:02</p>
+<p>   It's no secret that the intensity of work and always-on communications are outpacing our ability to keep up.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-loop-built-for-the-new-way-of-work-generally-available/ba-p/3982247>Microsoft Loop: built for the new way of work, generally available to Microsoft 365 work accounts</a></p><p>&nbsp;&nbsp;</p><h2>New! Create videos and images at work with Clipchamp and Designer</h2>
+<p>11/15/2023 08:00:02</p>
+<p>In a world where videos and images have become a critical part of how we express ideas and consume information it only makes sense that everyone in an organization is empowered to embrace this powerful form of communication.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-create-videos-and-images-at-work-with-clipchamp-and-designer/ba-p/3981574>New! Create videos and images at work with Clipchamp and Designer</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft 365 Backup and Microsoft 365 Backup Storage at Ignite 2023</h2>
+<p>11/15/2023 08:00:01</p>
+<p>       You have critical data stored in Microsoft 365 which means business continuity is more essential than ever in this era of rising ransomware attacks and security threats.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-backup-and-microsoft-365-backup-storage-at-ignite/ba-p/3981049>Microsoft 365 Backup and Microsoft 365 Backup Storage at Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Loop’s November 2023 Ignite summary for IT Admins</h2>
+<p>11/15/2023 08:00:01</p>
+<p>It's November 2023 and we're making the Loop app generally available for customers with Microsoft 365-Business Standard Business Premium E3 and E5-on web and mobile.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-loop-s-november-2023-ignite-summary-for-it-admins/ba-p/3981045>Microsoft Loop’s November 2023 Ignite summary for IT Admins</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftThreatProtectionBlog Blogs:
+</u></h1><h2>Ignite news: XDR in an era of end-user-to-cloud cyberattacks and securing the use of AI</h2>
+<p>11/15/2023 08:00:02</p>
+<p>Cyber criminals are continuously evolving their tactics and as trends shift it’s critical that defenders have solutions that are adapting alongside new cyberattack patterns and security risks.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/ignite-news-xdr-in-an-era-of-end-user-to-cloud-cyberattacks-and/ba-p/3982002>Ignite news: XDR in an era of end-user-to-cloud cyberattacks and securing the use of AI</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftDefenderCloudBlog Blogs:
+</u></h1><h2>Microsoft Announces General Availability of Defender for APIs</h2>
+<p>11/15/2023 08:05:15</p>
+<p>[Redmond 11/15/2023] – We are excited to announce the General Availability of Microsoft Defender for APIs designed to protect organizations against API security threats.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-announces-general-availability-of-defender-for-apis/ba-p/3981488>Microsoft Announces General Availability of Defender for APIs</a></p><p>&nbsp;&nbsp;</p><h2>Enhancing Defender CSPM across the application lifecycle</h2>
+<p>11/15/2023 08:04:38</p>
+<p>Organizations are challenged with managing multicloud security due to the complexity of coordinating security measures across diverse cloud environments each with its unique configurations and vulnerabilities.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/enhancing-defender-cspm-across-the-application-lifecycle/ba-p/3982046>Enhancing Defender CSPM across the application lifecycle</a></p><p>&nbsp;&nbsp;</p><h2>Announcing new CNAPP capabilities in Defender for Cloud</h2>
+<p>11/15/2023 07:58:00</p>
+<p>In the fast-paced world of cloud computing security teams are facing unprecedented challenges.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/announcing-new-cnapp-capabilities-in-defender-for-cloud/ba-p/3981941>Announcing new CNAPP capabilities in Defender for Cloud</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftDefenderATPBlog Blogs:
+</u></h1><h2>Ignite News: Augment your EDR with deception tactics to catch adversaries early</h2>
+<p>11/15/2023 07:58:00</p>
+<p>Endpoints remain critical entryways for adversaries to begin their reconnaissance before moving laterally through an organization.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/ignite-news-augment-your-edr-with-deception-tactics-to-catch/ba-p/3982253>Ignite News: Augment your EDR with deception tactics to catch adversaries early</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftEndpointManagerBlog Blogs:
+</u></h1><h2>Microsoft Intune news at Microsoft Ignite 2023</h2>
+<p>11/15/2023 08:02:09</p>
+<p>Proving the case for Intune cloud management   The Microsoft Intune story at Microsoft Ignite 2023 can be summed up this way: A cloud-native endpoint management approach with Intune may be the fastest way to recognize security and productivity value for enterprise and get ready for the AI-enabled future.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-intune-blog/microsoft-intune-news-at-microsoft-ignite-2023/ba-p/3982319>Microsoft Intune news at Microsoft Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Intune introduces Security Copilot-embedded experience</h2>
+<p>11/15/2023 08:01:50</p>
+<p>The introduction of Microsoft Security Copilot is a significant stride in AI-assisted cybersecurity defense—particularly when integrated with Microsoft Intune—allowing organizations to use endpoint data to inform the health and security of their digital estate.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-intune-blog/microsoft-intune-introduces-security-copilot-embedded-experience/ba-p/3982632>Microsoft Intune introduces Security Copilot-embedded experience</a></p><p>&nbsp;&nbsp;</p><h2>Introducing Microsoft Intune Enterprise App Management</h2>
+<p>11/15/2023 08:01:00</p>
+<p>Earlier this year we launched the Microsoft Intune Suite and shared our intent to offer a solution that helps organizations simplify how they package deploy and update third-party apps.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-intune-blog/introducing-microsoft-intune-enterprise-app-management/ba-p/3981044>Introducing Microsoft Intune Enterprise App Management</a></p><p>&nbsp;&nbsp;</p><h2>Announcing Microsoft Intune Advanced Analytics</h2>
+<p>11/15/2023 08:01:00</p>
+<p>With the digital workplace becoming increasingly dynamic IT faces the crucial task of not just managing but proactively improving users’ technology.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-intune-blog/announcing-microsoft-intune-advanced-analytics/ba-p/3982742>Announcing Microsoft Intune Advanced Analytics</a></p><p>&nbsp;&nbsp;</p><h2>New Microsoft Intune features help secure your Windows devices</h2>
+<p>11/15/2023 08:00:05</p>
+<p>In today's rapidly evolving digital landscape security matters are a major concern for every enterprise.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-intune-blog/new-microsoft-intune-features-help-secure-your-windows-devices/ba-p/3978670>New Microsoft Intune features help secure your Windows devices</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Cloud PKI launches as a new addition to the Microsoft Intune Suite</h2>
+<p>11/15/2023 08:00:04</p>
+<p>Public key infrastructure (PKI) is enormously complex time consuming and requires deep expertise.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-intune-blog/microsoft-cloud-pki-launches-as-a-new-addition-to-the-microsoft/ba-p/3982830>Microsoft Cloud PKI launches as a new addition to the Microsoft Intune Suite</a></p><p>&nbsp;&nbsp;</p><h1><u>Identity Blogs:
+</u></h1><h2>Identity at Microsoft Ignite: Securing access in the era of AI</h2>
+<p>11/15/2023 08:00:00</p>
+<p>As the digital world continues to expand so do the risks and challenges of cybersecurity.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/identity-at-microsoft-ignite-securing-access-in-the-era-of-ai/ba-p/2747279>Identity at Microsoft Ignite: Securing access in the era of AI</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftFormsBlog Blogs:
+</u></h1><h2>The new Forms app is here!</h2>
+<p>11/14/2023 07:15:52</p>
+<p>Until now creating a form/quiz required access to the Forms website.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-forms-blog/the-new-forms-app-is-here/ba-p/3981387>The new Forms app is here!</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftLearnBlog Blogs:
+</u></h1><h2>Live at Ignite: Microsoft Credentials for AI and Cloud Skills Challenge</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Welcome to Microsoft Ignite where we’ll experience AI transformation in action.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-learn-blog/live-at-ignite-microsoft-credentials-for-ai-and-cloud-skills/ba-p/3775646>Live at Ignite: Microsoft Credentials for AI and Cloud Skills Challenge</a></p><p>&nbsp;&nbsp;</p><h1><u>IntelligentSearch_DiscoveryBlog Blogs:
+</u></h1><h2>What's new in Microsoft Graph Connectors - Nov 2023 edition</h2>
+<p>11/16/2023 02:14:16</p>
+<p>Microsoft Graph connectors continue to be a powerful extensibility option for Microsoft 365 Copilot and Search.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-search-blog/what-s-new-in-microsoft-graph-connectors-nov-2023-edition/ba-p/3984398>What's new in Microsoft Graph Connectors - Nov 2023 edition</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftSentinelBlog Blogs:
+</u></h1><h2>Microsoft Sentinel Partner Solution Contributions update - Ignite 2023</h2>
+<p>11/15/2023 14:26:45</p>
+<p>Microsoft Sentinel is a cloud-native security information and event management (SIEM) solution that helps you detect investigate and respond to threats across your enterprise.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/microsoft-sentinel-partner-solution-contributions-update-ignite/ba-p/3982485>Microsoft Sentinel Partner Solution Contributions update - Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Introducing a Unified Security Operations Platform with Microsoft Sentinel and Defender XDR</h2>
+<p>11/15/2023 08:00:08</p>
+<p>Introducing a Unified Security Operations Platform with Microsoft Sentinel and Defender XDR       Security teams are tasked with more responsibilities than ever before and the complexity of today’s security tooling landscape doesn’t make their job any easier.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-a-unified-security-operations-platform-with/ba-p/3983341>Introducing a Unified Security Operations Platform with Microsoft Sentinel and Defender XDR</a></p><p>&nbsp;&nbsp;</p><h1><u>SPBlog Blogs:
+</u></h1><h2>SharePoint at Ignite 2023 – The Guide</h2>
+<p>11/13/2023 09:00:00</p>
+<p>This is a guide to Share so you get the Point (about SharePoint today and tomorrow).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/sharepoint-at-ignite-2023-the-guide/ba-p/3979616>SharePoint at Ignite 2023 – The Guide</a></p><p>&nbsp;&nbsp;</p><h1><u>StreamBlog Blogs:
+</u></h1><h2>Microsoft Stream: The Future of Video in Microsoft 365</h2>
+<p>11/15/2023 08:00:00</p>
+<p>   See demos of what’s new and coming for Microsoft Stream in this roadmap video       The future of video at work is bright and promising with Microsoft Stream the enterprise video solution within Microsoft 365.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-stream-blog/microsoft-stream-the-future-of-video-in-microsoft-365/ba-p/3969156>Microsoft Stream: The Future of Video in Microsoft 365</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftTeamsBlog Blogs:
+</u></h1><h2>Unlocking Efficient and Secure Collaboration with Advanced Collaboration Tools in Teams Premium</h2>
+<p>11/15/2023 08:05:11</p>
+<p>Improving collaboration is an ongoing goal for productive organizations.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/unlocking-efficient-and-secure-collaboration-with-advanced/ba-p/3983708>Unlocking Efficient and Secure Collaboration with Advanced Collaboration Tools in Teams Premium</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Teams Phone news from Microsoft Ignite 2023</h2>
+<p>11/15/2023 08:00:04</p>
+<p>We are excited to share the latest Teams Phone updates and innovations bringing calling to a whole new level with intelligent productivity capabilities that provide a seamless collaboration and communication experience for everyone in your organization from the back office to frontline workers.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/microsoft-teams-phone-news-from-microsoft-ignite-2023/ba-p/3982702>Microsoft Teams Phone news from Microsoft Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Extending Microsoft Copilot for Microsoft 365: A guide for enterprises and ISVs</h2>
+<p>11/15/2023 08:00:01</p>
+<p>This year the dominant theme for technology companies has been working to enable AI.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/extending-microsoft-copilot-for-microsoft-365-a-guide-for/ba-p/3980781>Extending Microsoft Copilot for Microsoft 365: A guide for enterprises and ISVs</a></p><p>&nbsp;&nbsp;</p><h2>What’s New in Microsoft Teams | Microsoft Ignite 2023</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Welcome to the November 2023 Special Edition of What’s New in Teams! We are publishing this month’s edition early to cover the announcements at the Microsoft Ignite conference in addition to our typical What’s New in Teams features.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/what-s-new-in-microsoft-teams-microsoft-ignite-2023/ba-p/3976670>What’s New in Microsoft Teams | Microsoft Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Explore the latest innovations in Webinars and Town Halls for Microsoft Teams</h2>
+<p>11/15/2023 08:00:00</p>
+<p>As Microsoft Ignite is underway we’re excited to share new capabilities we announced to deliver richer virtual event experiences on Teams.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/explore-the-latest-innovations-in-webinars-and-town-halls-for/ba-p/3975567>Explore the latest innovations in Webinars and Town Halls for Microsoft Teams</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Teams Rooms and Devices: Microsoft Ignite 2023</h2>
+<p>11/15/2023 08:00:00</p>
+<p>At Microsoft we never stop looking for new ways to break down the barriers between those working in the office and those working remotely.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/microsoft-teams-rooms-and-devices-microsoft-ignite-2023/ba-p/3975581>Microsoft Teams Rooms and Devices: Microsoft Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h2>Work smarter with Microsoft Teams Premium</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Today we are excited to unveil the latest innovations coming to Microsoft Teams Premium to make collaboration more intelligent engaging and protected.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-teams-blog/work-smarter-with-microsoft-teams-premium/ba-p/3975571>Work smarter with Microsoft Teams Premium</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftVivaBlog Blogs:
+</u></h1><h2>New ways Microsoft Copilot and Viva are transforming the employee experience</h2>
+<p>11/15/2023 08:00:03</p>
+<p>The rapidly evolving promise of AI can enable individuals to be more productive.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-viva-blog/new-ways-microsoft-copilot-and-viva-are-transforming-the/ba-p/3982293>New ways Microsoft Copilot and Viva are transforming the employee experience</a></p><p>&nbsp;&nbsp;</p><h2>Announcing 5 New Cross-Suite Capabilities Coming to Microsoft Viva in 2024</h2>
+<p>11/15/2023 08:00:00</p>
+<p>As Microsoft Viva continues to help organizations build engaged productive workforces we often get asked the question: “How do your apps work together?”     Building on our recent announcement of the Viva integration into Microsoft 365 Copilot which will bring data and intelligence from across the Viva apps directly into Microsoft 365 Chat to provide new human capital management (HCM) related and employee-self-service experiences for business leaders HR leaders managers and employees we want to highlight a few other ways you will see our Viva apps become even more connected in 2024.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-viva-blog/announcing-5-new-cross-suite-capabilities-coming-to-microsoft/ba-p/3977690>Announcing 5 New Cross-Suite Capabilities Coming to Microsoft Viva in 2024</a></p><p>&nbsp;&nbsp;</p><h1><u>Outlook Blogs:
+</u></h1><h2>Copilot in Outlook helps you achieve more</h2>
+<p>11/15/2023 08:00:01</p>
+<p>Copilot in Outlook helps you manage and triage your email and time more efficiently.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/outlook-blog/copilot-in-outlook-helps-you-achieve-more/ba-p/3981033>Copilot in Outlook helps you achieve more</a></p><p>&nbsp;&nbsp;</p><h1><u>PlannerBlog Blogs:
+</u></h1><h2>The new Microsoft Planner: A unified experience bringing together to-dos, tasks, plans and projects</h2>
+<p>11/15/2023 08:00:12</p>
+<p>We’re heading into a new era where AI is an integral part of the workday.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/planner-blog/the-new-microsoft-planner-a-unified-experience-bringing-together/ba-p/3977998>The new Microsoft Planner: A unified experience bringing together to-dos, tasks, plans and projects</a></p><p>&nbsp;&nbsp;</p><h1><u>PublicSectorBlog Blogs:
+</u></h1><h2>Microsoft Security Copilot and NIST 800-171</h2>
+<p>11/16/2023 11:33:06</p>
+<p>       Microsoft Security Copilot and NIST 800-171   It is with bated breath that we await the publication of a Proposed Rule and final draft of Cybersecurity Maturity Model Certification (CMMC) 2.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/public-sector-blog/microsoft-security-copilot-and-nist-800-171/ba-p/3984053>Microsoft Security Copilot and NIST 800-171</a></p><p>&nbsp;&nbsp;</p><h2>Preparing for Security Copilot in US Government Clouds</h2>
+<p>11/14/2023 10:00:00</p>
+<p>With the announcement of Security Copilot back in March there has been a growing demand to understand and expand the role of machine learning (ML) in security.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/public-sector-blog/preparing-for-security-copilot-in-us-government-clouds/ba-p/3982196>Preparing for Security Copilot in US Government Clouds</a></p><p>&nbsp;&nbsp;</p><h1><u>SAPApplications Blogs:
+</u></h1><h2>SAP on Azure General Update October 2023</h2>
+<p>11/14/2023 13:48:00</p>
+<p>1.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/sap-on-azure-general-update-october-2023/ba-p/3963349>SAP on Azure General Update October 2023</a></p><p>&nbsp;&nbsp;</p><h1><u>MicrosoftSecurityandCompliance Blogs:
+</u></h1><h2>Now in Public Preview: Microsoft Purview integration with Microsoft Dataverse</h2>
+<p>11/16/2023 23:00:00</p>
+<p>In the previous blog Govern your business applications data with Microsoft Purview we announced the private preview for the integration between Microsoft Purview and Microsoft Dataverse.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/now-in-public-preview-microsoft-purview-integration-with/ba-p/3985044>Now in Public Preview: Microsoft Purview integration with Microsoft Dataverse</a></p><p>&nbsp;&nbsp;</p><h2>Public Preview of Airflow/OpenLineage Support in Microsoft Purview</h2>
+<p>11/16/2023 09:30:33</p>
+<p>Microsoft Purview now provides an endpoint that supports collecting lineage from Apache Airflow via integration with OpenLineage an open framework for data lineage collection and analysis.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/public-preview-of-airflow-openlineage-support-in-microsoft/ba-p/3969395>Public Preview of Airflow/OpenLineage Support in Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>Integration of Azure Machine Learning with Microsoft Purview</h2>
+<p>11/16/2023 09:28:54</p>
+<p>Previously in the blog post Bringing ML assets to the Microsoft Purview Data Map we announced the public preview of Azure Machine Learning assets in Microsoft Purview.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/integration-of-azure-machine-learning-with-microsoft-purview/ba-p/3984976>Integration of Azure Machine Learning with Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Purview expands data estate support – Amazon Redshift and Tableau</h2>
+<p>11/16/2023 09:25:40</p>
+<p>Microsoft Purview enables organizations to easily create a comprehensive up-to-date map of their data landscape across on-premises multi-cloud and SaaS applications with automated data discovery.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-purview-expands-data-estate-support-amazon-redshift/ba-p/3985080>Microsoft Purview expands data estate support – Amazon Redshift and Tableau</a></p><p>&nbsp;&nbsp;</p><h2>Enhanced Snowflake integration in Microsoft Purview</h2>
+<p>11/16/2023 09:24:32</p>
+<p>Microsoft Purview keeps strengthening its Snowflake integration to help you enrich your data map with metadata from Snowflake.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/enhanced-snowflake-integration-in-microsoft-purview/ba-p/3985020>Enhanced Snowflake integration in Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>Introducing new version of Managed Virtual Network in Microsoft Purview</h2>
+<p>11/16/2023 09:18:47</p>
+<p>Managed Virtual Network (VNet) in Microsoft Purview enables the scenario when your Microsoft Purview and/or data systems restrict network access you can run the scan on the Managed VNet Integration Runtime (IR) – a fully managed service by Purview – to securely connect to them via private endpoints.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/introducing-new-version-of-managed-virtual-network-in-microsoft/ba-p/3984969>Introducing new version of Managed Virtual Network in Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>Introducing AD FS Application Migration: Your Path to Simplicity and Security</h2>
+<p>11/16/2023 09:00:00</p>
+<p>Are you tired of dealing with the hassles of managing your Active Directory Federation Services (AD FS) applications? Do you want to enjoy the benefits of a modern secure and cloud-based identity platform? If so we have some great news for you a new tool feature - AD FS Application Migration - is here to help!        We're thrilled to announce a game-changing feature AD FS Application Migration that will make your life as an IT administrator much easier.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/introducing-ad-fs-application-migration-your-path-to-simplicity/ba-p/3980232>Introducing AD FS Application Migration: Your Path to Simplicity and Security</a></p><p>&nbsp;&nbsp;</p><h2>Securing data in an AI-first world with Microsoft Purview</h2>
+<p>11/15/2023 08:00:02</p>
+<p>   We are living in an artificial intelligence (AI) first world in which organizations have a once-in-a-lifetime opportunity to leverage AI to transform their business and drive innovation at an accelerated rate.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/securing-data-in-an-ai-first-world-with-microsoft-purview/ba-p/3981279>Securing data in an AI-first world with Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>Gain comprehensive data protection and efficient investigation with Microsoft Purview DLP</h2>
+<p>11/15/2023 08:00:01</p>
+<p>Data is not only an asset but also a potential liability if it falls into the wrong hands inadvertently or maliciously.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/gain-comprehensive-data-protection-and-efficient-investigation/ba-p/3980776>Gain comprehensive data protection and efficient investigation with Microsoft Purview DLP</a></p><p>&nbsp;&nbsp;</p><h2>Supercharge security and compliance efficiency with Microsoft Security Copilot in Microsoft Purview</h2>
+<p>11/15/2023 08:00:01</p>
+<p>In the face of ever-looming security threats SOC teams need effective detection and response capabilities.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/supercharge-security-and-compliance-efficiency-with-microsoft/ba-p/3980765>Supercharge security and compliance efficiency with Microsoft Security Copilot in Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>The Next Era of eDiscovery: Embracing Advanced Capabilities for a Comprehensive Digital Landscape</h2>
+<p>11/15/2023 08:00:00</p>
+<p>In today's rapidly evolving digital world the art of eDiscovery is undergoing a transformative shift.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/the-next-era-of-ediscovery-embracing-advanced-capabilities-for-a/ba-p/3980511>The Next Era of eDiscovery: Embracing Advanced Capabilities for a Comprehensive Digital Landscape</a></p><p>&nbsp;&nbsp;</p><h2>Protect your entire data estate with Microsoft Purview</h2>
+<p>11/15/2023 08:00:00</p>
+<p>In today’s world data is generated at an unprecedented pace.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/protect-your-entire-data-estate-with-microsoft-purview/ba-p/3978758>Protect your entire data estate with Microsoft Purview</a></p><p>&nbsp;&nbsp;</p><h2>Trusted launch for Azure Arc VMs on Azure Stack HCI, version 23H2 preview</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Trusted launch for virtual machines   You may be familiar with Trusted launch for Azure virtual machines (VMs).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/trusted-launch-for-azure-arc-vms-on-azure-stack-hci-version-23h2/ba-p/3978051>Trusted launch for Azure Arc VMs on Azure Stack HCI, version 23H2 preview</a></p><p>&nbsp;&nbsp;</p><h2>Protect sensitive data across Azure SQL DB, Azure Data Lake using label-based access</h2>
+<p>11/15/2023 08:00:00</p>
+<p>One of the challenges for organizations is to manage and protect sensitive information which may be distributed across data assets in different clouds or on-prem datacenters to maintain customer trust and avoid potential penalties.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/protect-sensitive-data-across-azure-sql-db-azure-data-lake-using/ba-p/3977977>Protect sensitive data across Azure SQL DB, Azure Data Lake using label-based access</a></p><p>&nbsp;&nbsp;</p><h2>Unleash the Future of Communication Compliance at Microsoft Ignite 2023</h2>
+<p>11/15/2023 08:00:00</p>
+<p>Ensuring robust communication compliance is more crucial than ever.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/security-compliance-and-identity/unleash-the-future-of-communication-compliance-at-microsoft/ba-p/3977722>Unleash the Future of Communication Compliance at Microsoft Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h1><u>Microsoft365BusinessBlog Blogs:
+</u></h1><h2>Microsoft 365 Lighthouse is making it even easier to manage your customers</h2>
+<p>11/16/2023 06:00:00</p>
+<p>Easily access other Microsoft admin portals   We are excited to introduce a new feature in Microsoft 365 Lighthouse that lets you quickly and securely access other Microsoft admin portals for each of your customers.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/small-and-medium-business-blog/microsoft-365-lighthouse-is-making-it-even-easier-to-manage-your/ba-p/3984072>Microsoft 365 Lighthouse is making it even easier to manage your customers</a></p><p>&nbsp;&nbsp;</p><h1><u>SQLServer Blogs:
+</u></h1><h2>Cumulative Update #10 for SQL Server 2022 RTM</h2>
+<p>11/16/2023 16:57:04</p>
+<p>The 10th cumulative update release for SQL Server 2022 RTM is now available for download at the Microsoft Downloads site.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/sql-server-blog/cumulative-update-10-for-sql-server-2022-rtm/ba-p/3985560>Cumulative Update #10 for SQL Server 2022 RTM</a></p><p>&nbsp;&nbsp;</p><h2>The Bridge - How Azure Arc brings cloud innovation to SQL Server anywhere</h2>
+<p>11/15/2023 07:46:43</p>
+<p>By Debbi Lyons Director of Azure Relational Databases Product Marketing        The ability to effectively manage data is more critical than ever and increasingly complex — with organizations hosting data on-premises at the edge and across multiple clouds.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/sql-server-blog/the-bridge-how-azure-arc-brings-cloud-innovation-to-sql-server/ba-p/3983672>The Bridge - How Azure Arc brings cloud innovation to SQL Server anywhere</a></p><p>&nbsp;&nbsp;</p><h1><u>FileCAB Blogs:
+</u></h1><h2>SMB over QUIC now available in Windows Server Insider Datacenter and Standard editions</h2>
+<p>11/15/2023 10:33:10</p>
+<p>Heya folks Ned here again.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-over-quic-now-available-in-windows-server-insider-datacenter/ba-p/3975242>SMB over QUIC now available in Windows Server Insider Datacenter and Standard editions</a></p><p>&nbsp;&nbsp;</p><h1><u>SurfaceITPro Blogs:
+</u></h1><h2>Surface Hub support coming for Windows Autopilot</h2>
+<p>11/15/2023 07:59:56</p>
+<p>   At Microsoft Ignite 2023 Microsoft Teams announced upcoming support for streamlined deployment of Microsoft Teams Rooms on Windows via Windows Autopilot and Auto-login of Teams Rooms.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/surface-it-pro-blog/surface-hub-support-coming-for-windows-autopilot/ba-p/3977848>Surface Hub support coming for Windows Autopilot</a></p><p>&nbsp;&nbsp;</p><h2>Microsoft Surface at Ignite 2023</h2>
+<p>11/14/2023 08:38:29</p>
+<p>       We're excited to be a part of Microsoft Ignite 2023 inviting you to learn more about leveraging AI across your business operations.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/surface-it-pro-blog/microsoft-surface-at-ignite-2023/ba-p/3981054>Microsoft Surface at Ignite 2023</a></p><p>&nbsp;&nbsp;</p><h1><u>Sysinternals-Blog Blogs:
+</u></h1><h2>Sysmon v15.11</h2>
+<p>11/13/2023 14:48:00</p>
+<p> Sysmon v15.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/sysinternals-blog/sysmon-v15-11/ba-p/3980410>Sysmon v15.11</a></p><p>&nbsp;&nbsp;</p><h1><u>SystemCenterBlog Blogs:
+</u></h1><h2>GA Announcement: Bring Azure to your SCVMM managed environment through Azure Arc!</h2>
+<p>11/16/2023 02:50:37</p>
+<p>We’re excited to announce that System Center Virtual Machine Manager (SCVMM) enabled by Azure Arc is now generally available to manage SCVMM resources in Azure.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/system-center-blog/ga-announcement-bring-azure-to-your-scvmm-managed-environment/ba-p/3984671>GA Announcement: Bring Azure to your SCVMM managed environment through Azure Arc!</a></p><p>&nbsp;&nbsp;</p><h2>Announcement: SCOM is now available in Azure too!</h2>
+<p>11/14/2023 09:00:00</p>
+<p>We are excited to announce the General Availability of Azure Monitor SCOM managed instance (SCOM MI).</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/system-center-blog/announcement-scom-is-now-available-in-azure-too/ba-p/3981327>Announcement: SCOM is now available in Azure too!</a></p><p>&nbsp;&nbsp;</p><h2>System Center 2022 Update Rollup 2</h2>
+<p>11/12/2023 22:47:14</p>
+<p>We are delighted to announce the release of Update Rollup 2 for System Center 2022.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/system-center-blog/system-center-2022-update-rollup-2/ba-p/3979858>System Center 2022 Update Rollup 2</a></p><p>&nbsp;&nbsp;</p><h1><u>Windows-Admin-Center-Blog Blogs:
+</u></h1><h2>Windows Admin Center version 2311 is now in Public Preview!</h2>
+<p>11/16/2023 09:09:05</p>
+<p>Announcing public preview of Windows Admin Center v2311    Today we are releasing our latest version of Windows Admin Center to public preview – version 2311! Thank you to our customers partners and fans for helping us to continue to improve and make Windows Admin Center better!        In this release we’ve made improvements to some of our most used tools added new experiences around Azure hybrid services like Azure Arc and Azure Migrate and updated our platform.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/windows-admin-center-blog/windows-admin-center-version-2311-is-now-in-public-preview/ba-p/3983937>Windows Admin Center version 2311 is now in Public Preview!</a></p><p>&nbsp;&nbsp;</p><h1><u>Marketplace-Blog Blogs:
+</u></h1><h2>New on Microsoft AppSource: November 1-4, 2023</h2>
+<p>11/16/2023 06:00:00</p>
+<p>We continue to expand the Microsoft AppSource ecosystem.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/marketplace-blog-for-partners/new-on-microsoft-appsource-november-1-4-2023/ba-p/3972709>New on Microsoft AppSource: November 1-4, 2023</a></p><p>&nbsp;&nbsp;</p><h2>Announcing the public preview of Apache Airflow on Astro - An Azure Native ISV Service</h2>
+<p>11/15/2023 08:00:00</p>
+<p>We are excited to announce the public preview of Apache Airflow on Astro - An Azure Native.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/marketplace-blog-for-partners/announcing-the-public-preview-of-apache-airflow-on-astro-an/ba-p/3976003>Announcing the public preview of Apache Airflow on Astro - An Azure Native ISV Service</a></p><p>&nbsp;&nbsp;</p><h2>Silverfort offers a new transactable partner solution in Azure Marketplace</h2>
+<p>11/13/2023 06:00:00</p>
+<p>Microsoft partners like Silverfort deliver transact-capable offers which allow you to purchase directly from Azure Marketplace.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/marketplace-blog-for-partners/silverfort-offers-a-new-transactable-partner-solution-in-azure/ba-p/3972711>Silverfort offers a new transactable partner solution in Azure Marketplace</a></p><p>&nbsp;&nbsp;</p><h1><u>Identity Blogs:
+</u></h1><h2>Identity at Microsoft Ignite: Securing access in the era of AI</h2>
+<p>11/15/2023 08:00:00</p>
+<p>As the digital world continues to expand so do the risks and challenges of cybersecurity.</p><p>&nbsp;</p><p><a href=https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/identity-at-microsoft-ignite-securing-access-in-the-era-of-ai/ba-p/2747279>Identity at Microsoft Ignite: Securing access in the era of AI</a></p><p>&nbsp;&nbsp;</p></body></html>

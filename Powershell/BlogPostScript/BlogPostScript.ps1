@@ -154,4 +154,5 @@ $strOutput | Out-File .\blogs.htm
 }
 catch {
     Write-host -ForegroundColor Red  "Encountered Error:"$_.Exception.Message
+    Write-Host -ForegroundColor Red $url" failed"
 }
